@@ -1,0 +1,12 @@
+// your custom styles here
+
+.invert-color {
+    filter: invert(100%);
+    /* Inverts colors completely */
+}
+
+.bg-black, .bg-dark {
+    ::placeholder { /* Standard syntax */
+        color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
+    }
+}
