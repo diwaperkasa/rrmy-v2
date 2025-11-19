@@ -41,5 +41,5 @@ mix.
 
 mix
     .js([          
-        'assets/scripts/scripts.js',
-    ], 'assets/scripts/scripts.min.js');
+        'assets/dist/js/scripts.js',
+    ], 'assets/dist/js/scripts.min.js');

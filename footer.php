@@ -30,7 +30,7 @@
                         <p>Get Robb Report Hong Kong’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
                         <form action="">
                             <div class="input-group mb-3">
-                                <input name="email" type="email" class="form-control bg-black rounded-0 border text-white" placeholder="EMAIL" aria-label="EMAIL ADDRESS" required>
+                                <input name="email" type="email" class="form-control bg-black rounded-0 border text-white" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
                                 <button type="submit" class="input-group-text rounded-0">SIGN UP</button>
                             </div>
                         </form>
