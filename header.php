@@ -78,21 +78,21 @@
         <div class="container">
             <div id="containerNav">
                 <nav class="navbar navbar-expand-lg" id="mainNavbar">
-                    <span type="button" class="text-danger py-2 pe-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
+                    <span type="button" class="text-danger pe-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
                         <svg fill="#fff" stroke="#d02027" width="24" height="24" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
                             <title>Menu</title>
                             <path d="M2 7.5h18m-18 6h18M2 1.5h18" stroke-width="2.09" fill="none" stroke-linecap="square"></path>
                         </svg>
                     </span>
                     <div class="d-block d-lg-none">
-                        <a class="nav-link text-uppercase text-black text-decoration-none fw-normal" aria-current="page" href="/">
+                        <a class="nav-link text-uppercase text-black text-decoration-none fw-normal my-2" aria-current="page" href="/">
                             <img height="40px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
                         </a>
                     </div>
                     <div class="collapse navbar-collapse primary-menu">
                         <?php $primaryMenus = wp_get_nav_menu_items('primary-menu'); ?>
                         <?php if ($primaryMenus): ?>
-                            <ul class="navbar-nav text-nowrap flex-wrap me-auto mb-2 mb-lg-0 fw-bold">
+                            <ul class="navbar-nav text-nowrap flex-wrap me-auto mb-2 mb-lg-0 fw-bold align-items-center">
                                 <li class="px-2 nav-item flex-shrink-0 hidden-menu rr-top-menu d-none">
                                     <a class="nav-link text-uppercase text-black text-decoration-none fw-normal" aria-current="page" href="/">
                                         <img height="20px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
@@ -106,7 +106,7 @@
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                                 <li class="px-2 nav-item border-start border-1 border-secondary fw-normal d-none hidden-menu subscribe-menu">
-                                    <a class="nav-link text-uppercase text-black text-decoration-none subsribe-hover" aria-current="page" href="javascript:void(0);">Subscribe</a>
+                                    <a class="nav-link py-0 text-uppercase text-black text-decoration-none subsribe-hover" aria-current="page" href="javascript:void(0);">Subscribe</a>
                                 </li>
                                 <li class="px-2 nav-item fw-normal d-none hidden-menu rri-menu">
                                     <a class="text-decoration-none fw-normal" aria-current="page" href="/">
@@ -126,7 +126,7 @@
                             </ul>
                         <?php endif; ?>
                     </div>
-                    <span type="button" class="text-danger py-2 ps-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                    <span type="button" class="text-danger ps-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
                         <svg fill="#fff" stroke="#d02027" width="24" height="24" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
                             <title>Search</title>
                             <g transform="translate(.7)" stroke-width="1.58" fill="none" fill-rule="evenodd">
@@ -137,7 +137,7 @@
                     </span>
                 </nav>
                 <div class="d-block d-lg-none slider-menu-mobile">
-                    <div class="d-flex overflow-auto gap-3 pb-3">
+                    <div class="d-flex overflow-auto gap-3 pb-2">
                         <?php foreach ($primaryMenus as $menu): ?>
                             <?php if ($menu->menu_item_parent == 0): ?>
                                 <div class="flex-shrink-0">
@@ -150,7 +150,7 @@
                 <div class="position-relative subsribe-popup d-none">
                     <div class="position-absolute w-100">
                         <div class="subsribe-popup-container">
-                            <div class="row border bg-white">
+                            <div class="row bg-white shadow">
                                 <div class="col-md-6 py-4">
                                     <div class="row border-end h-100">
                                         <div class="col-md-4">

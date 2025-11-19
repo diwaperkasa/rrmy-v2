@@ -27,7 +27,7 @@ const navbarAnimation = () => {
         });
     
         if (navbarContainer.classList.contains('border-bottom')) {
-            navbarContainer.classList.remove(...['border-bottom', 'border-black', 'border-2']);
+            navbarContainer.classList.remove(...['border-bottom', 'border-black', 'border-2', 'sticky']);
         }
     } else {
         hiddenMenu.forEach(element => {
@@ -37,14 +37,30 @@ const navbarAnimation = () => {
         });
     
         if (!navbarContainer.classList.contains('border-bottom')) {
-            navbarContainer.classList.add(...['border-bottom', 'border-black', 'border-2']);
+            navbarContainer.classList.add(...['border-bottom', 'border-black', 'border-2', 'sticky']);
         }
     }
 }
 
 navbarAnimation();
 
+let isTransitioning = false;
+
+// Detect when transition starts
+navbar.addEventListener("transitionstart", () => {
+    isTransitioning = true;
+});
+
+// Detect when transition ends
+navbar.addEventListener("transitionend", () => {
+    isTransitioning = false;
+});
+
 window.addEventListener('scroll', () => {
+    if (isTransitioning) {
+        return;
+    }
+
     navbarAnimation();
 });
 

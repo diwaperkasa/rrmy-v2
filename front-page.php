@@ -28,7 +28,7 @@
                                         <?= get_the_post_thumbnail($post['ID'], 'full') ?>
                                     </a>
                                 </div>
-                                <div class="mx-3 mx-md-5 p-3 position-relative text-center article-banner-title bg-white mb-3 shadow">
+                                <div class="mx-3 mx-md-5 p-3 position-relative text-center article-banner-title bg-white mb-3">
                                     <?php $categories = get_the_category($post['ID']) ?>
                                     <?php if ($categories): ?>
                                         <a class="text-decoration-none category-article" href="<?= get_term_link($categories[0]->term_id) ?>"><h3 class="fs-6 text-center text-danger text-uppercase sweet-sans-font"><?= $categories[0]->name ?></h3></a>

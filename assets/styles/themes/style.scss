@@ -5,6 +5,18 @@
     /* Inverts colors completely */
 }
 
+a.nav-link, .navbar {
+    transition: all .2s ease;
+}
+
+.sticky a.nav-link {
+    font-size: 14px;
+}
+
+.sticky .navbar {
+    --bs-navbar-padding-y: none;
+}
+
 a.hover-border {
     position: relative;
 }
