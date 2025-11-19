@@ -16,5 +16,7 @@ Text Domain: barebones
 @import "../../node_modules/bootstrap/scss/bootstrap";
 // override Bootstrap variables
 @import 'config/variables';
+// flickity
+@import '../../node_modules/flickity/dist/flickity.min.css';
 // import your custom styles here
 @import 'themes/style';

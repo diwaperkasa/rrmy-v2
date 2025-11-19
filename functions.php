@@ -69,7 +69,7 @@ add_filter('post_comments_feed_link', 'barebones_post_comments_feed_link');
  */
 
 function barebones_enqueue_scripts() {
-    wp_deregister_script('jquery');
+    // wp_deregister_script('jquery');
     wp_enqueue_style( 'styles', get_stylesheet_directory_uri() . '/style.css?_v=' . filemtime( get_stylesheet_directory() . '/style.css' ) );
     wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/dist/js/scripts.min.js?_v=' . filemtime( get_stylesheet_directory() . '/assets/dist/js/scripts.min.js' ), [], null, true );
 }

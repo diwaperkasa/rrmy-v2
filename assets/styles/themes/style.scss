@@ -5,8 +5,62 @@
     /* Inverts colors completely */
 }
 
+a.hover-border {
+    position: relative;
+}
+
+a.hover-border:hover:before {
+    transform: scale(1);
+}
+
+a.hover-border::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 2px;
+    background: black;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.size-full {
+    max-width: 100%;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.wp-post-image {
+    max-width: 100%;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
+
+.img-hover-zoom {
+    overflow: hidden;
+}
+
+.img-hover-zoom img {
+    transition: transform 1s ease;
+}
+
+.img-hover-zoom img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item {
+    width: 100% !important;
+}
+
 .bg-black, .bg-dark {
     ::placeholder { /* Standard syntax */
         color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
+    }
+
+    a.hover-border::before {
+        background: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
     }
 }
