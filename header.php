@@ -68,7 +68,7 @@
                         </a>
                     </div>
                     <div class="header-img">
-                        <a class="text-uppercase text-black text-decoration-none fw-normal subsribe-hover" href="">SUBSCRIBE</a>
+                        <a class="text-uppercase text-black text-decoration-none fw-normal subsribe-hover roboto" href="">SUBSCRIBE</a>
                     </div>
                 </div>
             </div>
@@ -93,22 +93,22 @@
                         <?php $primaryMenus = wp_get_nav_menu_items('primary-menu'); ?>
                         <?php if ($primaryMenus): ?>
                             <ul class="navbar-nav text-nowrap flex-wrap me-auto mb-2 mb-lg-0 fw-bold align-items-center">
-                                <li class="px-2 nav-item flex-shrink-0 hidden-menu rr-top-menu d-none">
+                                <li class="nav-item flex-shrink-0 hidden-menu rr-top-menu d-none">
                                     <a class="nav-link text-uppercase text-black text-decoration-none fw-normal" aria-current="page" href="/">
                                         <img height="20px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
                                     </a>
                                 </li>
                                 <?php foreach ($primaryMenus as $menu): ?>
                                     <?php if ($menu->menu_item_parent == 0): ?>
-                                        <li class="px-2 nav-item flex-shrink-0">
-                                            <a class="nav-link text-uppercase text-black text-decoration-none fw-normal" aria-current="page" href="<?= $menu->url ?>"><?= $menu->title ?></a>
+                                        <li class="nav-item flex-shrink-0">
+                                            <a class="nav-link text-uppercase text-black text-decoration-none fw-normal sweet-sans-pro ls-1" aria-current="page" href="<?= $menu->url ?>"><?= $menu->title ?></a>
                                         </li>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
-                                <li class="px-2 nav-item border-start border-1 border-secondary fw-normal d-none hidden-menu subscribe-menu">
-                                    <a class="nav-link py-0 text-uppercase text-black text-decoration-none subsribe-hover" aria-current="page" href="javascript:void(0);">Subscribe</a>
+                                <li class="nav-item border-start border-1 border-secondary d-none hidden-menu subscribe-menu">
+                                    <a class="nav-link py-0 text-uppercase text-black text-decoration-none fw-normal subsribe-hover titling-gothic-fb-cond ls-1" aria-current="page" href="javascript:void(0);">Subscribe</a>
                                 </li>
-                                <li class="px-2 nav-item fw-normal d-none hidden-menu rri-menu">
+                                <li class="nav-item fw-normal d-none hidden-menu rri-menu">
                                     <a class="text-decoration-none fw-normal" aria-current="page" href="/">
                                         <svg width="40" height="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 720 252" style="enable-background:new 0 0 720 252;" xml:space="preserve">
                                             <title>RR One</title>

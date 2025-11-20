@@ -18,5 +18,11 @@ Text Domain: barebones
 @import 'config/variables';
 // flickity
 @import '../../node_modules/flickity/dist/flickity.min.css';
+// import font
+@import './themes/fonts/sweet-sans-pro/style.css';
+@import './themes/fonts/titling-gothic-fb-cond/style.css';
+@import './themes/fonts/roboto/style.css';
+@import './themes/fonts/arnhem/style.css';
+@import './themes/fonts/barlow/style.css';
 // import your custom styles here
 @import 'themes/style';

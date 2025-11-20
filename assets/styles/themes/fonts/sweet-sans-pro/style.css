@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "sweet-sans-pro";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/sweet-sans-pro/fonnts.com-SweetSansProRegular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "sweet-sans-pro-bold";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/sweet-sans-pro/fonnts.com-SweetSansProBold.otf") format("opentype");
+}
+
+.sweet-sans-pro {
+    font-family: sweet-sans-pro, sans-serif;
+    transform: translateY(1px);
+}

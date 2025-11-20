@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "titling-gothic-fb-cond";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/titling-gothic-fb-cond/TitlingGothicFBCond-Regular.otf") format("opentype");
+}
+
+.titling-gothic-fb-cond {
+    font-family: titling-gothic-fb-cond, sans-serif;
+    transform: translateY(2px);
+}

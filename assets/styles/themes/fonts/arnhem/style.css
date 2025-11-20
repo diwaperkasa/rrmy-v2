@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "arnhem";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/arnhem/Arnhem.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "arnhem-bold";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/arnhem/Arnhem-Bold.ttf") format("truetype");
+}
+
+.arnhem {
+    font-family: arnhem, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.arnhem-bold {
+    font-family: arnhem-bold, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}

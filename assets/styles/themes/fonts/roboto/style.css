@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "roboto";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/roboto/fonnts.com-Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "roboto-light";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/roboto/fonnts.com-Roboto-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "roboto-bold";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/roboto/fonnts.com-Roboto-Bold.ttf") format("truetype");
+}
+
+.roboto {
+    font-family: roboto, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-family: roboto-light, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: roboto-bold, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
