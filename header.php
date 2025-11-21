@@ -150,37 +150,39 @@
                 <div class="position-relative subsribe-popup d-none">
                     <div class="position-absolute w-100">
                         <div class="subsribe-popup-container">
-                            <div class="row bg-white shadow">
-                                <div class="col-md-6 py-4">
-                                    <div class="row border-end h-100">
-                                        <div class="col-md-4">
-                                            <div class="d-flex align-items-center h-100">
-                                                <img class="img-fluid" src="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp" alt="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp">
+                            <div class="shadow">
+                                <div class="row bg-white ">
+                                    <div class="col-md-6 py-4">
+                                        <div class="row border-end h-100">
+                                            <div class="col-md-4">
+                                                <div class="d-flex align-items-center justify-content-center h-100">
+                                                    <img class="img-fluid" src="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp" alt="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp">
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-8">
-                                            <div class="py-3">
-                                                <h3 class="text-uppercase mb-4 sweet-sans-pro ls-1">Get The Magazine</h3>
-                                                <p class="roboto-light ls-1">Subscribe now and get up to 61% off the cover price.</p>
-                                                <p class="roboto-light ls-1">Includes digital magazine access and the exclusive Robb Report tote bag.</p>
-                                                <button class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 roboto-light ls-1">SUBSCRIBE</button>
+                                            <div class="col-md-8 d-none d-md-block">
+                                                <div class="py-3">
+                                                    <h3 class="text-uppercase mb-4 sweet-sans-pro ls-1">Get The Magazine</h3>
+                                                    <p class="roboto-light ls-1">Subscribe now and get up to 61% off the cover price.</p>
+                                                    <p class="roboto-light ls-1">Includes digital magazine access and the exclusive Robb Report tote bag.</p>
+                                                    <button class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 roboto-light ls-1">SUBSCRIBE</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6 py-4">
-                                    <div class="py-3 px-5">
-                                        <h3 class="text-uppercase mb-4 text-center sweet-sans-pro ls-1">Newsletter</h3>
-                                        <p class="text-center mb-4 roboto-light ls-1">Sign up for our newsletter and go inside a world of luxury.</p>
-                                        <form action="">
-                                            <div class="input-group mb-4">
-                                                <input name="email" type="email" class="form-control rounded-0 border-black py-3 roboto-light ls-1" placeholder="Email address" aria-label="Email address" required />
-                                                <button type="submit" class="input-group-text bg-black text-white rounded-0 border-black ms-2 roboto-light ls-1"><span>SIGN UP</span></button>
-                                            </div>
-                                        </form>
-                                        <p class="mb-0 roboto-light ls-1">
-                                            By providing your information, you agree to our Terms of Use and our Privacy Policy. We use vendors that may also process your information to help provide our services. This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
-                                        </p>
+                                    <div class="col-md-6 py-4">
+                                        <div class="py-3 px-5">
+                                            <h3 class="text-uppercase mb-4 text-center sweet-sans-pro ls-1">Newsletter</h3>
+                                            <p class="text-center mb-4 roboto-light ls-1">Sign up for our newsletter and go inside a world of luxury.</p>
+                                            <form action="">
+                                                <div class="input-group mb-4">
+                                                    <input name="email" type="email" class="form-control rounded-0 border-black py-3 roboto-light ls-1" placeholder="Email address" aria-label="Email address" required />
+                                                    <button type="submit" class="input-group-text bg-black text-white rounded-0 border-black ms-2 roboto-light ls-1"><span>SIGN UP</span></button>
+                                                </div>
+                                            </form>
+                                            <p class="mb-0 roboto-light ls-1">
+                                                By providing your information, you agree to our Terms of Use and our Privacy Policy. We use vendors that may also process your information to help provide our services. This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
