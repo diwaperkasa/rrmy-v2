@@ -8,30 +8,30 @@
                             </a>
                         </div>
                         <div class="my-4">
-                            <p>Robb Report is leading voice in the global luxury market. Its discerning audience appreciates and desires quality, exclusivity, heritage, taste, and fine design. It is synonomous aith affluence, luxury, and the best of the best.</p>
-                            <p class="text-secondary text-uppercase">ROBB REPORT HONG KONG IS A TRADEMARK OF ROBB REPORT MEDIA, LLC © 2025 ROBB REPORT MEDIA, LLC. ALL RIGHTS RESERVED. PUBLISHED UNDER LICENSE FROM ROBB REPORT MEDIA, LLC, A SUBSIDIARY OF PENSKE MEDIA CORPORATION.</p>
+                            <p class="titling-gothic-fb-cond">Robb Report is leading voice in the global luxury market. Its discerning audience appreciates and desires quality, exclusivity, heritage, taste, and fine design. It is synonomous aith affluence, luxury, and the best of the best.</p>
+                            <p class="text-secondary text-uppercase titling-gothic-fb-cond">ROBB REPORT HONG KONG IS A TRADEMARK OF ROBB REPORT MEDIA, LLC © 2025 ROBB REPORT MEDIA, LLC. ALL RIGHTS RESERVED. PUBLISHED UNDER LICENSE FROM ROBB REPORT MEDIA, LLC, A SUBSIDIARY OF PENSKE MEDIA CORPORATION.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="row">
                             <div class="col-md-4">
-                                <h2 class="fw-normal h5">Sections</h2>
+                                <h2 class="fw-normal h5 titling-gothic-fb-cond">Sections</h2>
                             </div>
                             <div class="col-md-4">
-                                <h2 class="fw-normal h5">About</h2>
+                                <h2 class="fw-normal h5 titling-gothic-fb-cond">About</h2>
                             </div>
                             <div class="col-md-4">
-                                <h2 class="fw-normal h5">Legal</h2>
+                                <h2 class="fw-normal h5 titling-gothic-fb-cond">Legal</h2>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <h2 class="fw-normal h5">Newsletters</h2>
-                        <p>Get Robb Report Hong Kong’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
+                        <h2 class="fw-normal h5 titling-gothic-fb-cond">Newsletters</h2>
+                        <p class="titling-gothic-fb-cond">Get Robb Report Hong Kong’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
                         <form action="">
                             <div class="input-group mb-3">
-                                <input name="email" type="email" class="form-control bg-black rounded-0 border text-white" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
-                                <button type="submit" class="input-group-text rounded-0">SIGN UP</button>
+                                <input name="email" type="email" class="form-control bg-black rounded-0 border text-white titling-gothic-fb-cond" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
+                                <button type="submit" class="input-group-text rounded-0 titling-gothic-fb-cond">SIGN UP</button>
                             </div>
                         </form>
                     </div>
