@@ -137,29 +137,31 @@
                         </a>
                     </div>
                 </section>
-                <div class="row">
-                    <?php foreach ($category['child_category'] as $childCategory): ?>
-                        <div class="col-md-6">
-                            <section id="<?= $childCategory->name ?>-category" class="mb-3">
-                                <header class="mb-3">
-                                    <h2 class="sweet-sans-pro ls-2 text-center text-uppercase section-heading">
-                                        <span class="px-4"><?= $childCategory->name ?></span>
-                                    </h2>
-                                </header>
-                                <div class="row">
-                                    <div class="col-12"></div>
-                                    <div class="col-12"></div>
-                                    <div class="col-12"></div>
-                                </div>
-                                <div class="text-center p-3 mb-3">
-                                    <a href="<?=  get_term_link($childCategory->term_id) ?>" class="text-decoration-none bg-dark text-uppercase text-white sweet-sans-pro mb-3 fs-5 p-3">
-                                        <span class="p-2 mx-3">MORE <?= $childCategory->name ?> STORIES</span>
-                                    </a>
-                                </div>
-                            </section>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
+                <?php if ($category['child_category']): ?>
+                    <div class="row">
+                        <?php foreach ($category['child_category'] as $childCategory): ?>
+                            <div class="col-md-6">
+                                <section id="<?= $childCategory->name ?>-category" class="mb-3">
+                                    <header class="mb-3">
+                                        <h2 class="sweet-sans-pro ls-2 text-center text-uppercase section-heading">
+                                            <span class="px-4"><?= $childCategory->name ?></span>
+                                        </h2>
+                                    </header>
+                                    <div class="row">
+                                        <div class="col-12"></div>
+                                        <div class="col-12"></div>
+                                        <div class="col-12"></div>
+                                    </div>
+                                    <div class="text-center p-3 mb-3">
+                                        <a href="<?=  get_term_link($childCategory->term_id) ?>" class="text-decoration-none bg-dark text-uppercase text-white sweet-sans-pro mb-3 fs-5 p-3">
+                                            <span class="p-2 mx-3">MORE <?= $childCategory->name ?> STORIES</span>
+                                        </a>
+                                    </div>
+                                </section>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif ?>
             <?php endforeach; ?>
         </section>
     </div>
