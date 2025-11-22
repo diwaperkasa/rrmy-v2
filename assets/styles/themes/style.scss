@@ -1,4 +1,12 @@
 // your custom styles here
+.article-title {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+}
+
 .form-control:focus {
     outline: none !important;
     box-shadow: none !important;
@@ -104,7 +112,7 @@ a.hover-border::before {
 .ls-5   { letter-spacing: 5px; }
 
 .transition-color-hover {
-    transition: color .5s ease;
+    transition: color .3s ease;
 }
 
 /* Background Hover Utilities */
