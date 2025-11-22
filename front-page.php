@@ -31,7 +31,7 @@
                                         <a class="text-decoration-none category-article sweet-sans-pro ls-1" href="<?= get_term_link($categories[0]->term_id) ?>"><h3 class="fs-6 text-center text-danger text-uppercase sweet-sans-font"><?= $categories[0]->name ?></h3></a>
                                     <?php endif; ?>
                                     <a class="text-decoration-none" href="<?= get_the_permalink(); ?>">
-                                        <h1 class="article-title text-dark fw-bold h2 arnhem-bold"><?php the_title(); ?></h1>
+                                        <h1 class="article-title text-dark fw-bold h2 arnhem-bold text-danger-hover transition-color-hover"><?php the_title(); ?></h1>
                                     </a>
                                     <?php if ($shortDesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true)): ?>
                                         <div class="article-shortdesc">
@@ -53,11 +53,11 @@
                                     <?php $categories = get_the_category(get_the_ID()) ?>
                                     <?php if ($categories): ?>
                                         <a class="text-decoration-none category-article" href="<?= get_term_link($categories[0]->term_id) ?>">
-                                            <h3 class="fs-6 text-center text-danger text-uppercase sweet-sans-pro ls-1"><?= $categories[0]->name ?></h3>
+                                            <span class="h3 fs-6 text-center text-danger text-uppercase sweet-sans-pro ls-1"><?= $categories[0]->name ?></span>
                                         </a>
                                     <?php endif; ?>
                                     <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
-                                        <h2 class="article-title text-dark fw-bold h3 arnhem-bold"><?php the_title() ?></h2>
+                                        <h2 class="article-title text-dark fw-bold h3 arnhem-bold text-danger-hover transition-color-hover"><?php the_title() ?></h2>
                                     </a>
                                 </div>
                             </article>
@@ -91,7 +91,7 @@
                                     </a>
                                 <?php endif; ?>
                                 <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
-                                    <h3 class="article-title text-dark fw-bold arnhem-bold"><?php the_title() ?></h3>
+                                    <h3 class="article-title text-dark fw-bold arnhem-bold text-danger-hover transition-color-hover"><?php the_title() ?></h3>
                                 </a>
                                 <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
                                 <?php if ($writers): ?>
@@ -99,7 +99,7 @@
                                         <span>
                                             <span class="fst-italic georgia-italic">By</span>
                                             <?php foreach ($writers as $writer): ?>
-                                                <a class="ms-1 text-decoration-none text-dark sweet-sans-pro ls-1" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
+                                                <a class="ms-1 text-decoration-none text-dark sweet-sans-pro ls-1 text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
                                             <?php endforeach; ?>
                                         </span>
                                     </div>

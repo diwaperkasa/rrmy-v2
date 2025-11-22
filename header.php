@@ -68,7 +68,7 @@
                         </a>
                     </div>
                     <div class="header-img">
-                        <a class="text-uppercase text-black text-decoration-none fw-normal subsribe-hover roboto" href="">SUBSCRIBE</a>
+                        <a class="text-uppercase text-black text-decoration-none fw-normal subsribe-hover roboto ls-1" href="">SUBSCRIBE</a>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="collapse navbar-collapse primary-menu">
-                        <?php $primaryMenus = wp_get_nav_menu_items('primary-menu'); ?>
+                        <?php $primaryMenus = get_wp_menu_tree('header'); ?>
                         <?php if ($primaryMenus): ?>
                             <ul class="navbar-nav text-nowrap flex-wrap me-auto mb-2 mb-lg-0 fw-bold align-items-center">
                                 <li class="nav-item flex-shrink-0 hidden-menu rr-top-menu d-none">
@@ -99,11 +99,9 @@
                                     </a>
                                 </li>
                                 <?php foreach ($primaryMenus as $menu): ?>
-                                    <?php if ($menu->menu_item_parent == 0): ?>
-                                        <li class="nav-item flex-shrink-0">
-                                            <a class="nav-link text-uppercase text-black text-decoration-none fw-normal sweet-sans-pro ls-1" aria-current="page" href="<?= $menu->url ?>"><?= $menu->title ?></a>
-                                        </li>
-                                    <?php endif; ?>
+                                    <li class="nav-item flex-shrink-0">
+                                        <a class="nav-link text-uppercase text-black text-decoration-none fw-normal sweet-sans-pro ls-1 text-secondary-hover transition-color-hover" aria-current="page" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                                    </li>
                                 <?php endforeach; ?>
                                 <li class="nav-item border-start border-1 border-secondary d-none hidden-menu subscribe-menu">
                                     <a class="nav-link py-0 text-uppercase text-black text-decoration-none fw-normal subsribe-hover titling-gothic-fb-cond ls-1" aria-current="page" href="javascript:void(0);">Subscribe</a>
@@ -139,11 +137,9 @@
                 <div class="d-block d-lg-none slider-menu-mobile">
                     <div class="d-flex overflow-auto gap-3 pb-2">
                         <?php foreach ($primaryMenus as $menu): ?>
-                            <?php if ($menu->menu_item_parent == 0): ?>
-                                <div class="flex-shrink-0">
-                                    <a class="text-uppercase text-secondary text-decoration-none" href="<?= $menu->url ?>"><?= $menu->title ?></a>
-                                </div>
-                            <?php endif ?>
+                            <div class="flex-shrink-0">
+                                <a class="text-uppercase text-secondary text-decoration-none" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                            </div>
                         <?php endforeach; ?>
                     </div>
                 </div>

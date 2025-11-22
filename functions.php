@@ -171,6 +171,7 @@ function barebones_register_nav_menus() {
     register_nav_menus([
         'header' => 'Header',
         'footer' => 'Footer',
+        'mega-menu' => 'Mega Menu',
     ]);
 }
 

@@ -84,6 +84,30 @@ a.hover-border::before {
 .ls-4   { letter-spacing: 4px; }
 .ls-5   { letter-spacing: 5px; }
 
+.transition-color-hover {
+    transition: color .5s ease;
+}
+
+/* Background Hover Utilities */
+.bg-primary-hover:hover { background-color: var(--bs-primary) !important; }
+.bg-secondary-hover:hover { background-color: var(--bs-secondary) !important; }
+.bg-success-hover:hover { background-color: var(--bs-success) !important; }
+.bg-danger-hover:hover { background-color: var(--bs-danger) !important; }
+.bg-warning-hover:hover { background-color: var(--bs-warning) !important; }
+.bg-info-hover:hover { background-color: var(--bs-info) !important; }
+.bg-light-hover:hover { background-color: var(--bs-light) !important; }
+.bg-dark-hover:hover { background-color: var(--bs-dark) !important; }
+
+/* Text Hover Utilities */
+.text-primary-hover:hover { color: var(--bs-primary) !important; }
+.text-secondary-hover:hover { color: var(--bs-secondary) !important; }
+.text-success-hover:hover { color: var(--bs-success) !important; }
+.text-danger-hover:hover { color: var(--bs-danger) !important; }
+.text-warning-hover:hover { color: var(--bs-warning) !important; }
+.text-info-hover:hover { color: var(--bs-info) !important; }
+.text-light-hover:hover { color: var(--bs-light) !important; }
+.text-dark-hover:hover { color: var(--bs-dark) !important; }
+
 .horizontal-line {
     position: relative;
 }
@@ -99,10 +123,4 @@ a.hover-border::before {
     bottom: 0;
     width: 100%;
     z-index: -1;
-}
-
-#latest-article {
-    .section-heading {
-        line-height: 24px;
-    }
 }

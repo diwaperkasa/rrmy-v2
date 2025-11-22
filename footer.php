@@ -13,16 +13,20 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        <?php $menus = get_wp_menu_tree('footer'); ?>
                         <div class="row">
-                            <div class="col-md-4">
-                                <h2 class="fw-normal h5 titling-gothic-fb-cond">Sections</h2>
-                            </div>
-                            <div class="col-md-4">
-                                <h2 class="fw-normal h5 titling-gothic-fb-cond">About</h2>
-                            </div>
-                            <div class="col-md-4">
-                                <h2 class="fw-normal h5 titling-gothic-fb-cond">Legal</h2>
-                            </div>
+                            <?php foreach ($menus as $menu): ?>
+                                <div class="col-md-4 col-sm-6">
+                                    <h2 class="fw-normal h5 titling-gothic-fb-cond"><?= $menu['title'] ?></h2>
+                                    <ul class="list-unstyled">
+                                        <?php foreach ($menu['children'] as $children): ?>
+                                            <li>
+                                                <a href="<?= $children['url'] ?>" class="text-decoration-none titling-gothic-fb-cond text-white text-danger-hover transition-color-hover"><?= $children['title'] ?></a>
+                                            </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                     <div class="col-lg-3">

@@ -37,8 +37,8 @@ function theme_setup()
     /*  Enable support for Post Formats */
     add_theme_support('post-formats', array('video'));
     /* Register Menus */
-    register_nav_menus( [
-        'mobile_menu' => __( 'Mobile', 'rrmy' ),
+    register_nav_menus([
+        'mobile_menu' => __('Mobile', 'rrmy'),
     ]);
 }
 
@@ -127,3 +127,56 @@ function force_feed($feed)
 }
 
 add_action('wp_feed_options', 'force_feed', 10, 1);
+
+function get_wp_menu_tree($menu_location = 'primary')
+{
+    $locations = get_nav_menu_locations();
+
+    if (!isset($locations[$menu_location])) {
+        return [];
+    }
+
+    $menu_id = $locations[$menu_location];
+    $items   = wp_get_nav_menu_items($menu_id);
+
+    $menu_tree = [];
+    $children  = [];
+
+    // Group children by parent
+    foreach ($items as $item) {
+        $parent_id = intval($item->menu_item_parent);
+
+        if ($parent_id === 0) {
+            $menu_tree[$item->ID] = [
+                'id'       => $item->ID,
+                'title'    => $item->title,
+                'url'      => $item->url,
+                'object'   => $item->object,
+                'children' => []
+            ];
+        } else {
+            $children[$parent_id][] = [
+                'id'       => $item->ID,
+                'title'    => $item->title,
+                'url'      => $item->url,
+                'object'   => $item->object,
+                'parent'   => $parent_id,
+                'children' => []
+            ];
+        }
+    }
+
+    // Assign nested children recursively
+    $add_children = function (&$parents) use (&$children, &$add_children) {
+        foreach ($parents as &$parent) {
+            if (!empty($children[$parent['id']])) {
+                $parent['children'] = $children[$parent['id']];
+                $add_children($parent['children']);
+            }
+        }
+    };
+
+    $add_children($menu_tree);
+
+    return array_values($menu_tree);
+}
