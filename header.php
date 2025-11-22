@@ -142,7 +142,7 @@
                             </ul>
                         <?php endif; ?>
                     </div>
-                    <span type="button" class="text-danger ps-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSearch" aria-controls="offcanvasSearch">
+                    <span type="button" class="text-danger ps-2 search-btn">
                         <svg fill="#fff" stroke="#d02027" width="24" height="24" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
                             <title>Search</title>
                             <g transform="translate(.7)" stroke-width="1.58" fill="none" fill-rule="evenodd">
@@ -163,40 +163,60 @@
                 </div>
                 <div class="position-relative subsribe-popup d-none">
                     <div class="position-absolute w-100">
-                        <div class="subsribe-popup-container">
-                            <div class="shadow">
-                                <div class="row bg-white ">
-                                    <div class="col-md-6 py-4">
-                                        <div class="row border-end h-100">
-                                            <div class="col-md-4">
-                                                <div class="d-flex align-items-center justify-content-center h-100">
-                                                    <img class="img-fluid" src="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp" alt="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp">
-                                                </div>
+                        <div class="subsribe-popup-container shadow">
+                            <div class="row bg-white">
+                                <div class="col-md-6 py-4">
+                                    <div class="row border-end h-100">
+                                        <div class="col-md-4">
+                                            <div class="d-flex align-items-center justify-content-center h-100">
+                                                <img class="img-fluid" src="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp" alt="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp">
                                             </div>
-                                            <div class="col-md-8 d-none d-md-block">
-                                                <div class="py-3">
-                                                    <h3 class="text-uppercase mb-4 sweet-sans-pro ls-1">Get The Magazine</h3>
-                                                    <p class="roboto-light ls-1">Subscribe now and get up to 61% off the cover price.</p>
-                                                    <p class="roboto-light ls-1">Includes digital magazine access and the exclusive Robb Report tote bag.</p>
-                                                    <button class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 roboto-light ls-1">SUBSCRIBE</button>
-                                                </div>
+                                        </div>
+                                        <div class="col-md-8 d-none d-md-block">
+                                            <div class="py-3">
+                                                <h3 class="text-uppercase mb-4 sweet-sans-pro ls-1">Get The Magazine</h3>
+                                                <p class="roboto-light ls-1">Subscribe now and get up to 61% off the cover price.</p>
+                                                <p class="roboto-light ls-1">Includes digital magazine access and the exclusive Robb Report tote bag.</p>
+                                                <button class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 roboto-light ls-1">SUBSCRIBE</button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 py-4">
-                                        <div class="py-3 px-5">
-                                            <h3 class="text-uppercase mb-4 text-center sweet-sans-pro ls-1">Newsletter</h3>
-                                            <p class="text-center mb-4 roboto-light ls-1">Sign up for our newsletter and go inside a world of luxury.</p>
-                                            <form action="">
-                                                <div class="input-group mb-4">
-                                                    <input name="email" type="email" class="form-control rounded-0 border-black py-3 roboto-light ls-1" placeholder="Email address" aria-label="Email address" required />
-                                                    <button type="submit" class="input-group-text bg-black text-white rounded-0 border-black ms-2 roboto-light ls-1"><span>SIGN UP</span></button>
-                                                </div>
-                                            </form>
-                                            <p class="mb-0 roboto-light ls-1">
-                                                By providing your information, you agree to our Terms of Use and our Privacy Policy. We use vendors that may also process your information to help provide our services. This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
-                                            </p>
-                                        </div>
+                                </div>
+                                <div class="col-md-6 py-4">
+                                    <div class="py-3 px-5">
+                                        <h3 class="text-uppercase mb-4 text-center sweet-sans-pro ls-1">Newsletter</h3>
+                                        <p class="text-center mb-4 roboto-light ls-1">Sign up for our newsletter and go inside a world of luxury.</p>
+                                        <form action="">
+                                            <div class="input-group mb-4">
+                                                <input name="email" type="email" class="form-control rounded-0 border-black py-3 roboto-light ls-1" placeholder="Email address" aria-label="Email address" required />
+                                                <button type="submit" class="input-group-text bg-black text-white rounded-0 border-black ms-2 roboto-light ls-1"><span>SIGN UP</span></button>
+                                            </div>
+                                        </form>
+                                        <p class="mb-0 roboto-light ls-1">
+                                            By providing your information, you agree to our Terms of Use and our Privacy Policy. We use vendors that may also process your information to help provide our services. This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="position-relative search-popup d-none">
+                    <div class="position-absolute w-100">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="search-popup-container bg-white shadow">
+                                    <div class="pt-2 p-3">
+                                        <form action="/">
+                                            <div class="input-group">
+                                                <button type="submit" class="bg-transparent input-group-text border-0 rounded-0 border-bottom border-black">
+                                                    <svg fill="#000" class="text-white" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                                        <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z" />
+                                                    </svg>
+                                                </button>
+                                                <input name="s" type="search" class="bg-transparent form-control border-0 rounded-0 border-bottom border-black" type="search" placeholder="Type your keywords..." required />
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

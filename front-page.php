@@ -3,16 +3,16 @@
 <main class="main" role="main">
     <div class="container">
         <?php
-        $query = new WP_Query([
-            'posts_per_page' => get_field('how_many_articles_to_show'),
-            'post_status' => 'publish',
-            'post_type' => 'post',
-            'orderby' => 'date',
-            'order' => 'DESC'
-        ]);
+            $query = new WP_Query([
+                'posts_per_page' => get_field('how_many_articles_to_show'),
+                'post_status' => 'publish',
+                'post_type' => 'post',
+                'orderby' => 'date',
+                'order' => 'DESC'
+            ]);
 
-        $recentPosts = $query->posts;
-        $pinnedArticles = array_splice($recentPosts, 0, 4);
+            $recentPosts = $query->posts;
+            $pinnedArticles = array_splice($recentPosts, 0, 4);
         ?>
         <section id="main-banner" class="mb-3">
             <div class="row">

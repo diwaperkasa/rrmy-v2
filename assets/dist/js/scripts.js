@@ -82,6 +82,26 @@ subsribePopupContainer.addEventListener('mouseleave', () => {
     }
 })
 
+const searchBtn = document.querySelectorAll('.search-btn');
+const searchPopup = document.querySelector('.search-popup');
+const searchPopupContainer = document.querySelector('.search-popup-container');
+
+searchBtn.forEach(element => {
+    element.addEventListener('click', () => {
+        if (searchPopup.classList.contains('d-none')) {
+            searchPopup.classList.remove('d-none');
+        } else {
+            searchPopup.classList.add('d-none');
+        }
+    })
+});
+
+searchPopupContainer.addEventListener('mouseleave', () => {
+    if (!searchPopup.classList.contains('d-none')) {
+        searchPopup.classList.add('d-none');
+    }
+})
+
 const imageGalleries = document.querySelectorAll('.gallery');
 
 imageGalleries.forEach((gallery) => {
