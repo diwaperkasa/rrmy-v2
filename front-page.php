@@ -121,6 +121,25 @@
                 $selectedCategories = get_field('selected_categories');
             ?>
             <?php foreach ($selectedCategories as $category): ?>
+                <?php
+                    $query = new WP_Query([
+                        'posts_per_page' => get_field('how_many_article_category_to_show'),
+                        'post_status' => 'publish',
+                        'post_type' => 'post',
+                        'orderby' => 'date',
+                        'order' => 'DESC',
+                        'tax_query' => [
+                            [
+                                'taxonomy' => 'category',
+                                'field'    => 'term_id',
+                                'terms'    => $category['main_category']->term_id,
+                            ]
+                        ]
+                    ]);
+
+                    $articles = $query->posts;
+                    $cover = array_shift($articles);
+                ?>
                 <section id="<?= $category['main_category']->name ?>-category" class="border-bottom mb-3">
                     <header class="mb-3">
                         <h2 class="sweet-sans-pro ls-2 horizontal-line text-center text-uppercase section-heading">
@@ -128,8 +147,16 @@
                         </h2>
                     </header>
                     <div class="row">
-                        <div class="col-md-7"></div>
-                        <div class="col-md-5"></div>
+                        <div class="col-md-7">
+
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <?php foreach ($articles as $article): ?>
+                                    <div class="col-12"></div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
                     </div>
                     <div class="text-center p-3 mb-3">
                         <a href="<?=  get_term_link($category['main_category']->term_id) ?>" class="text-decoration-none bg-dark text-uppercase text-white sweet-sans-pro mb-3 fs-5 p-3">
@@ -140,17 +167,99 @@
                 <?php if ($category['child_category']): ?>
                     <div class="row">
                         <?php foreach ($category['child_category'] as $childCategory): ?>
+                            <?php
+                                $query = new WP_Query([
+                                    'posts_per_page' => get_field('how_many_article_category_to_show'),
+                                    'post_status' => 'publish',
+                                    'post_type' => 'post',
+                                    'orderby' => 'date',
+                                    'order' => 'DESC',
+                                    'tax_query' => [
+                                        [
+                                            'taxonomy' => 'category',
+                                            'field'    => 'term_id',
+                                            'terms'    => $childCategory->term_id,
+                                        ]
+                                    ]
+                                ]);
+
+                                $articles = $query->posts;
+                                $post = array_shift($articles);
+                            ?>
                             <div class="col-md-6">
                                 <section id="<?= $childCategory->name ?>-category" class="mb-3">
+                                    <?php setup_postdata($post); ?>
                                     <header class="mb-3">
                                         <h2 class="sweet-sans-pro ls-2 text-center text-uppercase section-heading">
                                             <span class="px-4"><?= $childCategory->name ?></span>
                                         </h2>
                                     </header>
                                     <div class="row">
-                                        <div class="col-12"></div>
-                                        <div class="col-12"></div>
-                                        <div class="col-12"></div>
+                                        <div class="col-12">
+                                            <article <?php post_class('border-bottom mb-4', get_the_ID()) ?>>
+                                                <div class="img-hover-zoom">
+                                                    <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
+                                                        <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
+                                                    </a>
+                                                </div>
+                                                <div class="text-center mb-3">
+                                                    <a class="text-decoration-none" href="<?= get_the_permalink(); ?>">
+                                                        <h3 class="h4 article-title text-dark fw-bold h2 arnhem-bold text-secondary-hover transition-color-hover"><?php the_title(); ?></h3>
+                                                    </a>
+                                                    <?php if ($shortDesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true)): ?>
+                                                        <div class="article-shortdesc">
+                                                            <p class="fw-light fs-5 text-dark roboto-light"><?= $shortDesc; ?></p>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                    <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
+                                                    <?php if ($writers): ?>
+                                                        <div class="article-writter fw-light">
+                                                            <span>
+                                                                <span class="fst-italic georgia-italic">By</span>
+                                                                <?php foreach ($writers as $writer): ?>
+                                                                    <a class="ms-1 text-decoration-none text-dark sweet-sans-pro ls-1 text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
+                                                                <?php endforeach; ?>
+                                                            </span>
+                                                        </div>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <?php wp_reset_postdata(); ?>
+                                        <?php foreach ($articles as $post): setup_postdata($post); ?>
+                                            <div class="col-12">
+                                                <article <?php post_class('border-bottom mb-4', get_the_ID()) ?>>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="img-hover-zoom">
+                                                                <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
+                                                                    <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="text-center text-md-start mb-3">
+                                                                <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
+                                                                    <h3 class="h4 article-title text-dark fw-bold arnhem-bold text-secondary-hover transition-color-hover"><?php the_title() ?></h3>
+                                                                </a>
+                                                                <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
+                                                                <?php if ($writers): ?>
+                                                                    <div class="article-writter text-center text-md-start fw-light">
+                                                                        <span>
+                                                                            <span class="fst-italic georgia-italic">By</span>
+                                                                            <?php foreach ($writers as $writer): ?>
+                                                                                <a class="ms-1 text-decoration-none text-dark sweet-sans-pro ls-1 text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
+                                                                            <?php endforeach; ?>
+                                                                        </span>
+                                                                    </div>
+                                                                <?php endif; ?>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                        <?php endforeach; ?>
+                                        <?php wp_reset_postdata(); ?>
                                     </div>
                                     <div class="text-center p-3 mb-3">
                                         <a href="<?=  get_term_link($childCategory->term_id) ?>" class="text-decoration-none bg-dark text-uppercase text-white sweet-sans-pro mb-3 fs-5 p-3">
