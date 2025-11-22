@@ -4,8 +4,9 @@
     "fields": [
         {
             "key": "field_5b9889970ca3d",
-            "label": "Carousel",
+            "label": "Latest Article",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -15,13 +16,15 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0
+            "placement": "left",
+            "endpoint": 1,
+            "selected": 0
         },
         {
             "key": "field_5b988b578d589",
-            "label": "How many articles to show?",
+            "label": "How many latest articles to show?",
             "name": "how_many_articles_to_show",
+            "aria-label": "",
             "type": "number",
             "instructions": "Excludes sticky posts",
             "required": 0,
@@ -31,18 +34,20 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
+            "default_value": 12,
             "min": "",
             "max": "",
-            "step": ""
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "step": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_5bb192a69b0d2",
             "label": "Articles",
             "name": "articles",
+            "aria-label": "",
             "type": "relationship",
             "instructions": "",
             "required": 0,
@@ -64,12 +69,14 @@
             ],
             "min": "",
             "max": "",
-            "return_format": "id"
+            "return_format": "id",
+            "bidirectional_target": []
         },
         {
-            "key": "field_5b63f92984357",
-            "label": "Quotes",
+            "key": "field_692185bc6429d",
+            "label": "Article Category",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -80,12 +87,36 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_692185db6429e",
+            "label": "How many article category to show?",
+            "name": "how_many_article_category_to_show",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_5b9888be46db8",
-            "label": "Contents",
-            "name": "contents",
+            "label": "Selected Categories",
+            "name": "selected_categories",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -98,14 +129,15 @@
             "collapsed": "",
             "min": 0,
             "max": 0,
-            "layout": "table",
-            "button_label": "",
+            "layout": "block",
+            "button_label": "Add Row",
             "sub_fields": [
                 {
                     "key": "field_5b9888d446db9",
-                    "label": "Content",
-                    "name": "content",
-                    "type": "wysiwyg",
+                    "label": "Main Category",
+                    "name": "main_category",
+                    "aria-label": "",
+                    "type": "taxonomy",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -114,13 +146,46 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "taxonomy": "category",
+                    "field_type": "select",
+                    "allow_null": 0,
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_5b9888be46db8"
+                },
+                {
+                    "key": "field_69218e22f7979",
+                    "label": "Child Category",
+                    "name": "child_category",
+                    "aria-label": "",
+                    "type": "taxonomy",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "category",
+                    "add_term": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "return_format": "object",
+                    "field_type": "multi_select",
+                    "allow_null": 0,
+                    "allow_in_bindings": 1,
+                    "bidirectional": 0,
+                    "multiple": 0,
+                    "bidirectional_target": [],
+                    "parent_repeater": "field_5b9888be46db8"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         }
     ],
     "location": [
@@ -140,7 +205,8 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1585640867
+    "show_in_rest": 0,
+    "modified": 1763809621
 }

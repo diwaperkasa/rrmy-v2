@@ -3,16 +3,16 @@
 <main class="main" role="main">
     <div class="container">
         <?php
-            $query = new WP_Query([
-                'posts_per_page' => 14,
-                'post_status' => 'publish',
-                'post_type' => 'post',
-                'orderby' => 'date',
-                'order' => 'DESC'
-            ]);
+        $query = new WP_Query([
+            'posts_per_page' => get_field('how_many_articles_to_show'),
+            'post_status' => 'publish',
+            'post_type' => 'post',
+            'orderby' => 'date',
+            'order' => 'DESC'
+        ]);
 
-            $recentPosts = $query->posts;
-            $pinnedArticles = array_splice($recentPosts, 0, 4);
+        $recentPosts = $query->posts;
+        $pinnedArticles = array_splice($recentPosts, 0, 4);
         ?>
         <section id="main-banner" class="mb-3">
             <div class="row">
@@ -28,10 +28,12 @@
                                 <div class="mx-3 mx-md-5 p-3 position-relative text-center article-banner-title bg-white mb-3">
                                     <?php $categories = get_the_category(get_the_ID()) ?>
                                     <?php if ($categories): ?>
-                                        <a class="text-decoration-none category-article sweet-sans-pro ls-1" href="<?= get_term_link($categories[0]->term_id) ?>"><h3 class="fs-6 text-center text-danger text-uppercase sweet-sans-font"><?= $categories[0]->name ?></h3></a>
+                                        <a class="text-decoration-none category-article sweet-sans-pro ls-1" href="<?= get_term_link($categories[0]->term_id) ?>">
+                                            <span class="h3 fs-6 text-center text-danger text-uppercase sweet-sans-font"><?= $categories[0]->name ?></span>
+                                        </a>
                                     <?php endif; ?>
                                     <a class="text-decoration-none" href="<?= get_the_permalink(); ?>">
-                                        <h1 class="article-title text-dark fw-bold h2 arnhem-bold text-danger-hover transition-color-hover"><?php the_title(); ?></h1>
+                                        <h1 class="article-title text-dark fw-bold h2 arnhem-bold text-secondary-hover transition-color-hover"><?php the_title(); ?></h1>
                                     </a>
                                     <?php if ($shortDesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true)): ?>
                                         <div class="article-shortdesc">
@@ -57,7 +59,7 @@
                                         </a>
                                     <?php endif; ?>
                                     <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
-                                        <h2 class="article-title text-dark fw-bold h3 arnhem-bold text-danger-hover transition-color-hover"><?php the_title() ?></h2>
+                                        <h2 class="article-title text-dark fw-bold h3 arnhem-bold text-secondary-hover transition-color-hover"><?php the_title() ?></h2>
                                     </a>
                                 </div>
                             </article>
@@ -67,7 +69,10 @@
                 <?php wp_reset_postdata(); ?>
             </div>
         </section>
-        <section id="latest-article" class="mb-3">
+        <section id="advertise-section">
+
+        </section>
+        <section id="latest-article">
             <header class="mb-3">
                 <h2 class="sweet-sans-pro ls-2 horizontal-line text-center text-uppercase section-heading">
                     <span class="px-4 bg-white">The Latest</span>
@@ -86,16 +91,16 @@
                             <div class="text-center py-3 py-md-4">
                                 <?php $categories = get_the_category(get_the_ID()) ?>
                                 <?php if ($categories): ?>
-                                    <a class="text-decoration-none category-article" href="<?= get_term_link($categories[0]->term_id) ?>">
-                                        <h4 class="fs-6 text-center text-danger text-uppercase sweet-sans-pro ls-1"><?= $categories[0]->name ?></h4>
+                                    <a class="text-decoration-none article-category" href="<?= get_term_link($categories[0]->term_id) ?>">
+                                        <span class="h3 fs-6 text-center text-danger text-uppercase sweet-sans-pro ls-1"><?= $categories[0]->name ?></span>
                                     </a>
                                 <?php endif; ?>
                                 <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
-                                    <h3 class="article-title text-dark fw-bold arnhem-bold text-danger-hover transition-color-hover"><?php the_title() ?></h3>
+                                    <h3 class="article-title text-dark fw-bold arnhem-bold text-secondary-hover transition-color-hover"><?php the_title() ?></h3>
                                 </a>
                                 <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
                                 <?php if ($writers): ?>
-                                    <div class="categoty-article-writter text-lg-center fw-light">
+                                    <div class="article-writter text-lg-center fw-light">
                                         <span>
                                             <span class="fst-italic georgia-italic">By</span>
                                             <?php foreach ($writers as $writer): ?>
@@ -110,6 +115,52 @@
                 <?php endforeach; ?>
                 <?php wp_reset_postdata(); ?>
             </div>
+        </section>
+        <section id="selected-category">
+            <?php
+                $selectedCategories = get_field('selected_categories');
+            ?>
+            <?php foreach ($selectedCategories as $category): ?>
+                <section id="<?= $category['main_category']->name ?>-category" class="border-bottom mb-3">
+                    <header class="mb-3">
+                        <h2 class="sweet-sans-pro ls-2 horizontal-line text-center text-uppercase section-heading">
+                            <span class="px-4 bg-white"><?= $category['main_category']->name ?></span>
+                        </h2>
+                    </header>
+                    <div class="row">
+                        <div class="col-md-7"></div>
+                        <div class="col-md-5"></div>
+                    </div>
+                    <div class="text-center p-3 mb-3">
+                        <a href="<?=  get_term_link($category['main_category']->term_id) ?>" class="text-decoration-none bg-dark text-uppercase text-white sweet-sans-pro mb-3 fs-5 p-3">
+                            <span class="p-2 mx-3">MORE <?= $category['main_category']->name ?> STORIES</span>
+                        </a>
+                    </div>
+                </section>
+                <div class="row">
+                    <?php foreach ($category['child_category'] as $childCategory): ?>
+                        <div class="col-md-6">
+                            <section id="<?= $childCategory->name ?>-category" class="mb-3">
+                                <header class="mb-3">
+                                    <h2 class="sweet-sans-pro ls-2 text-center text-uppercase section-heading">
+                                        <span class="px-4"><?= $childCategory->name ?></span>
+                                    </h2>
+                                </header>
+                                <div class="row">
+                                    <div class="col-12"></div>
+                                    <div class="col-12"></div>
+                                    <div class="col-12"></div>
+                                </div>
+                                <div class="text-center p-3 mb-3">
+                                    <a href="<?=  get_term_link($childCategory->term_id) ?>" class="text-decoration-none bg-dark text-uppercase text-white sweet-sans-pro mb-3 fs-5 p-3">
+                                        <span class="p-2 mx-3">MORE <?= $childCategory->name ?> STORIES</span>
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
         </section>
     </div>
 </main>

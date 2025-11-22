@@ -44,9 +44,9 @@ function theme_setup()
 
 add_action('after_setup_theme', 'theme_setup');
 
-function my_acf_json_save_point($path)
-{
-    $path = get_stylesheet_directory() . '../flatsome-child/acf-json';
+function my_acf_json_save_point( $path ) {
+    $path = get_stylesheet_directory() . '/acf-json';
+
     return $path;
 }
 
