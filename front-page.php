@@ -116,7 +116,7 @@
                 <?php wp_reset_postdata(); ?>
             </div>
         </section>
-        <section id="selected-category">
+        <section id="selected-category" class="mb-5">
             <?php
                 $selectedCategories = get_field('selected_categories');
             ?>
@@ -262,7 +262,7 @@
                                         <?php wp_reset_postdata(); ?>
                                     </div>
                                     <div class="text-center p-3 mb-3">
-                                        <a href="<?=  get_term_link($childCategory->term_id) ?>" class="text-decoration-none bg-dark text-uppercase text-white sweet-sans-pro mb-3 fs-5 p-3">
+                                        <a href="<?= get_term_link($childCategory->term_id) ?>" class="text-decoration-none bg-dark text-uppercase text-white sweet-sans-pro mb-3 fs-5 p-3">
                                             <span class="p-2 mx-3">MORE <?= $childCategory->name ?> STORIES</span>
                                         </a>
                                     </div>
@@ -272,6 +272,9 @@
                     </div>
                 <?php endif ?>
             <?php endforeach; ?>
+        </section>
+        <section id="most-popular" class="mb-5">
+            <?php get_template_part('templates/components/most-popular') ?>
         </section>
     </div>
 </main>

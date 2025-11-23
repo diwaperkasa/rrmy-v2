@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "lora";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/lora/Lora-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "lora-italic";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/lora/Lora-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "lora-bold";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/lora/Lora-Bold.ttf") format("truetype");
+}
+
+.lora {
+    font-family: lora, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lora-italic {
+    font-family: lora-italic, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lora-bold {
+    font-family: lora-bold, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}

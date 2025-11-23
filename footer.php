@@ -31,13 +31,19 @@
                     </div>
                     <div class="col-lg-3">
                         <h2 class="fw-normal h5 titling-gothic-fb-cond">Newsletters</h2>
-                        <p class="titling-gothic-fb-cond">Get Robb Report Hong Kong’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
-                        <form action="">
-                            <div class="input-group mb-3">
-                                <input name="email" type="email" class="form-control bg-black rounded-0 border text-white titling-gothic-fb-cond" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
-                                <button type="submit" class="input-group-text rounded-0 titling-gothic-fb-cond">SIGN UP</button>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-6">
+                                <p class="titling-gothic-fb-cond">Get Robb Report Hong Kong’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
                             </div>
-                        </form>
+                            <div class="col-lg-12 col-md-6">
+                                <form action="/">
+                                    <div class="input-group mb-3">
+                                        <input name="email" type="email" class="form-control bg-black rounded-0 border text-white titling-gothic-fb-cond" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
+                                        <button type="submit" class="input-group-text rounded-0 titling-gothic-fb-cond">SIGN UP</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

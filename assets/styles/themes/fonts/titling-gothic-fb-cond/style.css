@@ -3,7 +3,21 @@
     src: url("../rrmy-v2/assets/styles/themes/fonts/titling-gothic-fb-cond/TitlingGothicFBCond-Regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "titling-gothic-fb-cond-bold";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/titling-gothic-fb-cond/TitlingGothicFBCond-Bold.otf") format("opentype");
+}
+
 .titling-gothic-fb-cond {
     font-family: titling-gothic-fb-cond, sans-serif;
     transform: translateY(2px);
+    font-weight: normal;
+    font-style: normal;
+}
+
+.titling-gothic-fb-cond-bold {
+    font-family: titling-gothic-fb-cond-bold, sans-serif;
+    transform: translateY(2px);
+    font-weight: normal;
+    font-style: normal;
 }

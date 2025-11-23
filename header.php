@@ -163,7 +163,7 @@
                 </div>
                 <div class="position-relative subsribe-popup d-none">
                     <div class="position-absolute w-100">
-                        <div class="subsribe-popup-container shadow">
+                        <div class="subsribe-popup-container shadow mt-2">
                             <div class="row bg-white">
                                 <div class="col-md-6 py-4">
                                     <div class="row border-end h-100">
@@ -205,7 +205,7 @@
                     <div class="position-absolute w-100">
                         <div class="row justify-content-center">
                             <div class="col-md-6">
-                                <div class="search-popup-container bg-white shadow">
+                                <div class="search-popup-container bg-white shadow mt-2">
                                     <div class="pt-2 p-3">
                                         <form action="/">
                                             <div class="input-group">
