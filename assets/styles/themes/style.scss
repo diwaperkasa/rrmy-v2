@@ -29,7 +29,8 @@
         font-family: oranienbaum;
     }
 
-    img iframe, p img, p iframe {
+    img iframe, * img, * iframe {
+        width: 100%;
         max-width: 100%;
         height: auto;
     }
