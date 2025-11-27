@@ -1,4 +1,16 @@
 // your custom styles here
+:root {
+  --bs-warning-rgb: 186, 142, 63
+}
+
+.carousel-desc {
+    bottom: 0;
+    width: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
 
 .post__content {
     p a {
@@ -9,8 +21,17 @@
         color: var(--bs-secondary) !important;
     }
 
-    p, h1, h2, h3 {
+    p, h1, h2, h3, h4, h5, h6 {
         margin-bottom: 3rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: oranienbaum;
+    }
+
+    img iframe, p img, p iframe {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -156,11 +177,12 @@ a.hover-border::before {
 .text-dark-hover:hover { color: var(--bs-dark) !important; }
 
 .horizontal-line {
+    z-index: 10;
     position: relative;
 }
 
 .horizontal-line::before {
-    border-top: .1px solid #000;
+    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
     content: "";
     margin: 0 auto;
     position: absolute;
@@ -175,4 +197,64 @@ a.hover-border::before {
 .post__related-story svg {
     min-width: 15px;
     min-height: 15px;
+}
+
+.active .article-title {
+    color: var(--bs-dark) !important;
+}
+
+.ratio-1x1 {
+    aspect-ratio: 1 / 1;
+}
+
+.ratio-2x1 {
+    aspect-ratio: 2 / 1;
+}
+
+.ratio-4x3 {
+    aspect-ratio: 4 / 3;
+}
+
+.ratio-16x9 {
+    aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 768px) {
+    .ratio-md-1x1 {
+        aspect-ratio: 1 / 1;
+    }
+
+    .ratio-md-2x1 {
+        aspect-ratio: 2 / 1;
+    }
+
+    .ratio-md-4x3 {
+        aspect-ratio: 4 / 3;
+    }
+
+    .ratio-md-16x9 {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (min-width: 992px) {
+    .ratio-lg-1x1 {
+        aspect-ratio: 1 / 1;
+    }
+
+    .ratio-lg-2x1 {
+        aspect-ratio: 2 / 1;
+    }
+
+    .ratio-lg-4x3 {
+        aspect-ratio: 4 / 3;
+    }
+
+    .ratio-lg-16x9 {
+        aspect-ratio: 16 / 9;
+    }
+}
+
+.fs-small {
+    font-size: .75rem !important;
 }

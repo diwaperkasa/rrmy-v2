@@ -42,7 +42,7 @@ const navbarAnimation = () => {
     }
 }
 
-navbarAnimation();
+// navbarAnimation();
 
 let isTransitioning = false;
 
@@ -56,6 +56,7 @@ navbar.addEventListener("transitionend", () => {
     isTransitioning = false;
 });
 
+/**
 window.addEventListener('scroll', () => {
     if (isTransitioning) {
         return;
@@ -63,6 +64,7 @@ window.addEventListener('scroll', () => {
 
     navbarAnimation();
 });
+*/
 
 const subsribeHover = document.querySelectorAll('.subsribe-hover');
 const subsribePopup = document.querySelector('.subsribe-popup');
@@ -113,3 +115,40 @@ imageGalleries.forEach((gallery) => {
         cellAlign: 'center'
     });
 })
+
+const carouselGallery = document.querySelector('.carousel-gallery');
+
+if (carouselGallery) {
+    const flkty = new Flickity(carouselGallery, {
+        freeScroll: false,
+        wrapAround: true,
+        pageDots: false,
+        autoPlay: false,
+        prevNextButtons: false,
+        cellAlign: 'center'
+    });
+
+    const carouselNav = document.querySelectorAll('.carousel-nav');
+    
+    carouselNav.forEach((element) => {
+        element.addEventListener('click', () => {
+            const id = element.dataset.id;
+            flkty.selectCell('#carousel-slide-' + id);
+        })
+    })
+
+    flkty.on('change', function() {
+        const currentSlide = flkty.selectedElement;
+        const id = currentSlide.dataset.id;
+
+        carouselNav.forEach((element) => {
+            element.classList.remove('active');
+        });
+
+        const element = document.querySelector('#carousel-nav-' + id)
+
+        if (element) {
+            element.classList.add('active');
+        }
+    });
+}

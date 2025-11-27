@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "mulish";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Regular.ttf") format("truetype");
+}
+
+.mulish {
+    font-family: mulish, sans-serif;
+    transform: translateY(2px);
+    font-weight: normal;
+    font-style: normal;
+}

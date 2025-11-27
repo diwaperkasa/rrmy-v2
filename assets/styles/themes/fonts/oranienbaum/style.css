@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "oranienbaum";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/oranienbaum/Oranienbaum-Regular.ttf") format("truetype");
+}
+
+.oranienbaum {
+    font-family: oranienbaum, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
