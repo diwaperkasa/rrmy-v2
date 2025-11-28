@@ -47,11 +47,11 @@
                         <div class="col-md-3 col-sm-6">
                             <div class="py-2">
                                 <div class="border-bottom mb-3">
-                                    <a href="<?= $menu['url'] ?>" class="text-white text-decoration-none text-danger-hover transition-color-hover fs-4 titling-gothic-fb-cond ls-3"><?= $menu['title'] ?></a>
+                                    <a href="<?= $menu['url'] ?>" class="text-white text-decoration-none text-danger-hover transition-color-hover fs-4 oranienbaum ls-3"><?= $menu['title'] ?></a>
                                 </div>
                                 <ul class="list-unstyled d-none d-md-block">
                                     <?php foreach ($menu['children'] as $childMenu): ?>
-                                        <li class="mb-2"><a href="<?= $childMenu['url'] ?>" class="text-white text-decoration-none text-danger-hover transition-color-hover fs-6 titling-gothic-fb-cond ls-3"><?= $childMenu['title'] ?></a></li>
+                                        <li class="mb-2"><a href="<?= $childMenu['url'] ?>" class="text-white text-decoration-none text-danger-hover transition-color-hover fs-6 mulish ls-3"><?= $childMenu['title'] ?></a></li>
                                     <?php endforeach; ?>
                                 </ul>
                             </div>

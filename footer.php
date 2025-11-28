@@ -1,3 +1,10 @@
+        <div class="leaderboard">
+            <div class="container">
+                <div class="leaderboard-bottom">
+                    
+                </div>
+            </div>
+        </div>
         <footer class="footer bg-black" role="contentinfo">
             <div class="container text-white py-4">
                 <div class="row">

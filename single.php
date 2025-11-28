@@ -25,18 +25,18 @@
                                     </div>
                                 <?php endif; ?>
                                 <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
-                                <?php if ($writers): ?>
-                                    <div class="article-writter text-center fw-light mb-3">
-                                        <span>
+                                <div class="article-writter text-center fw-light mb-3">
+                                    <span>
+                                        <?php if ($writers): ?>
                                             <span class="mulish text-uppercase">By</span>
                                             <?php foreach ($writers as $writer): ?>
                                                 <a class="text-decoration-none text-dark mulish text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
                                             <?php endforeach; ?>
                                             <span class="">|</span>
-                                            <span class="mulish text-uppercase"><?= date('F d, Y', strtotime($post->post_date)) ?></span>
-                                        </span>
-                                    </div>
-                                <?php endif; ?>
+                                        <?php endif; ?>
+                                        <span class="mulish text-uppercase"><?= date('F d, Y', strtotime($post->post_date)) ?></span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                         <div class="post__share-btn mb-3">
@@ -89,13 +89,6 @@
             <section id="most-popular" class="pb-4">
                 <?php get_template_part('templates/components/most-popular') ?>
             </section>
-        </div>
-    </div>
-    <div class="leaderboard">
-        <div class="container">
-            <div class="leaderboard-bottom">
-                
-            </div>
         </div>
     </div>
 </main>

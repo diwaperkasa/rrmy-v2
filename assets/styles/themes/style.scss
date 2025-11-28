@@ -34,6 +34,10 @@
         max-width: 100%;
         height: auto;
     }
+
+    iframe, * iframe {
+        aspect-ratio: 16 / 9;
+    }
 }
 
 .wp-caption {

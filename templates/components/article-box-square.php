@@ -22,11 +22,13 @@
                     <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
                     <div class="article-writter fw-light">
                         <span>
-                            <span class="fs-small mulish text-uppercase">By</span>
-                            <?php foreach ($writers as $writer): ?>
-                                <a class="fs-small text-decoration-none text-dark mulish text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
-                            <?php endforeach; ?>
-                            <span class="mulish fs-small">|</span>
+                            <?php if ($writers): ?>
+                                <span class="fs-small mulish text-uppercase">By</span>
+                                <?php foreach ($writers as $writer): ?>
+                                    <a class="fs-small text-decoration-none text-dark mulish text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
+                                <?php endforeach; ?>
+                                <span class="mulish fs-small">|</span>
+                            <?php endif ?>
                         </span>
                         <span class="mulish text-uppercase fs-small"><?= date('F d, Y', strtotime($post->post_date)) ?></span>
                     </div>

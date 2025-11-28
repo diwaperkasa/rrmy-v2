@@ -1,7 +1,7 @@
 <div class="py-5">
     <div class="row justify-content-center">
         <div class="col-md-5">
-            <div class="d-flex h-100 align-items-center pe-md-4 border-end">
+            <div class="d-flex h-100 align-items-center pe-md-4 border-end pb-4 pb-md-0">
                 <p class="mb-0 oranienbaum h4">
                     Get Robb Report Malaysia’s take on what matters most in the world of the luxury, delivered to your inbox.
                 </p>
@@ -14,7 +14,7 @@
                 </p>
                 <form action="/">
                     <div class="input-group mb-3">
-                        <input name="email" type="email" class="form-control rounded-0 border border-black text-dark mulish" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
+                        <input name="email" type="email" class="form-control rounded-0 border border-black text-dark mulish bg-transparent" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
                         <button type="submit" class="input-group-text rounded-0 mulish border border-black text-white bg-black">SIGN UP</button>
                     </div>
                 </form>
