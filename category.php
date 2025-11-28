@@ -24,7 +24,7 @@ $topArticles = array_splice($articles, 0, 3);
 
 
 <main class="main" role="main">
-    <div class="border-bottom">
+    <div class="border-bottom bg-light">
         <div class="container">
             <section id="latest-category-article">
                 <header class="py-4">
@@ -60,7 +60,7 @@ $topArticles = array_splice($articles, 0, 3);
                     </div>
                     <div class="py-4">
                         <div class="horizontal-line text-center text-uppercase">
-                            <button class="btn px-4 border-0 rounded-0 bg-white more-btn">
+                            <button class="btn px-4 border-0 rounded-0 more-btn bg-light">
                                 <span class="oranienbaum h3 loading-text text-secondary-hover transition-color-hover">Read More Stories</span>
                             </button>
                         </div>
@@ -74,14 +74,14 @@ $topArticles = array_splice($articles, 0, 3);
             </div>
         </div>
     </div>
-    <div class="border-bottom bg-light">
+    <div class="border-bottom">
         <div class="container">
             <section id="newsletter">
                 <?php get_template_part('templates/components/newsletter') ?>
             </section>
         </div>
     </div>
-    <div class="border-bottom">
+    <div class="border-bottom bg-light">
         <div class="container">
             <section id="most-popular" class="pb-4">
                 <?php get_template_part('templates/components/most-popular') ?>

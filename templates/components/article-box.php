@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="flex-grow-1">
-        <div class="article-footer bg-white h-100 d-flex flex-column justify-content-between">
+        <div class="article-footer h-100 d-flex flex-column justify-content-between">
             <div class="article-desc">
                 <?php $categories = get_the_category(get_the_ID()) ?>
                 <?php if ($categories): ?>
