@@ -9,7 +9,7 @@
     <div class="position-relative">
         <div class="position-absolute bottom-0">
             <div class="p-3">
-                <div style="--bs-bg-opacity: .3" class="bg-white p-3">
+                <div style="--bs-bg-opacity: .75" class="bg-white p-3">
                     <?php $categories = get_the_category(get_the_ID()) ?>
                     <?php if ($categories): ?>
                         <div class="mb-1">
