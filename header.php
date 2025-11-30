@@ -66,7 +66,7 @@
             
         </div>
     </div>
-    <div class="bg-white" id="main-nav">
+    <div class="bg-white border-bottom main-nav" id="main-nav">
         <div class="container">
             <header class="header d-none d-lg-block border-bottom">
                 <div class="d-flex justify-content-between align-items-center">
@@ -118,7 +118,7 @@
                     </div>
                 </div>
             </header>
-            <div id="containerNav" class="border-bottom">
+            <div id="containerNav">
                 <nav class="navbar navbar-expand-lg p-0" id="mainNavbar">
                     <span type="button" class="d-block d-lg-none text-danger pe-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
                         <svg fill="#fff" stroke="#d02027" width="24" height="24" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">

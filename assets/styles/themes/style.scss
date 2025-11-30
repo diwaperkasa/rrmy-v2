@@ -1,6 +1,6 @@
 // your custom styles here
 :root {
-  --bs-warning-rgb: 186, 142, 63
+    --bs-warning-rgb: 186, 142, 63
 }
 
 .carousel-desc {
@@ -21,21 +21,35 @@
         color: var(--bs-secondary) !important;
     }
 
-    p, h1, h2, h3, h4, h5, h6 {
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         margin-bottom: 3rem;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: oranienbaum;
     }
 
-    img iframe, * img, * iframe {
+    img iframe,
+    * img,
+    * iframe {
         width: 100%;
         max-width: 100%;
         height: auto;
     }
 
-    iframe, * iframe {
+    iframe,
+    * iframe {
         aspect-ratio: 16 / 9;
     }
 }
@@ -63,7 +77,7 @@
 }
 
 .bg-black-blur {
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
 }
@@ -78,7 +92,8 @@
     /* Inverts colors completely */
 }
 
-a.nav-link, .navbar {
+a.nav-link,
+.navbar {
     transition: all .2s ease;
 }
 
@@ -140,8 +155,10 @@ a.hover-border::before {
     width: 100% !important;
 }
 
-.bg-black, .bg-dark {
-    ::placeholder { /* Standard syntax */
+.bg-black,
+.bg-dark {
+    ::placeholder {
+        /* Standard syntax */
         color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important
     }
 
@@ -150,36 +167,99 @@ a.hover-border::before {
     }
 }
 
-.ls-0   { letter-spacing: 0; }
-.ls-1   { letter-spacing: 1px; }
-.ls-2   { letter-spacing: 2px; }
-.ls-3   { letter-spacing: 3px; }
-.ls-4   { letter-spacing: 4px; }
-.ls-5   { letter-spacing: 5px; }
+.ls-0 {
+    letter-spacing: 0;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+.ls-2 {
+    letter-spacing: 2px;
+}
+
+.ls-3 {
+    letter-spacing: 3px;
+}
+
+.ls-4 {
+    letter-spacing: 4px;
+}
+
+.ls-5 {
+    letter-spacing: 5px;
+}
 
 .transition-color-hover {
     transition: color .3s ease;
 }
 
 /* Background Hover Utilities */
-.bg-primary-hover:hover { background-color: var(--bs-primary) !important; }
-.bg-secondary-hover:hover { background-color: var(--bs-secondary) !important; }
-.bg-success-hover:hover { background-color: var(--bs-success) !important; }
-.bg-danger-hover:hover { background-color: var(--bs-danger) !important; }
-.bg-warning-hover:hover { background-color: var(--bs-warning) !important; }
-.bg-info-hover:hover { background-color: var(--bs-info) !important; }
-.bg-light-hover:hover { background-color: var(--bs-light) !important; }
-.bg-dark-hover:hover { background-color: var(--bs-dark) !important; }
+.bg-primary-hover:hover {
+    background-color: var(--bs-primary) !important;
+}
+
+.bg-secondary-hover:hover {
+    background-color: var(--bs-secondary) !important;
+}
+
+.bg-success-hover:hover {
+    background-color: var(--bs-success) !important;
+}
+
+.bg-danger-hover:hover {
+    background-color: var(--bs-danger) !important;
+}
+
+.bg-warning-hover:hover {
+    background-color: var(--bs-warning) !important;
+}
+
+.bg-info-hover:hover {
+    background-color: var(--bs-info) !important;
+}
+
+.bg-light-hover:hover {
+    background-color: var(--bs-light) !important;
+}
+
+.bg-dark-hover:hover {
+    background-color: var(--bs-dark) !important;
+}
 
 /* Text Hover Utilities */
-.text-primary-hover:hover { color: var(--bs-primary) !important; }
-.text-secondary-hover:hover { color: var(--bs-secondary) !important; }
-.text-success-hover:hover { color: var(--bs-success) !important; }
-.text-danger-hover:hover { color: var(--bs-danger) !important; }
-.text-warning-hover:hover { color: var(--bs-warning) !important; }
-.text-info-hover:hover { color: var(--bs-info) !important; }
-.text-light-hover:hover { color: var(--bs-light) !important; }
-.text-dark-hover:hover { color: var(--bs-dark) !important; }
+.text-primary-hover:hover {
+    color: var(--bs-primary) !important;
+}
+
+.text-secondary-hover:hover {
+    color: var(--bs-secondary) !important;
+}
+
+.text-success-hover:hover {
+    color: var(--bs-success) !important;
+}
+
+.text-danger-hover:hover {
+    color: var(--bs-danger) !important;
+}
+
+.text-warning-hover:hover {
+    color: var(--bs-warning) !important;
+}
+
+.text-info-hover:hover {
+    color: var(--bs-info) !important;
+}
+
+.text-light-hover:hover {
+    color: var(--bs-light) !important;
+}
+
+.text-dark-hover:hover {
+    color: var(--bs-dark) !important;
+}
 
 .horizontal-line {
     z-index: 10;
@@ -262,4 +342,22 @@ a.hover-border::before {
 
 .fs-small {
     font-size: .75rem !important;
+}
+
+#main-nav {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Active after scroll */
+.sticky-active {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .25);
+}
+
+/* Hide animation */
+.sticky-hide {
+    transform: translateY(-100%);
+}
+
+.search-popup, .subsribe-popup {
+    z-index: 999;
 }

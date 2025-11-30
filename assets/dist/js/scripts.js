@@ -1,70 +1,33 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Flickity from 'flickity';
 
-const navbarContainer = document.getElementById('containerNav');
-const navbar = document.getElementById('mainNavbar');
-const hiddenMenu = document.querySelectorAll('.hidden-menu');
+let lastScroll = 0;
+const navbar = document.getElementById("main-nav");
 
-const getAbsolutePosition = (element) => {
-    const rect = element.getBoundingClientRect();
-    
-    return {
-        top: rect.top,
-        left: rect.left,
-        bottom: rect.bottom,
-        right: rect.right,
-    };
-}
-
-const navbarAnimation = () => {
-    const desktopNavMenuPosition = getAbsolutePosition(navbar);
-    
-    if (desktopNavMenuPosition.top > 0) {
-        hiddenMenu.forEach(element => {
-            if (!element.classList.contains('d-none')) {
-                element.classList.add('d-none');
-            }
-        });
-    
-        if (navbarContainer.classList.contains('border-bottom')) {
-            navbarContainer.classList.remove(...['border-bottom', 'border-black', 'border-2', 'sticky']);
-        }
+window.addEventListener("scroll", () => {
+    const current = window.scrollY;
+    // Shadow activation
+    if (current > navbar.offsetHeight) {
+        navbar.classList.add("sticky-active");
     } else {
-        hiddenMenu.forEach(element => {
-            if (element.classList.contains('d-none')) {
-                element.classList.remove('d-none');
-            }
-        });
-    
-        if (!navbarContainer.classList.contains('border-bottom')) {
-            navbarContainer.classList.add(...['border-bottom', 'border-black', 'border-2', 'sticky']);
-        }
+        navbar.classList.remove("sticky-active");
     }
-}
-
-// navbarAnimation();
-
-let isTransitioning = false;
-
-// Detect when transition starts
-navbar.addEventListener("transitionstart", () => {
-    isTransitioning = true;
-});
-
-// Detect when transition ends
-navbar.addEventListener("transitionend", () => {
-    isTransitioning = false;
-});
-
-/**
-window.addEventListener('scroll', () => {
-    if (isTransitioning) {
-        return;
+    // Scroll direction detection
+    if (current > lastScroll && current > navbar.offsetHeight) {
+        navbar.classList.add("sticky-hide"); // hide on down
+    } else {
+        navbar.classList.remove("sticky-hide"); // show on up
     }
 
-    navbarAnimation();
+    if (current > navbar.offsetHeight) {
+        navbar.classList.add("sticky-top");
+    } else {
+        navbar.classList.remove("sticky-top");
+    }
+
+    lastScroll = current;
 });
-*/
+
 
 const subsribeHover = document.querySelectorAll('.subsribe-hover');
 const subsribePopup = document.querySelector('.subsribe-popup');
@@ -129,7 +92,7 @@ if (carouselGallery) {
     });
 
     const carouselNav = document.querySelectorAll('.carousel-nav');
-    
+
     carouselNav.forEach((element) => {
         element.addEventListener('click', () => {
             const id = element.dataset.id;
@@ -137,7 +100,7 @@ if (carouselGallery) {
         })
     })
 
-    flkty.on('change', function() {
+    flkty.on('change', function () {
         const currentSlide = flkty.selectedElement;
         const id = currentSlide.dataset.id;
 
