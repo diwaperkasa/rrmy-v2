@@ -1,7 +1,9 @@
 <article <?php post_class('h-100', get_the_ID()) ?>>
     <div class="img-hover-zoom ratio-1x1 ratio-lg-2x1">
         <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
-            <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
+            <?= get_the_post_thumbnail(get_the_ID(), 'full', [
+                "class" => "ratio-1x1 ratio-lg-2x1"
+            ]) ?>
         </a>
     </div>
     <div class="position-relative">
