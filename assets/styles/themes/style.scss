@@ -351,6 +351,9 @@ a.hover-border::before {
 /* Active after scroll */
 .sticky-active {
     box-shadow: 0 6px 12px rgba(0, 0, 0, .25);
+    position: sticky;
+    top: 0px;
+    z-index: 1020;
 }
 
 /* Hide animation */

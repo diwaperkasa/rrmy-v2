@@ -210,9 +210,9 @@
                                     <div class="py-3 px-5">
                                         <h3 class="text-uppercase mb-4 text-center sweet-sans-pro ls-1">Newsletter</h3>
                                         <p class="text-center mb-4 roboto-light ls-1">Sign up for our newsletter and go inside a world of luxury.</p>
-                                        <form action="">
+                                        <form target="_blank" action="https://robbreport.us12.list-manage.com/subscribe/post?u=28729885bbfbb9568a4580c7b&id=6523a24d0a" method="POST">
                                             <div class="input-group mb-4">
-                                                <input name="email" type="email" class="form-control rounded-0 border-black py-3 roboto-light ls-1" placeholder="Email address" aria-label="Email address" required />
+                                                <input name="EMAIL" type="email" class="form-control rounded-0 border-black py-3 roboto-light ls-1" placeholder="Email address" aria-label="Email address" required />
                                                 <button type="submit" class="input-group-text bg-black text-white rounded-0 border-black ms-2 roboto-light ls-1"><span>SIGN UP</span></button>
                                             </div>
                                         </form>

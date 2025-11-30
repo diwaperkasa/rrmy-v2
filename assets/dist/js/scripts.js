@@ -19,12 +19,6 @@ window.addEventListener("scroll", () => {
         navbar.classList.remove("sticky-hide"); // show on up
     }
 
-    if (current > navbar.offsetHeight) {
-        navbar.classList.add("sticky-top");
-    } else {
-        navbar.classList.remove("sticky-top");
-    }
-
     lastScroll = current;
 });
 

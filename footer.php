@@ -43,9 +43,9 @@
                                 <p class="lora">Get Robb Report Hong Kong’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
                             </div>
                             <div class="col-lg-12 col-md-6">
-                                <form action="/">
+                                <form target="_blank" action="https://robbreport.us12.list-manage.com/subscribe/post?u=28729885bbfbb9568a4580c7b&id=6523a24d0a" method="POST">
                                     <div class="input-group mb-3">
-                                        <input name="email" type="email" class="form-control bg-black rounded-0 border text-white mulish" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
+                                        <input name="EMAIL" type="email" class="form-control bg-black rounded-0 border text-white mulish" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
                                         <button type="submit" class="input-group-text rounded-0 mulish">SIGN UP</button>
                                     </div>
                                 </form>

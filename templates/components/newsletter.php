@@ -12,9 +12,9 @@
                 <p class="oranienbaum h5 mb-3">
                     Sign up to our newsletters
                 </p>
-                <form action="/">
+                <form target="_blank" action="https://robbreport.us12.list-manage.com/subscribe/post?u=28729885bbfbb9568a4580c7b&id=6523a24d0a" method="POST">
                     <div class="input-group mb-3">
-                        <input name="email" type="email" class="form-control rounded-0 border border-black text-dark mulish bg-transparent" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
+                        <input name="EMAIL" type="email" class="form-control rounded-0 border border-black text-dark mulish bg-transparent" placeholder="EMAIL ADDRESS" aria-label="EMAIL ADDRESS" required>
                         <button type="submit" class="input-group-text rounded-0 mulish border border-black text-white bg-black">SIGN UP</button>
                     </div>
                 </form>

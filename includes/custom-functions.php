@@ -9,6 +9,75 @@
  */
 // add_filter('pre_option_link_manager_enabled', '__return_true');
 
+function mytheme_customize_register($wp_customize)
+{
+    $wp_customize->add_section('theme_options', array(
+        'title'       => __('Theme Options', 'mytheme'),
+        'priority'    => 30,
+    ));
+
+    $wp_customize->add_setting('theme_logo', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_setting('rr1_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_setting('the_vault_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_setting('ultimate_driver_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_setting('subscribe_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'theme_logo',
+        [
+            'label' => __('RobbReport Image','rr_logo'),
+            'section' => 'theme_options',
+            'settings' => 'theme_logo'
+        ]
+    ));
+
+    $wp_customize->add_control('rr1_url', [
+        'label' => __('RR1 Url','rr1_url'),
+        'section' => 'theme_options',
+        'type' => 'url',
+    ]);
+
+    $wp_customize->add_control('the_vault_url', [
+        'label' => __('The Vault Url','the_vault_url'),
+        'section' => 'theme_options',
+        'type' => 'url',
+    ]);
+
+    $wp_customize->add_control('ultimate_driver_url', [
+        'label' => __('Ultimate Driver Url','ultimate_driver_url'),
+        'section' => 'theme_options',
+        'type' => 'url',
+    ]);
+
+    $wp_customize->add_control('subscribe_url', [
+        'label' => __('Subscribe Url','subscribe_url'),
+        'section' => 'theme_options',
+        'type' => 'url',
+    ]);
+}
+
+add_action('customize_register', 'mytheme_customize_register');
+
 function theme_setup()
 {
     /* add woocommerce support */
