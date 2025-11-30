@@ -11,7 +11,7 @@
             <div class="article-desc">
                 <?php $categories = get_the_category(get_the_ID()) ?>
                 <?php if ($categories): ?>
-                    <div class="mb-1">
+                    <div class="my-2">
                         <a href="<?= get_term_link($categories[0]->term_id) ?>" class="text-decoration-none fs-small text-warning text-uppercase mulish">
                             <span class="ls-1"><?= $categories[0]->name ?></span>
                         </a>
