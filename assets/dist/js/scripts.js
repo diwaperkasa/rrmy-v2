@@ -82,7 +82,6 @@ import Flickity from 'flickity';
             wrapAround: true,
             pageDots: false,
             autoPlay: false,
-            prevNextButtons: false,
             cellAlign: 'center'
         });
 
@@ -112,13 +111,6 @@ import Flickity from 'flickity';
             const id = currentSlide.dataset.id;
     
             flktyNavGallery.selectCell('#carousel-nav-' + id);
-        });
-
-        flktyNavGallery.on('change', function () {
-            const currentSlide = flkty.selectedElement;
-            const id = currentSlide.dataset.id;
-    
-            flkty.selectCell('#carousel-slide-' + id);
         });
     }
     

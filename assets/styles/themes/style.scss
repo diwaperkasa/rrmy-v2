@@ -379,6 +379,14 @@ a.hover-border::before {
     display: block;
 }
 
+.flickity-button:focus {
+    box-shadow: none;
+}
+
+.carousel-gallery .flickity-button {
+    background: transparent;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     width: 35px;
