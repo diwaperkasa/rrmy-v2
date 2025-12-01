@@ -372,3 +372,7 @@ a.hover-border::before {
 .search-popup, .subsribe-popup {
     z-index: 999;
 }
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+}

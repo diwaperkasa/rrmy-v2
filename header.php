@@ -88,7 +88,7 @@
                                 </svg>
                             </span>
                             <a class="me-2" href="https://rr1.com/" target="_blank">
-                                <svg width="30" height="20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 720 252" style="enable-background:new 0 0 720 252;" xml:space="preserve">
+                                <svg width="30" height="30" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 720 252" style="enable-background:new 0 0 720 252;" xml:space="preserve">
                                     <title>RR One</title>
                                     <g>
                                         <g>
@@ -135,34 +135,16 @@
                         <?php $primaryMenus = get_wp_menu_tree('header'); ?>
                         <?php if ($primaryMenus): ?>
                             <ul class="navbar-nav text-nowrap flex-wrap mx-auto mb-2 mb-lg-0 fw-bold align-items-center">
-                                <li class="nav-item flex-shrink-0 hidden-menu rr-top-menu d-none">
-                                    <a class="nav-link text-uppercase text-black text-decoration-none fw-normal" aria-current="page" href="/">
-                                        <img height="20px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
-                                    </a>
-                                </li>
                                 <?php foreach ($primaryMenus as $menu): ?>
-                                    <li class="nav-item flex-shrink-0">
+                                    <li class="nav-item dropdown flex-shrink-0">
                                         <a class="nav-link text-uppercase text-black text-decoration-none fw-normal mulish ls-1 text-secondary-hover transition-color-hover" aria-current="page" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                                        <ul class="dropdown-menu bg-white shadow border-0 rounded-0 py-0" style="--bs-light-rgb: 235,236,237;">
+                                            <?php foreach ($menu['children'] as $childMenu): ?>
+                                                <li><a class="dropdown-item py-2 fs-small" href="<?= $childMenu['url'] ?>"><?= $childMenu['title'] ?></a></li>
+                                            <?php endforeach; ?>
+                                        </ul>
                                     </li>
                                 <?php endforeach; ?>
-                                <li class="nav-item border-start border-1 border-secondary d-none hidden-menu subscribe-menu">
-                                    <a class="nav-link py-0 text-uppercase text-black text-decoration-none fw-normal subsribe-hover titling-gothic-fb-cond ls-1" aria-current="page" href="javascript:void(0);">Subscribe</a>
-                                </li>
-                                <li class="nav-item fw-normal d-none hidden-menu rri-menu">
-                                    <a class="text-decoration-none fw-normal" aria-current="page" href="/">
-                                        <svg width="40" height="40" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 720 252" style="enable-background:new 0 0 720 252;" xml:space="preserve">
-                                            <title>RR One</title>
-                                            <g>
-                                                <g>
-                                                    <g>
-                                                        <path fill="#BE1E2D" class="st0" d="M488,239.1c37.2-0.4,47.3-4.2,47.3-23.5V44.2c0-22.1-5.3-25.9-47-26.6v-2.8l75.7-6.3v207.1 c0,18.9,9.5,23.1,47.7,23.5v3.1H488V239.1z"></path>
-                                                    </g>
-                                                </g>
-                                                <path d="M435.9,199.7l-2-14.5c-5.1-36.3-15.5-54.8-64.2-59.9v-1c49.8-7.7,70.6-29.2,70.6-59.5c0-35-34.6-57.2-96.5-57.2h-97.8v2.7 c34.3,1,39.7,7.1,39.7,23.2v182.3c0,12.9-3.4,19.2-21.3,21.8c-1.9,0.2-3.9,0.3-5.8,0.4c-28.7-0.5-34.3-7.9-39.5-38.3l-2-14.5 c-5.1-36.3-15.5-54.8-64.2-59.9v-1c49.8-7.7,70.6-29.2,70.6-59.5c0-35-34.6-57.2-96.5-57.2H29.1v2.7c34.3,1,39.7,7.1,39.7,23.2 v182.3c0,16.5-5.4,22.2-39.7,23.2v3h106.3v-3c-33.6-1-38-6.4-38-22.8v-88.8h33c40,0,50.1,7.7,54.1,41.4l3.7,30.3 c3.2,25.8,8.1,40.1,27.9,43.7l-0.1,0c0,0,14.2,3.2,55.7-0.7h80.5v-3c-33.6-1-38-6.4-38-22.8v-88.8h33c40,0,50.1,7.7,54.1,41.4 L405,199c3.7,30.3,9.8,44.7,39.3,44.7c11.1,0,23.5-1,34.6-3V238C447,238,441.3,231.3,435.9,199.7z M129.4,122.3h-32V12.7h27.9 c49.4,0,65.6,17.2,65.6,52.5C190.9,102.8,179.8,122.3,129.4,122.3z M346.1,122.3h-32V12.7h27.9c49.4,0,65.6,17.2,65.6,52.5 C407.7,102.8,396.6,122.3,346.1,122.3z"></path>
-                                            </g>
-                                        </svg>
-                                    </a>
-                                </li>
                             </ul>
                         <?php endif; ?>
                     </div>
