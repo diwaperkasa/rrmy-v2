@@ -113,6 +113,13 @@ import Flickity from 'flickity';
     
             flktyNavGallery.selectCell('#carousel-nav-' + id);
         });
+
+        flktyNavGallery.on('change', function () {
+            const currentSlide = flkty.selectedElement;
+            const id = currentSlide.dataset.id;
+    
+            flkty.selectCell('#carousel-slide-' + id);
+        });
     }
     
     const moreCategoryArticle = document.querySelector('.more-category-article');
