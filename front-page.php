@@ -93,13 +93,13 @@
                     <div class="col-lg-9">
                         <div class="row">
                             <?php $post = array_shift($topArticles) ?>
-                            <div class="col-md-8">
+                            <div class="col-md-8 pb-3 pb-md-4">
                                 <?php get_template_part('templates/components/article-box', '1x1') ?>
                             </div>
                             <div class="col-md-4">
                                 <div class="row">
                                     <?php foreach ($topArticles as $post): ?>
-                                        <div class="col-12">
+                                        <div class="col-12 pb-3 pb-md-4">
                                             <?php get_template_part('templates/components/article-box') ?>
                                         </div>
                                     <?php endforeach ?>
@@ -116,7 +116,7 @@
                 </div>
                 <div class="row">
                     <?php foreach ($latestArticles as $post): ?>
-                        <div class="col-lg-4 col-md-6">
+                        <div class="col-lg-4 col-md-6 pb-3 pb-md-4">
                             <?php get_template_part('templates/components/article-box') ?>
                         </div>
                     <?php endforeach ?>
