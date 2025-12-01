@@ -51,7 +51,7 @@
                     <?php endforeach; ?>
                     <?php wp_reset_postdata(); ?>
                 </div>
-                <div class="row bg-white carousel-navigation-gallery">
+                <div class="d-flex bg-white carousel-navigation-gallery">
                     <?php foreach ($carousels as $index => $postId): $post = get_post($postId); ?>
                         <div class="p-3 col-lg col-md-3 col-sm-6 col-12 col cursor-pointer carousel-nav" data-id="<?= $postId ?>" id="carousel-nav-<?= $postId ?>">
                             <?php $categories = get_the_category(get_the_ID()) ?>
