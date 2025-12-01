@@ -114,7 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div id="latest-container" class="row">
                     <?php foreach ($latestArticles as $post): ?>
                         <div class="col-lg-4 col-md-6 pb-3 pb-md-4">
                             <?php get_template_part('templates/components/article-box') ?>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="py-4">
                     <div class="horizontal-line text-center text-uppercase">
-                        <button class="btn px-4 border-0 rounded-0 bg-white more-btn">
+                        <button style="--bs-btn-disabled-opacity: 1" class="btn px-4 border-0 rounded-0 bg-white more-article-btn">
                             <span class="oranienbaum h3 loading-text text-secondary-hover transition-color-hover">Read More Stories</span>
                         </button>
                     </div>

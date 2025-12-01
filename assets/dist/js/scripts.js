@@ -157,4 +157,46 @@ import Flickity from 'flickity';
             }
         });
     }
+
+    const moreArticle = document.querySelector('.more-article-btn');
+
+    if (moreArticle) {
+        let page = 2;
+        const length = 10;
+
+        moreArticle.addEventListener("click", async function() {
+            const content = moreArticle.innerHTML;
+            moreArticle.disabled = true;
+            moreArticle.innerHTML = '<div class="loader"></div>';
+    
+            try {
+                const res = await fetch(`/wp-admin/admin-ajax.php?${new URLSearchParams({
+                    action: 'more_article',
+                    page: page,
+                    length: length,
+                })}`, {
+                    headers: {
+                        "Content-type": "application/json"
+                    }
+                }).then(async (response) => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+        
+                    return await response.json()
+                });
+
+                const articleContainer = document.querySelector('#latest-container');
+
+                res.data.forEach((row) => {
+                    articleContainer.insertAdjacentHTML('beforeend', `<div class="col-lg-4 col-md-6 pb-3 pb-md-4">${row}</div>`)
+                });
+
+                page++;
+            } catch (error) {} finally {
+                moreArticle.innerHTML = content
+                moreArticle.disabled = false;
+            }
+        });
+    }
 })()
