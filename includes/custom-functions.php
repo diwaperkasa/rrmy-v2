@@ -249,3 +249,51 @@ function get_wp_menu_tree($menu_location = 'primary')
 
     return array_values($menu_tree);
 }
+
+function more_category_article()
+{
+    $result = [];
+    
+    $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $length = filter_input(INPUT_GET, 'length', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $term_id = filter_input(INPUT_GET, 'term_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+    $query = new WP_Query([
+        'paged' => $page,
+        'posts_per_page' => $length,
+        'post_status' => 'publish',
+        'post_type' => 'post',
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'tax_query' => [
+            [
+                'taxonomy' => 'category',
+                'field'    => 'term_id',
+                'terms'    => $term_id,
+            ]
+        ]
+    ]);
+
+    foreach ($query->posts as $row) {
+        global $post;
+        $post = $row;
+        setup_postdata($post);
+        ob_start();
+        get_template_part('templates/components/article-box');
+        $html = ob_get_clean();
+        $result[] = $html;
+        wp_reset_postdata();
+    }
+
+    // Prepare response
+    $response = array(
+        'message' => 'success',
+        'data' => $result,
+    );
+
+    // Send JSON response
+    return wp_send_json($response);
+}
+
+add_action('wp_ajax_more_category_article', 'more_category_article');
+add_action('wp_ajax_nopriv_more_category_article', 'more_category_article');

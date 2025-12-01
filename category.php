@@ -60,7 +60,7 @@ $topArticles = array_splice($articles, 0, 3);
                     </div>
                     <div class="py-4">
                         <div class="horizontal-line text-center text-uppercase">
-                            <button class="btn px-4 border-0 rounded-0 more-btn bg-light">
+                            <button data-term_id="<?= $category->term_id ?>" style="--bs-btn-disabled-opacity: 1" class="btn px-4 border-0 rounded-0 more-category-article bg-light">
                                 <span class="oranienbaum h3 loading-text text-secondary-hover transition-color-hover">Read More Stories</span>
                             </button>
                         </div>
