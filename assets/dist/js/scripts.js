@@ -85,6 +85,17 @@ import Flickity from 'flickity';
             prevNextButtons: false,
             cellAlign: 'center'
         });
+
+        const carouselNavigationGallery = document.querySelector('.carousel-navigation-gallery');
+
+        const flktyNavGallery = new Flickity(carouselNavigationGallery, {
+            freeScroll: false,
+            wrapAround: true,
+            pageDots: false,
+            autoPlay: false,
+            prevNextButtons: false,
+            cellAlign: 'center'
+        });
     
         const carouselNav = document.querySelectorAll('.carousel-nav');
     
@@ -92,6 +103,7 @@ import Flickity from 'flickity';
             element.addEventListener('click', () => {
                 const id = element.dataset.id;
                 flkty.selectCell('#carousel-slide-' + id);
+                flktyNavGallery.selectCell('#carousel-nav-' + id);
             })
         })
     
@@ -99,15 +111,7 @@ import Flickity from 'flickity';
             const currentSlide = flkty.selectedElement;
             const id = currentSlide.dataset.id;
     
-            carouselNav.forEach((element) => {
-                element.classList.remove('active');
-            });
-    
-            const element = document.querySelector('#carousel-nav-' + id)
-    
-            if (element) {
-                element.classList.add('active');
-            }
+            flktyNavGallery.selectCell('#carousel-nav-' + id);
         });
     }
     

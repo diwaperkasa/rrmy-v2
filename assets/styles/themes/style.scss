@@ -292,8 +292,9 @@ a.hover-border::before {
     min-height: 15px;
 }
 
-.active .article-title {
+.carousel-navigation-gallery .is-selected .article-title {
     color: var(--bs-dark) !important;
+    font-weight: bold;
 }
 
 .ratio-1x1 {
