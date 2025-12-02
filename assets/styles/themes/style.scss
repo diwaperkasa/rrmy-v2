@@ -73,6 +73,7 @@
     }
 
     .flickity-prev-next-button {
+        z-index: 9999;
         background: transparent;
         bottom: -4rem;
         top: unset;
@@ -86,11 +87,11 @@
     }
 
     .next {
-        right: 35% !important;
+        right: 30% !important;
     }
 
     .previous {
-        left: 35% !important;
+        left: 30% !important;
     }
 }
 
