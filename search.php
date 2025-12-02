@@ -1,5 +1,17 @@
 <?php get_header(); ?>
 
+<?php
+$args = [
+    'post_type' => 'post',
+    'posts_per_page' => 5,
+    'post_status' => 'publish',
+    'post__not_in' => array(get_the_ID()),
+    'orderby' => 'rand',
+];
+
+$randomPost = new WP_Query($args);
+?>
+
 <main class="main" role="main">
     <div class="bg-light border-bottom">
         <div class="container">
@@ -25,12 +37,17 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <header class="pb-4">
-                            <h3 class="oranienbaum border-bottom pb-2 h4">You May Also Like</h3>
-                        </header>
-                        <div class="row">
-                            <div class="col-12 pb-3 pb-md-4">
-        
+                        <div class="sticky-top">
+                            <header class="pb-4">
+                                <h3 class="oranienbaum border-bottom pb-2 h4">You May Also Like</h3>
+                            </header>
+                            <div class="row">
+                                <?php while ( $randomPost->have_posts() ) : $randomPost->the_post(); ?>
+                                    <div class="col-12 pb-3 pb-md-4">
+                                        <?php get_template_part('templates/components/article-box') ?>
+                                    </div>
+                                <?php endwhile; ?>
+                                <?php wp_reset_postdata(); ?>
                             </div>
                         </div>
                     </div>
@@ -44,9 +61,12 @@
                 </div>
                 <div class="py-3">
                     <div class="row">
-                        <div class="col-md-6 col-lg-4">
-                            
-                        </div>
+                        <?php while ( $randomPost->have_posts() ) : $randomPost->the_post(); ?>
+                            <div class="col-md-6 col-lg-4">
+                                <?php get_template_part('templates/components/article-box') ?>
+                            </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
                     </div>
                 </div>
             <?php endif; ?>

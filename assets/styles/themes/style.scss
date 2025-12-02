@@ -393,6 +393,7 @@ a.hover-border::before {
 }
 
 #main-nav {
+    z-index: 9999;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
