@@ -62,7 +62,7 @@ $randomPost = new WP_Query($args);
                 <div class="py-3">
                     <div class="row">
                         <?php while ( $randomPost->have_posts() ) : $randomPost->the_post(); ?>
-                            <div class="col-md-6 col-lg-4">
+                            <div class="col-md-6 col-lg-4 pb-3 pb-md-4">
                                 <?php get_template_part('templates/components/article-box') ?>
                             </div>
                         <?php endwhile; ?>
