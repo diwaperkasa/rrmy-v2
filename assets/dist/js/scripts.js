@@ -68,7 +68,6 @@ import Flickity from 'flickity';
         const flkty = new Flickity(gallery, {
             freeScroll: false,
             wrapAround: true,
-            pageDots: false,
             autoPlay: true,
             cellAlign: 'center'
         });

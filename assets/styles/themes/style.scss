@@ -60,6 +60,38 @@
     * iframe {
         aspect-ratio: 16 / 9;
     }
+
+    .flickity-page-dots {
+        .flickity-page-dot.is-selected {
+            background: #BA8E3F;
+            box-shadow: 0 0 10px 2px #BA8E3F;
+        }
+    }
+
+    .flickity-page-dots:focus {
+        box-shadow: inherit;
+    }
+
+    .flickity-prev-next-button {
+        background: transparent;
+        bottom: -4rem;
+        top: unset;
+        transform: translateY(-20px);
+
+        .flickity-button-icon {
+            width: 50%;
+            height: 50%;
+            color: #BA8E3F;
+        }
+    }
+
+    .next {
+        right: 35% !important;
+    }
+
+    .previous {
+        left: 35% !important;
+    }
 }
 
 .wp-caption {
@@ -383,8 +415,16 @@ a.hover-border::before {
     box-shadow: none;
 }
 
-.carousel-gallery .flickity-button {
-    background: transparent;
+.carousel-gallery {
+    .flickity-button {
+        background: transparent;
+    }
+
+    .flickity-prev-next-button {
+        .flickity-button-icon {
+            color: #BA8E3F;
+        }
+    }
 }
 
 body {
@@ -393,6 +433,10 @@ body {
 
 .screen-reader-text {
     display: none;
+}
+
+.gallery {
+    margin-bottom: 3rem;
 }
 
 .navigation.pagination {
