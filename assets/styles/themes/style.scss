@@ -387,6 +387,10 @@ a.hover-border::before {
     background: transparent;
 }
 
+body {
+    padding-bottom: 0 !important;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     width: 30px;
