@@ -28,7 +28,7 @@ $topArticles = array_splice($articles, 0, 3);
         <div class="container">
             <section id="latest-category-article">
                 <header class="py-4">
-                    <h1 class="oranienbaum border-bottom pb-2 text-center text-lg-start"><?= $category->name ?></h1>
+                    <h1 class="oranienbaum border-bottom pb-2"><?= $category->name ?></h1>
                 </header>
             </section>
             <div class="row">
