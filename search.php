@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="main" role="main">
-    <div class="bg-light">
+    <div class="bg-light border-bottom">
         <div class="container">
             <?php if (have_posts()): ?>
                 <div class="text-center py-4">
@@ -11,7 +11,7 @@
                     <div class="col-lg-9">
                         <div class="row">
                             <?php while ( have_posts() ) : the_post(); ?>
-                                <div class="col-lg-6 pb-3 pb-md-4">
+                                <div class="col-md-6 pb-3 pb-md-4">
                                     <?php get_template_part('templates/components/article-box') ?>
                                 </div>
                             <?php endwhile; ?>
@@ -36,8 +36,27 @@
                     </div>
                 </div>
             <?php else: ?>
-
+                <div class="text-center py-4 border-bottom">
+                    <h1 class="oranienbaum">No Results Found</h1>
+                </div>
+                <div class="py-4 border-bottom">
+                    <h2 class="oranienbaum">You May Like</h2>
+                </div>
+                <div class="py-3">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            
+                        </div>
+                    </div>
+                </div>
             <?php endif; ?>
+        </div>
+    </div>
+    <div class="border-bottom">
+        <div class="container">
+            <section id="newsletter">
+                <?php get_template_part('templates/components/newsletter') ?>
+            </section>
         </div>
     </div>
 </main>
