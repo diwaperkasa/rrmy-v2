@@ -100,6 +100,12 @@
     height: auto !important;
 }
 
+.wp-caption-text {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+    font-family: 'mulish';
+}
+
 .article-title {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
