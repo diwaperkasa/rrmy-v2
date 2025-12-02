@@ -226,8 +226,19 @@ https://flickity.metafizzy.co
     src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Regular.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "mulish-light";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Light.ttf") format("truetype");
+}
+
 .mulish {
     font-family: mulish, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mulish-light {
+    font-family: mulish-light, sans-serif;
     font-weight: normal;
     font-style: normal;
 }
