@@ -21,7 +21,7 @@
                                 </div>
                                 <?php if ($shortDesc = get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true)): ?>
                                     <div class="text-center mb-3">
-                                        <p class="fw-light fs-5 text-dark roboto-light"><?= $shortDesc; ?></p>
+                                        <p class="fw-light fs-5 text-dark mulish-light"><?= $shortDesc; ?></p>
                                     </div>
                                 <?php endif; ?>
                                 <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
