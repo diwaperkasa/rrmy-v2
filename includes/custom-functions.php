@@ -337,3 +337,7 @@ function more_article()
 
 add_action('wp_ajax_more_article', 'more_article');
 add_action('wp_ajax_nopriv_more_article', 'more_article');
+
+add_shortcode('gap', function($atts) {
+    return null;
+});
