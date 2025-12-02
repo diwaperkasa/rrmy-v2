@@ -341,3 +341,15 @@ add_action('wp_ajax_nopriv_more_article', 'more_article');
 add_shortcode('gap', function($atts) {
     return null;
 });
+
+add_shortcode('title', function($atts) {
+
+    $atts = shortcode_atts([
+        'text'  => '',
+    ], $atts);
+
+    // sanitize output text
+    $text = esc_html($atts['text']);
+
+    return "<h2>{$text}</h2>";
+});
