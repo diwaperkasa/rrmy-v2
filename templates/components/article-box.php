@@ -1,6 +1,6 @@
 <article <?php post_class('h-100 d-flex flex-column', get_the_ID()) ?>>
     <div class="article-header">
-        <div class="img-hover-zoom">
+        <div class="img-hover-zoom ratio-16x9">
             <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
                 <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
             </a>
