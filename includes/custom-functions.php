@@ -351,5 +351,5 @@ add_shortcode('title', function($atts) {
     // sanitize output text
     $text = esc_html($atts['text']);
 
-    return "<h2>{$text}</h2>";
+    return "<h2><b>{$text}</b></h2>";
 });
