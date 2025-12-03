@@ -132,7 +132,7 @@ $topArticles = array_splice($articles, 0, 3);
     </div>
     <div class="border-bottom bg-light">
         <div class="container">
-            <section id="most-popular" class="pb-4">
+            <section id="most-popular" class="mb-4">
                 <?php get_template_part('templates/components/most-popular') ?>
             </section>
         </div>
