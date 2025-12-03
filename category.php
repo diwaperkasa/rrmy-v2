@@ -68,7 +68,36 @@ $topArticles = array_splice($articles, 0, 3);
                 </div>
                 <div class="col-lg-3">
                     <div class="leaderboard leaderboard-vertical">
-                                            
+                        <div id='div-gpt-ad-3035191-5'>
+                            <script>
+                                googletag.cmd.push(function() {
+                                    googletag.display('div-gpt-ad-3035191-5')
+                                });
+                            </script>
+                        </div>       
+                    </div>
+                    <?php
+                        $args = [
+                            'post_type' => 'post',
+                            'posts_per_page' => 5,
+                            'post_status' => 'publish',
+                            'orderby' => 'rand',
+                        ];
+
+                        $randomPost = new WP_Query($args);
+                    ?>
+                    <div class="sticky-top">
+                        <div class="pb-4 border-bottom">
+                            <h2 class="oranienbaum">You May Like</h2>
+                        </div>
+                        <div class="row">
+                            <?php while ( $randomPost->have_posts() ) : $randomPost->the_post(); ?>
+                                <div class="col-12 pb-3 pb-md-4">
+                                    <?php get_template_part('templates/components/article-box') ?>
+                                </div>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </div>
                     </div>
                 </div>
             </div>
