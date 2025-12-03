@@ -136,7 +136,7 @@ function video_vimeo_register_post_type_args($args, $post_type)
 
 add_filter('register_post_type_args', 'video_vimeo_register_post_type_args', 10, 2);
 
-function get_targets()
+function get_dfp_targets()
 {
     global $post;
     $targets = [];

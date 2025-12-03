@@ -1,7 +1,11 @@
-        <div class="leaderboard">
-            <div class="container">
-                <div class="leaderboard-bottom">
-                    
+        <div class="container">
+            <div class="leaderboard leaderboard-bottom">
+                <div id='div-gpt-ad-3035191-4'>
+                    <script>
+                        googletag.cmd.push(function() {
+                            googletag.display('div-gpt-ad-3035191-4')
+                        });
+                    </script>
                 </div>
             </div>
         </div>

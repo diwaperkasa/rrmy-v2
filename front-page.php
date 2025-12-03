@@ -110,7 +110,13 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="leaderboard leaderboard-vertical">
-                                        
+                            <div id='div-gpt-ad-3035191-5'>
+                                <script>
+                                    googletag.cmd.push(function() {
+                                        googletag.display('div-gpt-ad-3035191-5')
+                                    });
+                                </script>
+                            </div>
                         </div>
                     </div>
                 </div>

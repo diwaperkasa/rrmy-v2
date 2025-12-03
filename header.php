@@ -6,6 +6,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="dns-prefetch" href="//google-analytics.com">
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        var gptadslots = [];
+        var googletag = googletag || {
+            cmd: []
+        };
+    </script>
+    <script>
+        googletag.cmd.push(function() {
+            const dfpTarget = <?= json_encode(get_dfp_targets()) ?>;
+
+            const mapping = googletag.sizeMapping().
+                addSize([1024, 768], [
+                    [960, 300]
+                ]). //desktop
+                addSize([768, 0], [
+                    [960, 300]
+                ]). //tablet
+                addSize([320, 0], [
+                    [400, 500],
+                    [375, 500]
+                ]). //mobile
+                build();
+
+            const mapping_header = googletag.sizeMapping().
+                addSize([1024, 768], [
+                    [1280, 300]
+                ]). //desktop
+                addSize([768, 0], [
+                    [1280, 300]
+                ]). //tablet
+                addSize([320, 0], [
+                    [375, 225],
+                    [400, 225]
+                ]). //mobile
+                build();
+
+            const mapping_vertical = googletag.sizeMapping().
+                addSize([1024, 768], [
+                    [300, 600]
+                ]). //desktop
+                build();
+            // Adslot 1 declaration
+            gptadslots.push(googletag.defineSlot('/21837625142/header', [
+                    [1280, 300],
+                    [375, 225],
+                    [400, 225]
+                ], 'div-gpt-ad-3035191-1')
+                .defineSizeMapping(mapping_header)
+                .setTargeting('tag', dfpTarget)
+                .addService(googletag.pubads()));
+            // Adslot 2 declaration
+            gptadslots.push(googletag.defineSlot('/21837625142/top-lb', [
+                    [375, 500],
+                    [960, 300],
+                    [400, 500]
+                ], 'div-gpt-ad-3845563-2')
+                .defineSizeMapping(mapping)
+                .setTargeting('tag', dfpTarget)
+                .addService(googletag.pubads()));
+            // Adslot 3 declaration
+            gptadslots.push(googletag.defineSlot('/21837625142/mid-lb', [
+                    [375, 500],
+                    [960, 300],
+                    [400, 500]
+                ], 'div-gpt-ad-3035191-3')
+                .defineSizeMapping(mapping)
+                .setTargeting('tag', dfpTarget)
+                .addService(googletag.pubads()));
+            // Adslot 4 declaration
+            gptadslots.push(googletag.defineSlot('/21837625142/bottom-lb', [
+                    [400, 500],
+                    [375, 500],
+                    [960, 300]
+                ], 'div-gpt-ad-3035191-4')
+                .defineSizeMapping(mapping)
+                .setTargeting('tag', dfpTarget)
+                .addService(googletag.pubads()));
+            // Adslot 5 declaration (Vertical Banner)
+            gptadslots.push(googletag.defineSlot('/21837625142/hp-home', [
+                    [300, 600],
+                    [300, 600]
+                ], 'div-gpt-ad-3035191-5')
+                .defineSizeMapping(mapping_vertical)
+                .setTargeting('tag', dfpTarget)
+                .addService(googletag.pubads()));
+
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.pubads().setCentering(true);
+            googletag.enableServices();
+        });
+    </script>
     <?php wp_head(); ?>
 </head>
 
@@ -62,8 +155,14 @@
         </div>
     </div>
     <div class="container">
-        <div class="leaderboard leaderboard-top">
-            
+        <div class="leaderboard header-top">
+            <div id='div-gpt-ad-3035191-1'>
+                <script>
+                    googletag.cmd.push(function() {
+                        googletag.display('div-gpt-ad-3035191-1')
+                    });
+                </script>
+            </div>
         </div>
     </div>
     <div class="bg-white border-bottom main-nav" id="main-nav">
@@ -230,5 +329,14 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="leaderboard leaderboard-top">
+        <div id='div-gpt-ad-3035191-2'>
+            <script>
+                googletag.cmd.push(function() {
+                    googletag.display('div-gpt-ad-3035191-2')
+                });
+            </script>
         </div>
     </div>
