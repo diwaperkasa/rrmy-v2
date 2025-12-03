@@ -103,6 +103,13 @@ $topArticles = array_splice($articles, 0, 3);
             </div>
         </div>
     </div>
+    <div class="border-bottom">
+        <div class="container">
+            <section id="newsletter">
+                <?php get_template_part('templates/components/newsletter') ?>
+            </section>
+        </div>
+    </div>
     <div class="container">
         <div class="leaderboard leaderboard-mid">
             <div id='div-gpt-ad-3035191-3'>
@@ -112,13 +119,6 @@ $topArticles = array_splice($articles, 0, 3);
                     });
                 </script>
             </div>
-        </div>
-    </div>
-    <div class="border-bottom">
-        <div class="container">
-            <section id="newsletter">
-                <?php get_template_part('templates/components/newsletter') ?>
-            </section>
         </div>
     </div>
     <div class="border-bottom bg-light">
