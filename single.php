@@ -77,7 +77,7 @@
                                 <?php the_content(); ?>
                             </div>
                         </div>
-                        <div class="col-md-4 d-none d-md-block">
+                        <div class="col-md-4">
                             <div class="leaderboard leaderboard-vertical">
                                 <div id='div-gpt-ad-3035191-5'>
                                     <script>
@@ -109,7 +109,7 @@
 
                                 $relatedPost = new WP_Query($args);
                             ?>
-                            <div class="sticky-top">
+                            <div class="sticky-top d-none d-md-block">
                                 <div class="pb-4 border-bottom">
                                     <h2 class="oranienbaum">You May Like</h2>
                                 </div>
