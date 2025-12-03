@@ -136,11 +136,11 @@
         </div>
     </div>
     <div class="container">
-        <div class="leaderboard leaderboard-top">
-            <div id='div-gpt-ad-3035191-4'>
+        <div class="leaderboard leaderboard-mid">
+            <div id='div-gpt-ad-3035191-3'>
                 <script>
                     googletag.cmd.push(function() {
-                        googletag.display('div-gpt-ad-3035191-4')
+                        googletag.display('div-gpt-ad-3035191-3')
                     });
                 </script>
             </div>
