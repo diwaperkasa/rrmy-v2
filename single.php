@@ -60,7 +60,7 @@
                     <div class="post__thumbnail mb-5">
                         <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
                     </div>
-                    
+
                     <div class="leaderboard leaderboard-top">
                         <div id='div-gpt-ad-3035191-2'>
                             <script>
@@ -133,6 +133,17 @@
             <section id="newsletter">
                 <?php get_template_part('templates/components/newsletter') ?>
             </section>
+        </div>
+    </div>
+    <div class="container">
+        <div class="leaderboard leaderboard-top">
+            <div id='div-gpt-ad-3035191-4'>
+                <script>
+                    googletag.cmd.push(function() {
+                        googletag.display('div-gpt-ad-3035191-4')
+                    });
+                </script>
+            </div>
         </div>
     </div>
     <div class="bg-light border-bottom">
