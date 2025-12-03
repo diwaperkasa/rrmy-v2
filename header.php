@@ -8,8 +8,8 @@
     <link rel="dns-prefetch" href="//google-analytics.com">
     <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
     <script>
-        var gptadslots = [];
-        var googletag = googletag || {
+        const gptadslots = [];
+        const googletag = googletag || {
             cmd: []
         };
     </script>
@@ -111,7 +111,7 @@
 
                     head.appendChild(style);
 
-                    if (style.styleSheet){
+                    if (style.styleSheet) {
                         // This is required for IE8 and below.
                         style.styleSheet.cssText = css;
                     } else {
@@ -351,14 +351,5 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="leaderboard leaderboard-top">
-        <div id='div-gpt-ad-3035191-2'>
-            <script>
-                googletag.cmd.push(function() {
-                    googletag.display('div-gpt-ad-3035191-2')
-                });
-            </script>
         </div>
     </div>

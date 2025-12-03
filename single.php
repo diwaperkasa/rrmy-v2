@@ -60,6 +60,16 @@
                     <div class="post__thumbnail mb-5">
                         <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
                     </div>
+                    
+                    <div class="leaderboard leaderboard-top">
+                        <div id='div-gpt-ad-3035191-2'>
+                            <script>
+                                googletag.cmd.push(function() {
+                                    googletag.display('div-gpt-ad-3035191-2')
+                                });
+                            </script>
+                        </div>
+                    </div>
     
                     <div class="row">
                         <div class="col-md-8">
