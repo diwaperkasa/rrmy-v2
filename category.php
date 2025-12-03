@@ -103,6 +103,17 @@ $topArticles = array_splice($articles, 0, 3);
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="leaderboard leaderboard-mid">
+            <div id='div-gpt-ad-3035191-3'>
+                <script>
+                    googletag.cmd.push(function() {
+                        googletag.display('div-gpt-ad-3035191-3')
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
     <div class="border-bottom">
         <div class="container">
             <section id="newsletter">
