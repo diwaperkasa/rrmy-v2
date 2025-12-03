@@ -9,7 +9,7 @@
     <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
     <script>
         const gptadslots = [];
-        let googletag = googletag || {
+        var googletag = googletag || {
             cmd: []
         };
     </script>
