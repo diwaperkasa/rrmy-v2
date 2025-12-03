@@ -94,7 +94,7 @@ $topArticles = array_splice($articles, 0, 3);
                         $randomPost = new WP_Query($args);
                     ?>
                     <div class="sticky-top">
-                        <div class="pb-4 border-bottom">
+                        <div class="mb-4 border-bottom">
                             <h2 class="oranienbaum">You May Like</h2>
                         </div>
                         <div class="row">
@@ -132,7 +132,7 @@ $topArticles = array_splice($articles, 0, 3);
     </div>
     <div class="border-bottom bg-light">
         <div class="container">
-            <section id="most-popular" class="mb-4">
+            <section id="most-popular" class="pb-4">
                 <?php get_template_part('templates/components/most-popular') ?>
             </section>
         </div>
