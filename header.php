@@ -62,7 +62,7 @@
                     [375, 500],
                     [960, 300],
                     [400, 500]
-                ], 'div-gpt-ad-3845563-2')
+                ], 'div-gpt-ad-3035191-2')
                 .defineSizeMapping(mapping)
                 .setTargeting('tag', dfpTarget)
                 .addService(googletag.pubads()));
