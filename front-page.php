@@ -228,6 +228,22 @@
                 </section>
             </div>
         </div>
+
+        <?php if ($categoryIndex == 0): ?>
+            <div class="leaderboard-border">
+                <div class="container">
+                    <div class="leaderboard leaderboard-mid">
+                        <div id='div-gpt-ad-3035191-3'>
+                            <script>
+                                googletag.cmd.push(function() {
+                                    googletag.display('div-gpt-ad-3035191-3')
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endif;  ?>
     <?php endforeach; ?>
 </main>
 

@@ -482,7 +482,7 @@ body {
     padding-bottom: 1rem;
 }
 
-.leaderboard-mid:has(iframe) {
+.leaderboard-border:has(iframe) {
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
