@@ -482,6 +482,10 @@ body {
     padding-bottom: 1rem;
 }
 
+.leaderboard-mid:has(iframe) {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     width: 30px;

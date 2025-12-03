@@ -117,14 +117,16 @@ $topArticles = array_splice($articles, 0, 3);
             </section>
         </div>
     </div>
-    <div class="container">
-        <div class="leaderboard leaderboard-mid">
-            <div id='div-gpt-ad-3035191-3'>
-                <script>
-                    googletag.cmd.push(function() {
-                        googletag.display('div-gpt-ad-3035191-3')
-                    });
-                </script>
+    <div class="leaderboard-mid">
+        <div class="container">
+            <div class="leaderboard">
+                <div id='div-gpt-ad-3035191-3'>
+                    <script>
+                        googletag.cmd.push(function() {
+                            googletag.display('div-gpt-ad-3035191-3')
+                        });
+                    </script>
+                </div>
             </div>
         </div>
     </div>
