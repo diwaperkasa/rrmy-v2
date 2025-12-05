@@ -93,7 +93,7 @@ $topArticles = array_splice($articles, 0, 3);
 
                         $randomPost = new WP_Query($args);
                     ?>
-                    <div class="sticky-top">
+                    <div class="sticky-top py-0 py-md-3">
                         <div class="mb-4 border-bottom">
                             <h2 class="oranienbaum">You May Like</h2>
                         </div>

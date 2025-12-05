@@ -109,8 +109,8 @@
 
                                 $relatedPost = new WP_Query($args);
                             ?>
-                            <div class="sticky-top d-none d-md-block">
-                                <div class="pb-4 border-bottom">
+                            <div class="sticky-top py-0 py-md-3">
+                                <div class="mb-4 border-bottom">
                                     <h2 class="oranienbaum">You May Like</h2>
                                 </div>
                                 <div class="row">
