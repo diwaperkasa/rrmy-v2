@@ -2,9 +2,9 @@
 
 <main class="main" role="main">
     <div class="bg-light border-bottom">
-        <div class="container">
-            <?php while ( have_posts() ) : the_post(); ?>
-                <article <?php post_class(''); ?>>
+        <?php while ( have_posts() ) : the_post(); ?>
+            <article <?php post_class(''); ?>>
+                <div class="container">
                     <header class="post__header py-4" role="heading">
                         <div class="text-center mb-3">
                             <?php $categories = get_the_category(get_the_ID()) ?>
@@ -56,11 +56,15 @@
                             </div>
                         </div>
                     </header>
+                </div>
     
+                <div class="container">
                     <div class="post__thumbnail mb-5">
                         <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
                     </div>
+                </div>
 
+                <div class="container">
                     <div class="leaderboard leaderboard-top">
                         <div id='div-gpt-ad-3035191-2'>
                             <script>
@@ -124,9 +128,9 @@
                             </div>
                         </div>
                     </div>
-                </article>
-            <?php endwhile; ?>
-        </div>
+                </div>
+            </article>
+        <?php endwhile; ?>
     </div>
     <div class="border-bottom">
         <div class="container">
