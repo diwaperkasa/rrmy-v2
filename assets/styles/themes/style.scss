@@ -486,6 +486,11 @@ body {
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
+.container:has(.post__thumbnail) {
+    padding-right: 0;
+    padding-left: 0;
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     width: 30px;
