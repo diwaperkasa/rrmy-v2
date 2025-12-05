@@ -4,17 +4,19 @@ import Flickity from 'flickity';
 (async () => {
     let lastScroll = 0;
     const navbar = document.getElementById("main-nav");
+    const headerTop = document.querySelector(".header-top");
     
     window.addEventListener("scroll", () => {
         const current = window.scrollY;
+        const offsetHeight = navbar.offsetHeight + headerTop.offsetHeight;
         // Shadow activation
-        if (current > navbar.offsetHeight) {
+        if (current > offsetHeight) {
             navbar.classList.add("sticky-active");
         } else {
             navbar.classList.remove("sticky-active");
         }
         // Scroll direction detection
-        if (current > lastScroll && current > navbar.offsetHeight) {
+        if (current > lastScroll && current > offsetHeight) {
             navbar.classList.add("sticky-hide"); // hide on down
         } else {
             navbar.classList.remove("sticky-hide"); // show on up
