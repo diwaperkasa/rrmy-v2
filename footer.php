@@ -28,7 +28,7 @@
                         <div class="row">
                             <?php foreach ($menus as $menu): ?>
                                 <div class="col-md-4 col-sm-6">
-                                    <h2 class="fw-normal h5 oranienbaum"><?= $menu['title'] ?></h2>
+                                    <h2 class="fw-normal h4 oranienbaum"><?= $menu['title'] ?></h2>
                                     <ul class="list-unstyled">
                                         <?php foreach ($menu['children'] as $children): ?>
                                             <li>
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <h2 class="fw-normal h5 oranienbaum">Newsletters</h2>
+                        <h2 class="fw-normal h4 oranienbaum">Newsletters</h2>
                         <div class="row">
                             <div class="col-lg-12 col-md-6">
                                 <p class="lora">Get Robb Report Hong Kong’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
