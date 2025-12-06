@@ -542,9 +542,22 @@ body {
         font-family: mulish;
 
         .yotu-video-title {
-            font-size: var(--bs-nav-link-font-size) !important;
+            font-size: var(--bs-body-font-size) !important;
             line-height: 1.5 !important;
             color: rgba(var(--bs-dark-rgb), 1) !important;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+        }
+
+        a {
+            display: flex;
+
+            .yotu-video-thumb-wrp {
+                width: 100%;
+            }
         }
     }
 }
