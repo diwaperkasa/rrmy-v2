@@ -141,7 +141,10 @@
     </div>
     <div class="border-bottom">
         <div class="container">
-            <section id="video-section" class="py-4">
+            <section id="video-section" class="pb-4">
+                <header class="py-4">
+                    <h2 class="oranienbaum border-bottom pb-2">Videos</h2>
+                </header>
                 <div class="row">
                     <div class="col-12">
                         <?= do_shortcode('[yotuwp type="channel" id="UCFTpnmZ91yuM7SyBByJCsXg" ]'); ?>
