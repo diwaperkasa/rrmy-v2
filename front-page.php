@@ -5,7 +5,7 @@
         <div class="container">
             <?php $carousels = get_field('articles'); ?>
             <section id="main-banner" class="mb-3">
-                <div class="ratio-16x9">
+                <div class="ratio-16x9 overflow-hidden">
                     <div class="carousel-gallery">
                         <?php foreach ($carousels as $postId): $post = get_post($postId); ?>
                             <div id="carousel-slide-<?= $postId ?>" class="carousel-cell w-100" data-id="<?= $postId ?>">
