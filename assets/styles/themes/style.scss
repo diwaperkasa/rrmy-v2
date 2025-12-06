@@ -515,7 +515,7 @@ body {
         font-family: oranienbaum;
         border-radius: 0;
         border: none;
-        font-size: 1.75rem;
+        font-size: calc(1.3rem + 0.6vw);
         box-shadow: none !important;
     }
 
