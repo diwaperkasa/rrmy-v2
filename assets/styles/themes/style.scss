@@ -491,6 +491,10 @@ body {
     padding-left: 0;
 }
 
+.yotu-playlist {
+    padding: 0 !important;
+}
+
 .yotu-playlist > div {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
@@ -532,7 +536,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 3rem;
+    bottom: 1rem;
     width: 100%;
     z-index: -1;
 }
