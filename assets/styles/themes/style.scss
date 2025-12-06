@@ -519,6 +519,10 @@ body {
         color: inherit;
         box-shadow: none !important;
     }
+
+    .yotu-pagination-more::after {
+        background-color: #fff;
+    }
 }
 
 .yotu-playlist .yotu-pagination::before {
