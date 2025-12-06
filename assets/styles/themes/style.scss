@@ -3,6 +3,14 @@
     --bs-warning-rgb: 186, 142, 63
 }
 
+.carousel-desc-gallery {
+    display: none;
+}
+
+.carousel-desc-gallery.flickity-enabled {
+    display: block;
+}
+
 .carousel-desc {
     bottom: 0;
     width: 100%;
