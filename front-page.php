@@ -5,51 +5,53 @@
         <div class="container">
             <?php $carousels = get_field('articles'); ?>
             <section id="main-banner" class="mb-3">
-                <div class="carousel-gallery">
-                    <?php foreach ($carousels as $postId): $post = get_post($postId); ?>
-                        <div id="carousel-slide-<?= $postId ?>" class="carousel-cell w-100" data-id="<?= $postId ?>">
-                            <figure class="mb-0">
-                                <article <?php post_class("", get_the_ID()); ?>>
-                                    <div class="p-0">
-                                        <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
-                                            <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
-                                        </a>
-                                        <div class="position-relative d-none d-md-block">
-                                            <div class="position-absolute carousel-desc">
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div style="--bs-bg-opacity: 0.75" class="m-4 p-4 position-relative article-banner-title bg-white">
-                                                            <?php $categories = get_the_category(get_the_ID()) ?>
-                                                            <?php if ($categories): ?>
-                                                                <a class="text-decoration-none category-article" href="<?= get_term_link($categories[0]->term_id) ?>">
-                                                                    <span class="h3 fs-small text-warning text-uppercase mulish ls-1"><?= $categories[0]->name ?></span>
-                                                                </a>
-                                                            <?php endif; ?>
-                                                            <a class="text-decoration-none" href="<?= get_the_permalink(); ?>">
-                                                                <h1 class="article-title text-dark h3 oranienbaum text-secondary-hover transition-color-hover mb-0"><?php the_title(); ?></h1>
-                                                            </a>
-                                                            <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
-                                                            <p class="mb-0">
-                                                                <?php if ($writers): ?>
-                                                                    <span>
-                                                                        <span class="mulish text-dark fs-small text-uppercase">By</span>
-                                                                        <?php foreach ($writers as $writer): ?>
-                                                                            <a class="fs-small text-decoration-none text-dark text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase mulish"><?= $writer->name ?></span></a>
-                                                                        <?php endforeach; ?>
-                                                                    </span>
+                <div class="ratio-16x9">
+                    <div class="carousel-gallery">
+                        <?php foreach ($carousels as $postId): $post = get_post($postId); ?>
+                            <div id="carousel-slide-<?= $postId ?>" class="carousel-cell w-100" data-id="<?= $postId ?>">
+                                <figure class="mb-0">
+                                    <article <?php post_class("", get_the_ID()); ?>>
+                                        <div class="p-0">
+                                            <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
+                                                <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
+                                            </a>
+                                            <div class="position-relative d-none d-md-block">
+                                                <div class="position-absolute carousel-desc">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div style="--bs-bg-opacity: 0.75" class="m-4 p-4 position-relative article-banner-title bg-white">
+                                                                <?php $categories = get_the_category(get_the_ID()) ?>
+                                                                <?php if ($categories): ?>
+                                                                    <a class="text-decoration-none category-article" href="<?= get_term_link($categories[0]->term_id) ?>">
+                                                                        <span class="h3 fs-small text-warning text-uppercase mulish ls-1"><?= $categories[0]->name ?></span>
+                                                                    </a>
                                                                 <?php endif; ?>
-                                                            </p>
+                                                                <a class="text-decoration-none" href="<?= get_the_permalink(); ?>">
+                                                                    <h1 class="article-title text-dark h3 oranienbaum text-secondary-hover transition-color-hover mb-0"><?php the_title(); ?></h1>
+                                                                </a>
+                                                                <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
+                                                                <p class="mb-0">
+                                                                    <?php if ($writers): ?>
+                                                                        <span>
+                                                                            <span class="mulish text-dark fs-small text-uppercase">By</span>
+                                                                            <?php foreach ($writers as $writer): ?>
+                                                                                <a class="fs-small text-decoration-none text-dark text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase mulish"><?= $writer->name ?></span></a>
+                                                                            <?php endforeach; ?>
+                                                                        </span>
+                                                                    <?php endif; ?>
+                                                                </p>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </article>
-                            </figure>
-                        </div>
-                    <?php endforeach; ?>
-                    <?php wp_reset_postdata(); ?>
+                                    </article>
+                                </figure>
+                            </div>
+                        <?php endforeach; ?>
+                        <?php wp_reset_postdata(); ?>
+                    </div>
                 </div>
                 <div class="row bg-white mx-0 carousel-navigation-gallery">
                     <?php foreach ($carousels as $index => $postId): $post = get_post($postId); ?>
