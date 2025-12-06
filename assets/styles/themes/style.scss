@@ -1,6 +1,10 @@
 // your custom styles here
 :root {
-    --bs-warning-rgb: 186, 142, 63
+    --bs-warning-rgb: 186, 142, 63;
+}
+
+.offcanvas {
+    --bs-offcanvas-zindex: 99999;
 }
 
 .carousel-desc-gallery {
