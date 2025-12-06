@@ -101,7 +101,7 @@
             // This listener will be called when a slot has finished rendering.
             googletag.pubads().addEventListener("slotRenderEnded", (event) => {
                 const slotId = event.slot.getSlotElementId();
-                
+
                 if (event.advertiserId) {
                     const width = document.querySelector(`#${slotId}`).offsetWidth;
                     const iframe = document.querySelector(`#${slotId} iframe`);
@@ -121,10 +121,83 @@
             });
         });
     </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-T5GV2H9');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWC6L1FB6R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-WWC6L1FB6R');
+    </script>
+
+    <!-- Event snippet for Page view conversion page -->
+    <script>
+        gtag('event', 'conversion', {
+            'send_to': 'AW-853072439/kBr4CInTvfUZELe045YD'
+        });
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '147646339349091');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1"
+            src="https://www.facebook.com/tr?id=147646339349091&ev=PageView
+      &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5GV2H9"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div style="--bs-bg-opacity: .75;" class="offcanvas offcanvas-start w-100 bg-black bg-blur text-white" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasLabel">
         <div class="container">
             <div class="offcanvas-header justify-content-between align-items-start align-items-md-center py-3 py-md-5">
