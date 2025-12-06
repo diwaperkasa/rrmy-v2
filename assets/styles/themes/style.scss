@@ -491,6 +491,83 @@ body {
     padding-left: 0;
 }
 
+.yotu-playlist > div {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.yotu-playlist .yotu-wrapper-player, .yotu-playlist .yotu-videos, .yotu-playlist .yotu-pagination {
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-right: calc(var(--bs-gutter-x) * .5);
+}
+
+.yotu-playlist .yotu-pagination {
+    .yotu-pagination-more {
+        font-family: oranienbaum;
+        border-radius: 0;
+        border: none;
+        font-size: 1.75rem;
+        box-shadow: none !important;
+    }
+
+    .yotu-pagination-more:hover {
+        color: inherit;
+        box-shadow: none !important;
+    }
+}
+
+.yotu-playlist .yotu-pagination::before {
+    border-top: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    content: "";
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 3rem;
+    width: 100%;
+    z-index: -1;
+}
+
+.yotu-playlist .yotu-videos {
+    li {
+        font-family: mulish;
+
+        .yotu-video-title {
+            font-size: var(--bs-nav-link-font-size) !important;
+            line-height: 1.5 !important;
+            color: rgba(var(--bs-dark-rgb), 1) !important;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .yotu-playlist .yotu-wrapper-player {
+        flex: 0 0 auto;
+        width: 50% !important;
+        padding-right: 1rem;
+    }
+
+    .yotu-playlist .yotu-videos {
+        flex: 0 0 auto;
+        width: 50% !important;
+        padding-top: 0 !important;
+        padding-left: 1rem;
+        height: 350px;
+        overflow: auto;
+    }
+
+    .yotu-playlist .yotu-pagination {
+        flex: 0 0 auto;
+        width: 100% !important;
+        padding-top: 2rem !important;
+    }
+}
+
 /* HTML: <div class="loader"></div> */
 .loader {
     width: 30px;

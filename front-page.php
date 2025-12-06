@@ -139,6 +139,17 @@
             <?php wp_reset_postdata(); ?>
         </div>
     </div>
+    <div class="border-bottom">
+        <div class="container">
+            <section id="video-section" class="py-4">
+                <div class="row">
+                    <div class="col-12">
+                        <?= do_shortcode('[yotuwp type="channel" id="UCFTpnmZ91yuM7SyBByJCsXg" ]'); ?>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
     <?php
     $selectedCategories = get_field('selected_categories');
     ?>

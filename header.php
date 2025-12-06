@@ -17,37 +17,37 @@
         googletag.cmd.push(function() {
             const dfpTarget = <?= json_encode(get_dfp_targets()) ?>;
 
-            const mapping = googletag.sizeMapping().
-            addSize([1024, 768], [
-                [960, 300]
-            ]). //desktop
-            addSize([768, 0], [
-                [960, 300]
-            ]). //tablet
-            addSize([320, 0], [
-                [400, 500],
-                [375, 500]
-            ]). //mobile
-            build();
+            const mapping = googletag.sizeMapping()
+                .addSize([1024, 768], [
+                    [960, 300]
+                ])
+                .addSize([768, 0], [
+                    [960, 300]
+                ])
+                .addSize([320, 0], [
+                    [400, 500],
+                    [375, 500]
+                ])
+                .build();
 
-            const mapping_header = googletag.sizeMapping().
-            addSize([1024, 768], [
-                [1280, 300]
-            ]). //desktop
-            addSize([768, 0], [
-                [1280, 300]
-            ]). //tablet
-            addSize([320, 0], [
-                [375, 225],
-                [400, 225]
-            ]). //mobile
-            build();
+            const mapping_header = googletag.sizeMapping()
+                .addSize([1024, 768], [
+                    [1280, 300]
+                ])
+                .addSize([768, 0], [
+                    [1280, 300]
+                ])
+                .addSize([320, 0], [
+                    [375, 225],
+                    [400, 225]
+                ])
+                .build();
 
-            const mapping_vertical = googletag.sizeMapping().
-            addSize([1024, 768], [
-                [300, 600]
-            ]). //desktop
-            build();
+            const mapping_vertical = googletag.sizeMapping()
+                .addSize([1024, 768], [
+                    [300, 600]
+                ])
+                .build();
             // Adslot 1 declaration
             gptadslots.push(googletag.defineSlot('/21837625142/header', [
                     [1280, 300],
@@ -97,7 +97,6 @@
             googletag.pubads().collapseEmptyDivs();
             googletag.pubads().setCentering(true);
             googletag.enableServices();
-
             // This listener will be called when a slot has finished rendering.
             googletag.pubads().addEventListener("slotRenderEnded", (event) => {
                 const slotId = event.slot.getSlotElementId();
@@ -194,12 +193,11 @@
 
         if (is_singular()) {
             $category = get_the_category();
-    
+
             if ($category) {
                 $category_display = $category[0]->name;
             }
         }
-
 
         if (is_category()) {
             $term = get_queried_object();
@@ -219,8 +217,9 @@
 
 <body <?php body_class(); ?>>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5GV2H9"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5GV2H9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div style="--bs-bg-opacity: .75;" class="offcanvas offcanvas-start w-100 bg-black bg-blur text-white" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasLabel">
         <div class="container">
