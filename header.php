@@ -18,36 +18,36 @@
             const dfpTarget = <?= json_encode(get_dfp_targets()) ?>;
 
             const mapping = googletag.sizeMapping().
-                addSize([1024, 768], [
-                    [960, 300]
-                ]). //desktop
-                addSize([768, 0], [
-                    [960, 300]
-                ]). //tablet
-                addSize([320, 0], [
-                    [400, 500],
-                    [375, 500]
-                ]). //mobile
-                build();
+            addSize([1024, 768], [
+                [960, 300]
+            ]). //desktop
+            addSize([768, 0], [
+                [960, 300]
+            ]). //tablet
+            addSize([320, 0], [
+                [400, 500],
+                [375, 500]
+            ]). //mobile
+            build();
 
             const mapping_header = googletag.sizeMapping().
-                addSize([1024, 768], [
-                    [1280, 300]
-                ]). //desktop
-                addSize([768, 0], [
-                    [1280, 300]
-                ]). //tablet
-                addSize([320, 0], [
-                    [375, 225],
-                    [400, 225]
-                ]). //mobile
-                build();
+            addSize([1024, 768], [
+                [1280, 300]
+            ]). //desktop
+            addSize([768, 0], [
+                [1280, 300]
+            ]). //tablet
+            addSize([320, 0], [
+                [375, 225],
+                [400, 225]
+            ]). //mobile
+            build();
 
             const mapping_vertical = googletag.sizeMapping().
-                addSize([1024, 768], [
-                    [300, 600]
-                ]). //desktop
-                build();
+            addSize([1024, 768], [
+                [300, 600]
+            ]). //desktop
+            build();
             // Adslot 1 declaration
             gptadslots.push(googletag.defineSlot('/21837625142/header', [
                     [1280, 300],
@@ -185,11 +185,35 @@
         fbq('track', 'PageView');
     </script>
     <noscript>
-        <img height="1" width="1"
-            src="https://www.facebook.com/tr?id=147646339349091&ev=PageView
-      &noscript=1" />
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=147646339349091&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
+    <?php if (is_singular(['post']) || is_category()): ?>
+        <?php
+        $category_display = "";
+
+        if (is_singular()) {
+            $category = get_the_category();
+    
+            if ($category) {
+                $category_display = $category[0]->name;
+            }
+        }
+
+
+        if (is_category()) {
+            $term = get_queried_object();
+            $category_display = $term->name;
+        }
+        ?>
+        <script>
+            dataLayer.push(function() {
+                dataLayer.push({
+                    'Category': '<?= htmlspecialchars_decode($category_display); ?>'
+                });
+            });
+        </script>
+    <?php endif; ?>
     <?php wp_head(); ?>
 </head>
 
