@@ -221,7 +221,7 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5GV2H9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div style="--bs-bg-opacity: .75;" class="offcanvas offcanvas-start w-100 bg-black bg-blur text-white" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasLabel">
+    <div style="--bs-bg-opacity: .75;" class="offcanvas offcanvas-start w-100 bg-black bg-blur text-white overflow-auto" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasLabel">
         <div class="container">
             <div class="offcanvas-header justify-content-between align-items-start align-items-md-center py-3 py-md-5">
                 <div class="d-flex w-100">
@@ -240,7 +240,7 @@
                                                 <path d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z" />
                                             </svg>
                                         </button>
-                                        <input name="s" type="search" class="bg-transparent form-control border-0 rounded-0 border-bottom text-white" type="search" placeholder="Type your keywords..." required />
+                                        <input name="s" type="search" class="bg-transparent form-control border-0 rounded-0 border-bottom text-white mulish" type="search" placeholder="Type your keywords..." required />
                                     </div>
                                 </form>
                             </div>
@@ -260,7 +260,7 @@
                                 <div class="border-bottom mb-3">
                                     <a href="<?= $menu['url'] ?>" class="text-white text-decoration-none text-danger-hover transition-color-hover fs-4 oranienbaum ls-3"><?= $menu['title'] ?></a>
                                 </div>
-                                <ul class="list-unstyled d-none d-md-block">
+                                <ul class="list-unstyled">
                                     <?php foreach ($menu['children'] as $childMenu): ?>
                                         <li class="mb-2"><a href="<?= $childMenu['url'] ?>" class="text-white text-decoration-none text-danger-hover transition-color-hover fs-6 mulish ls-3"><?= $childMenu['title'] ?></a></li>
                                     <?php endforeach; ?>
