@@ -7,6 +7,10 @@
     --bs-offcanvas-zindex: 99999;
 }
 
+.fill-white {
+    fill: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+}
+
 .carousel-desc-gallery {
     display: none;
 }

@@ -44,7 +44,7 @@
                         <h2 class="fw-normal h4 oranienbaum">Newsletters</h2>
                         <div class="row">
                             <div class="col-lg-12 col-md-6">
-                                <p class="lora">Get Robb Report Hong Kong’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
+                                <p class="lora">Get Robb Report Malaysia’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
                             </div>
                             <div class="col-lg-12 col-md-6">
                                 <form target="_blank" action="https://robbreport.us12.list-manage.com/subscribe/post?u=28729885bbfbb9568a4580c7b&id=6523a24d0a" method="POST">
