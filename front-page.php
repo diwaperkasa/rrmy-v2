@@ -75,7 +75,7 @@
     </div>
     <div class="border-bottom">
         <div class="container">
-            <section id="latest-article" class="mb-5">
+            <section id="latest-article">
                 <header class="py-4">
                     <h2 class="oranienbaum border-bottom pb-2">Latest Stories</h2>
                 </header>

@@ -282,9 +282,9 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-6 mb-5 mb-md-0">
+                    <div class="col-md-6">
                         <div class="d-flex justify-content-start justify-content-md-end">
-                            <div>
+                            <div class="mb-5 mb-md-0">
                                 <h2 class="fw-normal h4 oranienbaum">Follow us</h2>
                                 <div class="d-flex">
                                     <a href="<?= get_field("instagram_url", "option") ?>" target="_blank" style="height:40px; width:40px" class="text-decoration-none mx-2 btn border border-white bg-white rounded-circle d-flex justify-content-center align-items-center p-0">
