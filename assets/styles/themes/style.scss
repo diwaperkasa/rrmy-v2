@@ -29,6 +29,10 @@
 }
 
 .post__content {
+    p > a > img {
+        margin-bottom: 2rem;
+    }
+    
     p a {
         color: var(--bs-body-color);
     }
