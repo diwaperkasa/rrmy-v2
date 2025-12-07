@@ -37,7 +37,7 @@ $randomPost = new WP_Query($args);
                     </div>
                     <div class="col-lg-3">
                         <div class="sticky-top">
-                            <header class="py-4">
+                            <header class="pb-4 pt-3">
                                 <h3 class="oranienbaum border-bottom pb-2 h4">You May Also Like</h3>
                             </header>
                             <div class="row">
