@@ -32,12 +32,12 @@
     p > a > img {
         margin-bottom: 2rem;
     }
-    
-    p a {
+
+    a {
         color: var(--bs-body-color);
     }
 
-    p a:hover {
+    a:hover {
         color: var(--bs-secondary) !important;
     }
 
