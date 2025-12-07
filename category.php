@@ -117,7 +117,7 @@ $topArticles = array_splice($articles, 0, 3);
             </section>
         </div>
     </div>
-    <div class="leaderboard-border">
+    <div class="leaderboard-border-bottom">
         <div class="container">
             <div class="leaderboard leaderboard-mid">
                 <div id='div-gpt-ad-3035191-3'>
