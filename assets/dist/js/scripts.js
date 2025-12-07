@@ -1,4 +1,5 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'sharer.js/sharer.min.js';
 import Flickity from 'flickity';
 
 (async () => {
