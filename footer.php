@@ -20,7 +20,7 @@
                         </div>
                         <div class="my-4">
                             <p class="lora fs-small">Robb Report is leading voice in the global luxury market. Its discerning audience appreciates and desires quality, exclusivity, heritage, taste, and fine design. It is synonomous aith affluence, luxury, and the best of the best.</p>
-                            <p class="text-secondary text-uppercase mulish fs-small">ROBB REPORT HONG KONG IS A TRADEMARK OF ROBB REPORT MEDIA, LLC © 2025 ROBB REPORT MEDIA, LLC. ALL RIGHTS RESERVED. PUBLISHED UNDER LICENSE FROM ROBB REPORT MEDIA, LLC, A SUBSIDIARY OF PENSKE MEDIA CORPORATION.</p>
+                            <p class="text-secondary text-uppercase mulish fs-small">LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. IN SED RUTRUM MASSA. DONEC ULTRICIES EFFICITUR NIBH ID CONSEQUAT. NULLA SAPIEN LEO, EUISMOD A LACINIA NEC, BIBENDUM NON NISL. CURABITUR PHARETRA VULPUTATE VENENATIS. NULLA MAGNA FELIS, GRAVIDA ID QUAM NON, PULVINAR LAOREET LIBERO</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
