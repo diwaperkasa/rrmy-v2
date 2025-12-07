@@ -446,8 +446,8 @@
                                         <p class="text-center mb-4 roboto-light ls-1">Sign up for our newsletter and go inside a world of luxury.</p>
                                         <form target="_blank" action="https://robbreport.us12.list-manage.com/subscribe/post?u=28729885bbfbb9568a4580c7b&id=6523a24d0a" method="POST">
                                             <div class="input-group mb-4">
-                                                <input name="EMAIL" type="email" class="form-control rounded-0 border-black py-3 roboto-light ls-1" placeholder="Email address" aria-label="Email address" required />
-                                                <button type="submit" class="input-group-text bg-black text-white rounded-0 border-black ms-2 roboto-light ls-1"><span>SIGN UP</span></button>
+                                                <input name="EMAIL" type="email" class="fs-small form-control rounded-0 border-black roboto-light ls-1 px-3 py-2" placeholder="Email address" aria-label="Email address" required />
+                                                <button type="submit" class="fs-small input-group-text bg-black text-white rounded-0 border-black ms-2 roboto-light ls-1 px-3 py-2"><span>SIGN UP</span></button>
                                             </div>
                                         </form>
                                         <p class="mb-0 roboto-light ls-1">
