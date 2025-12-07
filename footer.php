@@ -1,11 +1,13 @@
-        <div class="container">
-            <div class="leaderboard leaderboard-bottom">
-                <div id='div-gpt-ad-3035191-4'>
-                    <script>
-                        googletag.cmd.push(function() {
-                            googletag.display('div-gpt-ad-3035191-4')
-                        });
-                    </script>
+        <div class="leaderboard-border-bottom">
+            <div class="container">
+                <div class="leaderboard leaderboard-bottom">
+                    <div id='div-gpt-ad-3035191-4'>
+                        <script>
+                            googletag.cmd.push(function() {
+                                googletag.display('div-gpt-ad-3035191-4')
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>

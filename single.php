@@ -139,14 +139,16 @@
             </section>
         </div>
     </div>
-    <div class="container">
-        <div class="leaderboard leaderboard-mid">
-            <div id='div-gpt-ad-3035191-3'>
-                <script>
-                    googletag.cmd.push(function() {
-                        googletag.display('div-gpt-ad-3035191-3')
-                    });
-                </script>
+    <div class="leaderboard-border-bottom">
+        <div class="container">
+            <div class="leaderboard leaderboard-mid">
+                <div id='div-gpt-ad-3035191-3'>
+                    <script>
+                        googletag.cmd.push(function() {
+                            googletag.display('div-gpt-ad-3035191-3')
+                        });
+                    </script>
+                </div>
             </div>
         </div>
     </div>

@@ -502,7 +502,7 @@ body {
     padding-bottom: 1rem;
 }
 
-.leaderboard-border:has(iframe) {
+.leaderboard-border-bottom:has(iframe) {
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
