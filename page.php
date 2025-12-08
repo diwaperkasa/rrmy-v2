@@ -2,11 +2,13 @@
 
 <main class="main" role="main">
     <div class="container">
-        <div class="py-4 lora">
+        <div class="py-4">
             <header class="pb-4 text-center oranienbaum">
                 <h1 class="mb-0"><?= the_title() ?></h1>
             </header>
-            <?php the_content(); ?>
+            <div class="post__content lora">
+                <?php the_content(); ?>
+            </div>
         </div>
     </div>
 </main>
