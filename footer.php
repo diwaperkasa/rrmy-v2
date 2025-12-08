@@ -14,8 +14,8 @@
         <footer class="footer bg-black" role="contentinfo">
             <div class="container text-white py-4">
                 <div class="row mb-4">
-                    <div class="col-lg-3 border-end border-white">
-                        <div class="border-bottom text-center">
+                    <div style="--bs-border-color: rgba(255, 255, 255, 0.5)" class="col-lg-3 border-end border-white">
+                        <div style="--bs-border-color: rgba(255, 255, 255, 0.5)" class="border-bottom text-center">
                             <a class="text-decoration-none" href="/">
                                 <img style="max-height: 60px;" class="invert-color mb-4 img-fluid" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
                             </a>

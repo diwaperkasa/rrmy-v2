@@ -425,7 +425,7 @@
                             <div class="subsribe-popup-container">
                                 <div class="row">
                                     <div class="col-md-6 py-4">
-                                        <div class="row border-end">
+                                        <div class="row">
                                             <div class="col-md-5">
                                                 <div class="d-flex justify-content-center">
                                                     <img class="img-fluid" src="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp" alt="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp">
@@ -442,7 +442,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6 py-4">
-                                        <div class="py-3 px-5">
+                                        <div class="py-3 px-5 border-start">
                                             <h3 class="text-uppercase mb-4 text-center sweet-sans-pro ls-1">Newsletter</h3>
                                             <p class="text-center mb-4 roboto-light ls-1">Sign up for our newsletter and go inside a world of luxury.</p>
                                             <form target="_blank" action="https://robbreport.us12.list-manage.com/subscribe/post?u=28729885bbfbb9568a4580c7b&id=6523a24d0a" method="POST">
