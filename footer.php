@@ -33,7 +33,7 @@
                                     <h2 class="fw-normal h4 oranienbaum"><?= $menu['title'] ?></h2>
                                     <ul class="list-unstyled">
                                         <?php foreach ($menu['children'] as $children): ?>
-                                            <li>
+                                            <li class="mb-1">
                                                 <a href="<?= $children['url'] ?>" class="text-decoration-none mulish text-white text-danger-hover transition-color-hover text-uppercase"><?= $children['title'] ?></a>
                                             </li>
                                         <?php endforeach; ?>
