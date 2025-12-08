@@ -228,7 +228,7 @@
                     <div class="row w-100">
                         <div class="col-md-4">
                             <a class="text-decoration-none me-4" href="/">
-                                <img class="invert-color" height="50px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
+                                <img class="invert-color" height="50px" src="<?= get_theme_mod('theme_logo' , get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp"); ?>" alt="robbreport-malaysia-logo">
                             </a>
                         </div>
                         <div class="col-md-5">
@@ -339,7 +339,7 @@
                                     </g>
                                 </svg>
                             </span>
-                            <a class="me-2" href="https://rr1.com/" target="_blank">
+                            <a class="me-2" href="<?= get_theme_mod("rr1_url", "javascript:void(0);") ?>" target="_blank">
                                 <svg width="30" height="30" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 720 252" style="enable-background:new 0 0 720 252;" xml:space="preserve">
                                     <title>RR One</title>
                                     <g>
@@ -352,7 +352,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish" href="">The Vault</a>
+                            <a target="_blank" class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish" href="<?= get_theme_mod("the_vault_url", "javascript:void(0);") ?>">The Vault</a>
                         </div>
                     </div>
                     <div class="col-4">
@@ -364,7 +364,7 @@
                     </div>
                     <div class="col-4">
                         <div class="d-flex justify-content-end align-items-center">
-                            <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish me-2" href="">Ultimate Drives</a>
+                            <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish me-2" href="<?= get_theme_mod("ultimate_drives_url", "javascript:voi(0);") ?>">Ultimate Drives</a>
                             <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small subsribe-hover mulish" href="javascript:void(0);">SUBSCRIBE</a>
                         </div>
                     </div>
@@ -428,7 +428,7 @@
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <div class="d-flex justify-content-center">
-                                                    <img class="img-fluid" src="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp" alt="https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp">
+                                                    <img class="img-fluid" src="<?= get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp"); ?>" alt="<?= get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp"); ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-7 d-none d-md-block">

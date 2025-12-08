@@ -31,12 +31,17 @@ function mytheme_customize_register($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
 
-    $wp_customize->add_setting('ultimate_driver_url', array(
+    $wp_customize->add_setting('ultimate_drives_url', array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw'
     ));
 
     $wp_customize->add_setting('subscribe_url', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw'
+    ));
+
+    $wp_customize->add_setting('subscribe_logo', array(
         'default' => '',
         'sanitize_callback' => 'esc_url_raw'
     ));
@@ -63,8 +68,8 @@ function mytheme_customize_register($wp_customize)
         'type' => 'url',
     ]);
 
-    $wp_customize->add_control('ultimate_driver_url', [
-        'label' => __('Ultimate Driver Url','ultimate_driver_url'),
+    $wp_customize->add_control('ultimate_drives_url', [
+        'label' => __('Ultimate Drives Url','ultimate_drives_url'),
         'section' => 'theme_options',
         'type' => 'url',
     ]);
@@ -74,6 +79,16 @@ function mytheme_customize_register($wp_customize)
         'section' => 'theme_options',
         'type' => 'url',
     ]);
+
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+        $wp_customize,
+        'subscribe_logo',
+        [
+            'label' => __('Subscribe Image', 'subscribe_logo'),
+            'section' => 'theme_options',
+            'settings' => 'subscribe_logo'
+        ]
+    ));
 }
 
 add_action('customize_register', 'mytheme_customize_register');

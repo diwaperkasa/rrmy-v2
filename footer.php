@@ -17,7 +17,7 @@
                     <div style="--bs-border-color: rgba(255, 255, 255, 0.5)" class="col-lg-3 border-end border-white">
                         <div style="--bs-border-color: rgba(255, 255, 255, 0.5)" class="border-bottom text-center">
                             <a class="text-decoration-none" href="/">
-                                <img style="max-height: 60px;" class="invert-color mb-4 img-fluid" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
+                                <img style="max-height: 60px;" class="invert-color mb-4 img-fluid" src="<?= get_theme_mod('theme_logo' , get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp"); ?>" alt="robbreport-malaysia-logo">
                             </a>
                         </div>
                         <div class="my-4">
