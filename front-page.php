@@ -244,7 +244,7 @@
                             <?php wp_reset_postdata(); ?>
                         <?php endif; ?>
                     </div>
-                    <div class="py-5">
+                    <div class="pt-4 pb-5">
                         <div class="horizontal-line text-center">
                             <a href="<?= get_term_link($category['main_category']) ?>" class="text-decoration-none px-4 border-0 rounded-0 <?= $categoryIndex % 2 ? "bg-white" : "bg-light"  ?> text-dark more-category-btn">
                                 <span class="oranienbaum h3 loading-text text-secondary-hover transition-color-hover">More <?= $term->name ?> Stories</span>
