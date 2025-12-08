@@ -13,7 +13,7 @@
         </div>
         <footer class="footer bg-black" role="contentinfo">
             <div class="container text-white py-4">
-                <div class="row">
+                <div class="row mb-4">
                     <div class="col-lg-3 border-end border-white">
                         <div class="border-bottom text-center">
                             <a class="text-decoration-none" href="/">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3">
-                        <h2 class="fw-normal h4 oranienbaum">Newsletters</h2>
+                        <h2 class="fw-normal h4 oranienbaum">Newsletter</h2>
                         <div class="row mb-0 mb-md-4">
                             <div class="col-lg-12 col-md-6">
                                 <p class="lora">Get Robb Report Malaysia’s take on what matters most in the world of the luxury, delivered to your inbox every week.</p>
@@ -73,6 +73,9 @@
                             </a>
                         </div>
                     </div>
+                </div>
+                <div class="text-center">
+                    <p class="text-white fs-small fst-italic">Published by Indochine Media Ventures under license from Robb Report Media, LLC, a subsidiary of Penske Media Corporation.</p>
                 </div>
             </div>
         </footer>

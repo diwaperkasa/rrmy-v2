@@ -53,14 +53,16 @@
                         <?php wp_reset_postdata(); ?>
                     </div>
                 </div>
-                <div class="row carousel-desc-gallery bg-white mx-0 carousel-navigation-gallery">
+                <div class="row carousel-desc-gallery bg-white mx-0 carousel-navigation-gallery my-auto">
                     <?php foreach ($carousels as $index => $postId): $post = get_post($postId); ?>
-                        <div class="p-3 col-lg col-md-3 col-sm-6 col-12 col cursor-pointer carousel-nav" data-id="<?= $postId ?>" id="carousel-nav-<?= $postId ?>">
-                            <?php $categories = get_the_category(get_the_ID()) ?>
-                            <?php if ($categories): ?>
-                                <p class="fs-small text-warning text-uppercase mulish mb-0 ls-1"><?= $categories[0]->name ?></p>
-                            <?php endif; ?>
-                            <h2 class="h6 article-title text-secondary oranienbaum text-dark-hover transition-color-hover mb-0"><?php the_title(); ?></h1>
+                        <div class="py-3 col-lg col-md-3 col-sm-6 col-12 col cursor-pointer carousel-nav h-100" data-id="<?= $postId ?>" id="carousel-nav-<?= $postId ?>">
+                            <div class="px-3 border-end h-100">
+                                <?php $categories = get_the_category(get_the_ID()) ?>
+                                <?php if ($categories): ?>
+                                    <p class="fs-small text-warning text-uppercase mulish mb-2 ls-1"><?= $categories[0]->name ?></p>
+                                <?php endif; ?>
+                                <h2 class="h6 article-title text-secondary oranienbaum text-dark-hover transition-color-hover mb-0"><?php the_title(); ?></h1>
+                            </div>
                         </div>
                     <?php endforeach; ?>
                     <?php wp_reset_postdata(); ?>
@@ -68,10 +70,18 @@
             </section>
         </div>
     </div>
-    <div class="container">
-        <section id="advertise-section">
-
-        </section>
+    <div class="leaderboard-border-bottom">
+        <div class="container">
+            <div class="leaderboard leaderboard-top">
+                <div id='div-gpt-ad-3035191-2'>
+                    <script>
+                        googletag.cmd.push(function() {
+                            googletag.display('div-gpt-ad-3035191-2')
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="border-bottom">
         <div class="container">
@@ -130,7 +140,7 @@
                     <?php endforeach ?>
                     <?php wp_reset_postdata(); ?>
                 </div>
-                <div class="py-4">
+                <div class="pt-4 pb-5">
                     <div class="horizontal-line text-center text-uppercase">
                         <button style="--bs-btn-disabled-opacity: 1" class="btn px-4 border-0 rounded-0 bg-white more-article-btn">
                             <span class="oranienbaum h3 loading-text text-secondary-hover transition-color-hover">Read More Stories</span>
@@ -143,7 +153,7 @@
     </div>
     <div class="border-bottom">
         <div class="container">
-            <section id="video-section" class="pb-4">
+            <section id="video-section" class="pb-5">
                 <header class="py-4">
                     <h2 class="oranienbaum border-bottom pb-2">Videos</h2>
                 </header>
@@ -234,7 +244,7 @@
                             <?php wp_reset_postdata(); ?>
                         <?php endif; ?>
                     </div>
-                    <div class="py-4">
+                    <div class="py-5">
                         <div class="horizontal-line text-center">
                             <a href="<?= get_term_link($category['main_category']) ?>" class="text-decoration-none px-4 border-0 rounded-0 <?= $categoryIndex % 2 ? "bg-white" : "bg-light"  ?> text-dark more-category-btn">
                                 <span class="oranienbaum h3 loading-text text-secondary-hover transition-color-hover">More <?= $term->name ?> Stories</span>
