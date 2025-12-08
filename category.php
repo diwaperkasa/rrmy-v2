@@ -50,12 +50,14 @@ $topArticles = array_splice($articles, 0, 3);
                             </div>
                         </div>
                     </div>
-                    <div id='div-gpt-ad-3035191-2'>
-                        <script>
-                            googletag.cmd.push(function() {
-                                googletag.display('div-gpt-ad-3035191-2')
-                            });
-                        </script>
+                    <div class="leaderboard leaderboard-top">
+                        <div id='div-gpt-ad-3035191-2'>
+                            <script>
+                                googletag.cmd.push(function() {
+                                    googletag.display('div-gpt-ad-3035191-2')
+                                });
+                            </script>
+                        </div>
                     </div>
                     <div class="row" id="category-container">
                         <?php foreach ($articles as $post): ?>
