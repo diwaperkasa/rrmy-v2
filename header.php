@@ -364,7 +364,7 @@
                     </div>
                     <div class="col-4">
                         <div class="d-flex justify-content-end align-items-center">
-                            <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish me-2" href="<?= get_theme_mod("ultimate_drives_url", "javascript:voi(0);") ?>">Ultimate Drives</a>
+                            <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish me-2" href="<?= get_theme_mod("ultimate_drives_url", "javascript:void(0);") ?>">Ultimate Drives</a>
                             <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small subsribe-hover mulish" href="javascript:void(0);">SUBSCRIBE</a>
                         </div>
                     </div>
