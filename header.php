@@ -421,7 +421,7 @@
                 </div>
                 <div class="position-relative subsribe-popup d-none">
                     <div class="position-absolute w-100">
-                        <div class="container bg-white">
+                        <div class="container bg-white border-top">
                             <div class="subsribe-popup-container">
                                 <div class="row">
                                     <div class="col-md-6 py-4">
@@ -462,7 +462,7 @@
                     </div>
                 </div>
                 <div class="position-relative search-popup d-none">
-                    <div class="position-absolute w-100">
+                    <div class="position-absolute w-100 border-top">
                         <div class="container bg-white">
                             <div class="search-popup-container">
                                 <div class="px-3 py-5">
