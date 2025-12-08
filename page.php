@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="main" role="main">
+<main class="main bg-light" role="main">
     <div class="container">
         <div class="py-4">
             <header class="pb-4 text-center oranienbaum">
