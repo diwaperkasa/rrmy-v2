@@ -86,8 +86,8 @@ $topArticles = array_splice($articles, 0, 3);
                 <div class="col-md-9">
                     <div class="row" id="category-container">
                         <?php foreach ($articles as $post): ?>
-                            <div class="col-md-6 pb-3 pb-md-4">
-                                <?php get_template_part('templates/components/article-box') ?>
+                            <div class="col-lg-12 col-sm-6 pb-3 pb-md-4">
+                                <?php get_template_part('templates/components/article-box', 'category') ?>
                             </div>
                         <?php endforeach ?>
                         <?php wp_reset_postdata(); ?>
