@@ -576,6 +576,7 @@ body {
 }
 
 .container:has(.post__thumbnail) {
+    --bs-gutter-x: 1.5rem;
     padding-right: 0;
     padding-left: 0;
 
