@@ -11,6 +11,13 @@
             </div>
         </div>
     </div>
+    <div class="border-bottom">
+        <div class="container">
+            <section id="newsletter">
+                <?php get_template_part('templates/components/newsletter') ?>
+            </section>
+        </div>
+    </div>
 </main>
 
 <?php get_footer(); ?>
