@@ -59,7 +59,7 @@
                             <div class="px-3 border-end h-100">
                                 <?php $categories = get_the_category(get_the_ID()) ?>
                                 <?php if ($categories): ?>
-                                    <p class="fs-small text-warning text-uppercase mulish mb-2 ls-1"><?= $categories[0]->name ?></p>
+                                    <p class="fs-small article-category text-secondary text-uppercase mulish mb-2 ls-1"><?= $categories[0]->name ?></p>
                                 <?php endif; ?>
                                 <h2 class="h6 article-title text-secondary oranienbaum text-dark-hover transition-color-hover mb-0"><?php the_title(); ?></h1>
                             </div>

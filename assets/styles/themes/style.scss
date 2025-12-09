@@ -356,6 +356,11 @@ a.hover-border::before {
     font-weight: bold;
 }
 
+.carousel-navigation-gallery .is-selected .article-category {
+    --bs-secondary-rgb: 186, 142, 63;
+    color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+}
+
 .ratio-1x1 {
     aspect-ratio: 1 / 1;
 }
