@@ -12,7 +12,7 @@ $popularPostIds = wpp_get_ids([
     <div class="row most-popular-gallery">
         <?php foreach ($popularPostIds as $postIdx => $postId): $post = get_post($postId); ?>
             <?php if ($postIdx % 4 === 0): ?>
-                <div class="col-lg-6 col-md-6 col-sm-6 pb-3 pb-md-4">
+                <div class="col-lg-6 col-md-6 col-sm-6 pb-3 pb-md-4 px-0 px-lg-4">
                     <?php get_template_part('templates/components/article-box', 'rectangle') ?> 
                 </div>
             <?php else: ?>
