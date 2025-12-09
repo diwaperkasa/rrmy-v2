@@ -362,7 +362,9 @@ a.hover-border::before {
 }
 
 .most-popular-container .article-title {
-    font-size: 1rem;
+    @media (min-width: 992px) {
+        font-size: 1rem;
+    }
 }
 
 .most-popular-container .article-writter {
