@@ -69,6 +69,7 @@
     }
 
     img iframe,
+    iframe,
     * img,
     * iframe {
         width: 100%;
@@ -126,6 +127,8 @@
 
     .instagram-media {
         min-width: 100% !important;
+        width: 100% !important;
+        height: revert-layer !important;
     }
 }
 
