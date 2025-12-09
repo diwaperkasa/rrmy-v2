@@ -294,7 +294,7 @@ function more_category_article()
         $post = $row;
         setup_postdata($post);
         ob_start();
-        get_template_part('templates/components/article-box');
+        get_template_part('templates/components/article-box', 'category');
         $html = ob_get_clean();
         $result[] = $html;
         wp_reset_postdata();
