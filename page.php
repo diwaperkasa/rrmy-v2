@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-<main class="main bg-light" role="main">
-    <div class="border-bottom">
+<main class="main" role="main">
+    <div class="border-bottom bg-light">
         <div class="container">
             <div class="py-4">
                 <header class="pb-4 text-center oranienbaum">
