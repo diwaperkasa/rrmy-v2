@@ -19,7 +19,7 @@
                         </div>
                     <?php endif; ?>
                     <a class="text-decoration-none" href="<?= get_the_permalink(); ?>">
-                        <h3 class="article-title text-dark h4 oranienbaum text-secondary-hover transition-color-hover mb-1"><?php the_title(); ?></h3>
+                        <h3 class="article-title text-dark h6 oranienbaum text-secondary-hover transition-color-hover mb-1"><?php the_title(); ?></h3>
                     </a>
                     <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
                     <div class="article-writter fw-light">

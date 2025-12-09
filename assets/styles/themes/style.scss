@@ -361,6 +361,10 @@ a.hover-border::before {
     color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
 }
 
+.most-popular-container .article-writter {
+    display: none;
+}
+
 .ratio-1x1 {
     aspect-ratio: 1 / 1;
 }
