@@ -36,22 +36,24 @@ $topArticles = array_splice($articles, 0, 3);
                     <div class="text-center">
                         <h1 class="oranienbaum pb-2"><?= $category->name ?></h1>
                     </div>
-                    <div class="border-bottom">
-                        <div class="row justify-content-center">
-                            <div class="col-md-10">
-                                <div class="d-flex justify-content-center lora">
-                                    <div class="px-5 pb-2">
-                                        <span class="text-warning">All</span>
-                                    </div>
-                                    <?php foreach ($children as $childCategory): ?>
-                                        <div class="border-start px-5 pb-2">
-                                            <a class="text-secondary-hover text-decoration-none text-dark" href="<?= get_term_link($childCategory->term_id) ?>"><?= $childCategory->name ?></a>
+                    <?php if ($children): ?>
+                        <div class="border-bottom">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10">
+                                    <div class="d-flex justify-content-center lora">
+                                        <div class="px-5 pb-2">
+                                            <span class="text-warning">All</span>
                                         </div>
-                                    <?php endforeach ?>
+                                        <?php foreach ($children as $childCategory): ?>
+                                            <div class="border-start px-5 pb-2">
+                                                <a class="text-secondary-hover text-decoration-none text-dark" href="<?= get_term_link($childCategory->term_id) ?>"><?= $childCategory->name ?></a>
+                                            </div>
+                                        <?php endforeach ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 </header>
             </section>
             <div class="row">
