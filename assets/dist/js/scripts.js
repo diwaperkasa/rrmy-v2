@@ -103,7 +103,7 @@ import Flickity from 'flickity';
         carouselNav.forEach((element) => {
             element.addEventListener('click', () => {
                 const id = element.dataset.id;
-                flkty.selectCell('#carousel-slide-' + id);
+                
                 flktyNavGallery.selectCell('#carousel-nav-' + id);
             })
         })
@@ -113,6 +113,13 @@ import Flickity from 'flickity';
             const id = currentSlide.dataset.id;
     
             flktyNavGallery.selectCell('#carousel-nav-' + id);
+        });
+
+        flktyNavGallery.on('change', function () {
+            const element = flktyNavGallery.selectedElement;
+            const id = element.dataset.id;
+            
+            flkty.selectCell('#carousel-slide-' + id);
         });
     }
     
