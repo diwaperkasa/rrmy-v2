@@ -4,7 +4,7 @@
     <div class="bg-light border-bottom">
         <div class="container">
             <?php $carousels = get_field('articles'); ?>
-            <section id="main-banner" class="mb-3">
+            <section id="main-banner" class="py-3">
                 <div class="ratio-16x9 overflow-hidden">
                     <div class="carousel-gallery">
                         <?php foreach ($carousels as $postId): $post = get_post($postId); ?>
