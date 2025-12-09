@@ -3,6 +3,11 @@
 <?php
 $category = get_queried_object();
 
+$children = get_categories([
+    'parent' => $category->term_id,
+    'hide_empty' => false
+]);
+
 $query = new WP_Query([
     'posts_per_page' => 10,
     'post_status' => 'publish',
@@ -28,7 +33,25 @@ $topArticles = array_splice($articles, 0, 3);
         <div class="container">
             <section id="latest-category-article">
                 <header class="py-4">
-                    <h1 class="oranienbaum border-bottom pb-2"><?= $category->name ?></h1>
+                    <div class="text-center">
+                        <h1 class="oranienbaum pb-2"><?= $category->name ?></h1>
+                    </div>
+                    <div class="border-bottom">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10">
+                                <div class="d-flex justify-content-center lora">
+                                    <div class="px-5 pb-2">
+                                        <span class="text-warning">All</span>
+                                    </div>
+                                    <?php foreach ($children as $childCategory): ?>
+                                        <div class="border-start px-5 pb-2">
+                                            <a class="text-secondary-hover text-decoration-none text-dark" href="<?= get_term_link($childCategory->term_id) ?>"><?= $childCategory->name ?></a>
+                                        </div>
+                                    <?php endforeach ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </header>
             </section>
             <div class="row">

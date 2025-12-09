@@ -388,7 +388,7 @@
                         <?php if ($primaryMenus): ?>
                             <ul class="navbar-nav text-nowrap flex-wrap mx-auto mb-2 mb-lg-0 fw-bold align-items-center">
                                 <?php foreach ($primaryMenus as $menu): ?>
-                                    <li class="nav-item dropdown flex-shrink-0">
+                                    <li class="nav-item dropdown flex-shrink-0 px-3">
                                         <a class="nav-link text-uppercase text-black text-decoration-none fw-normal mulish ls-1 text-secondary-hover transition-color-hover" aria-current="page" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
                                         <ul class="dropdown-menu bg-white shadow border-0 rounded-0 py-0" style="--bs-light-rgb: 235,236,237;">
                                             <?php foreach ($menu['children'] as $childMenu): ?>
