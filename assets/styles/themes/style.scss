@@ -113,6 +113,20 @@
     .previous {
         left: 25% !important;
     }
+
+    p:has(iframe) {
+        margin-right: calc(var(--bs-gutter-x) * -.5);
+        margin-left: calc(var(--bs-gutter-x) * -.5);
+
+        @media (min-width: 768px) {
+            margin-right: unset;
+            margin-left: unset;
+        }
+    }
+
+    .instagram-media {
+        min-width: 100% !important;
+    }
 }
 
 .wp-caption {
