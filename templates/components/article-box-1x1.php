@@ -1,9 +1,9 @@
 <article <?php post_class('h-100 d-flex flex-column', get_the_ID()) ?>>
     <div class="article-header">
-        <div class="img-hover-zoom ratio-19x6 ratio-lg-1x1">
+        <div class="img-hover-zoom ratio-1x1 ratio-md-16x9">
             <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
                 <?= get_the_post_thumbnail(get_the_ID(), 'full', [
-                    "class" => "ratio-19x6 ratio-lg-1x1"
+                    "class" => "ratio-1x1 ratio-md-16x9"
                 ]) ?>
             </a>
         </div>

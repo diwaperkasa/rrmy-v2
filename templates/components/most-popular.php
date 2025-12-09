@@ -17,7 +17,7 @@ $popularPostIds = wpp_get_ids([
                 </div>
             <?php else: ?>
                 <div class="col-lg-3 col-md-6 col-sm-6 pb-3 pb-md-4">
-                    <?php get_template_part('templates/components/article-box', 'square') ?> 
+                    <?php get_template_part('templates/components/article-box', 'square') ?>
                 </div>
             <?php endif; ?>
         <?php endforeach ?>

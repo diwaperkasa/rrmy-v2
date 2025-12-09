@@ -57,33 +57,33 @@ $topArticles = array_splice($articles, 0, 3);
                 </header>
             </section>
             <div class="row">
-                <div class="col-lg-9">
+                <?php $post = array_shift($topArticles) ?>
+                <div class="col-md-8 pb-3 pb-md-4">
+                    <?php get_template_part('templates/components/article-box', 'square') ?>
+                    <?php wp_reset_postdata(); ?>
+                </div>
+                <div class="col-md-4">
                     <div class="row">
-                        <?php $post = array_shift($topArticles) ?>
-                        <div class="col-md-8 pb-3 pb-md-4">
-                            <?php get_template_part('templates/components/article-box', '1x1') ?>
-                            <?php wp_reset_postdata(); ?>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row">
-                                <?php foreach ($topArticles as $post): ?>
-                                    <div class="col-12 pb-3 pb-md-4">
-                                        <?php get_template_part('templates/components/article-box') ?>
-                                    </div>
-                                <?php endforeach ?>
-                                <?php wp_reset_postdata(); ?>
+                        <?php foreach ($topArticles as $post): ?>
+                            <div class="col-6 col-md-12 pb-3 pb-md-4">
+                                <?php get_template_part('templates/components/article-box', '1x1') ?>
                             </div>
-                        </div>
+                        <?php endforeach ?>
+                        <?php wp_reset_postdata(); ?>
                     </div>
-                    <div class="leaderboard leaderboard-top">
-                        <div id='div-gpt-ad-3035191-2'>
-                            <script>
-                                googletag.cmd.push(function() {
-                                    googletag.display('div-gpt-ad-3035191-2')
-                                });
-                            </script>
-                        </div>
-                    </div>
+                </div>
+            </div>
+            <div class="leaderboard leaderboard-top">
+                <div id='div-gpt-ad-3035191-2'>
+                    <script>
+                        googletag.cmd.push(function() {
+                            googletag.display('div-gpt-ad-3035191-2')
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
                     <div class="row" id="category-container">
                         <?php foreach ($articles as $post): ?>
                             <div class="col-md-6 pb-3 pb-md-4">
@@ -100,8 +100,8 @@ $topArticles = array_splice($articles, 0, 3);
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
-                    <div class="leaderboard leaderboard-vertical">
+                <div class="col-md-3">
+                    <div class="leaderboard leaderboard-vertical sticky-top">
                         <div id='div-gpt-ad-3035191-5'>
                             <script>
                                 googletag.cmd.push(function() {
@@ -109,29 +109,6 @@ $topArticles = array_splice($articles, 0, 3);
                                 });
                             </script>
                         </div>       
-                    </div>
-                    <?php
-                        $args = [
-                            'post_type' => 'post',
-                            'posts_per_page' => 5,
-                            'post_status' => 'publish',
-                            'orderby' => 'rand',
-                        ];
-
-                        $randomPost = new WP_Query($args);
-                    ?>
-                    <div class="sticky-top py-0 py-md-3">
-                        <div class="mb-4 border-bottom">
-                            <h2 class="oranienbaum">You May Like</h2>
-                        </div>
-                        <div class="row">
-                            <?php while ( $randomPost->have_posts() ) : $randomPost->the_post(); ?>
-                                <div class="col-12 pb-3 pb-md-4">
-                                    <?php get_template_part('templates/components/article-box') ?>
-                                </div>
-                            <?php endwhile; ?>
-                            <?php wp_reset_postdata(); ?>
-                        </div>
                     </div>
                 </div>
             </div>
