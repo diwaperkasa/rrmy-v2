@@ -103,7 +103,7 @@ import Flickity from 'flickity';
         carouselNav.forEach((element) => {
             element.addEventListener('click', () => {
                 const id = element.dataset.id;
-                
+
                 flktyNavGallery.selectCell('#carousel-nav-' + id);
             })
         })
@@ -156,7 +156,7 @@ import Flickity from 'flickity';
                 const articleContainer = document.querySelector('#category-container')
 
                 res.data.forEach((row) => {
-                    articleContainer.insertAdjacentHTML('beforeend', `<div class="col-md-6 pb-3 pb-md-4">${row}</div>`)
+                    articleContainer.insertAdjacentHTML('beforeend', `<div class="col-lg-12 col-sm-6 pb-3 pb-md-4">${row}</div>`)
                 });
 
                 page++;
