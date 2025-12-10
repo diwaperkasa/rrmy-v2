@@ -573,6 +573,10 @@ body {
     }
 }
 
+.leaderboard iframe {
+    width: 100%;
+}
+
 .leaderboard:has(iframe) {
     padding-top: 2rem;
     padding-bottom: 2rem;
