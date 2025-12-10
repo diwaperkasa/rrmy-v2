@@ -2,7 +2,7 @@
 
 <main class="main" role="main">
     <div class="bg-light border-bottom">
-        <div class="container">
+        <div class="container p-0">
             <?php $carousels = get_field('articles'); ?>
             <section id="main-banner" class="py-3">
                 <div class="ratio-16x9 overflow-hidden">
