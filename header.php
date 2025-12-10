@@ -466,7 +466,7 @@
                     <div class="position-absolute w-100 border-top">
                         <div class="container bg-white">
                             <div class="search-popup-container">
-                                <div class="px-3 py-5">
+                                <div class="py-5">
                                     <div class="row justify-content-center">
                                         <div class="col-md-10">
                                             <form action="/">
