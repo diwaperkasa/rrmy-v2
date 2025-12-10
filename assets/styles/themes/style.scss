@@ -579,7 +579,7 @@ body {
     border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
-.container:has(.post__thumbnail) {
+.container:has(.post__thumbnail), .container:has(#main-banner) {
     padding-right: 0;
     padding-left: 0;
 
