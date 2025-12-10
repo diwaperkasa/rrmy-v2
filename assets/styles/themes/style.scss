@@ -647,12 +647,17 @@ body {
         font-family: mulish;
 
         .yotu-video-title {
-            font-size: var(--bs-body-font-size) !important;
+            font-family: oranienbaum;
+            color: #fff;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            bottom: 1rem;
+            position: absolute;
+            font-size: 1.25rem;
             line-height: 1.5 !important;
-            color: rgba(var(--bs-dark-rgb), 1) !important;
             overflow: hidden;
             display: -webkit-box;
-            -webkit-line-clamp: 4;
+            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             text-overflow: ellipsis;
         }
@@ -661,7 +666,8 @@ body {
             display: flex;
 
             .yotu-video-thumb-wrp {
-                width: 75%;
+                width: 100%;
+                margin-right: 0px;
             }
         }
     }
@@ -670,16 +676,14 @@ body {
 @media (min-width: 768px) {
     .yotu-playlist .yotu-wrapper-player {
         flex: 0 0 auto;
-        width: 50% !important;
-        padding-right: 1rem;
+        width: 65% !important;
     }
 
     .yotu-playlist .yotu-videos {
         flex: 0 0 auto;
-        width: 50% !important;
+        width: 35% !important;
         padding-top: 0 !important;
-        padding-left: 1rem;
-        height: 450px;
+        height: 460px;
         overflow: auto;
     }
 
