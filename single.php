@@ -65,65 +65,69 @@
                 </div>
 
                 <div class="container">
-                    <div class="leaderboard leaderboard-top">
-                        <div id='div-gpt-ad-3035191-2'>
-                            <script>
-                                googletag.cmd.push(function() {
-                                    googletag.display('div-gpt-ad-3035191-2')
-                                });
-                            </script>
-                        </div>
-                    </div>
-    
                     <div class="row">
-                        <div class="col-md-8">
-                            <div class="post__content lora mb-5  border-bottom">
-                                <?php the_content(); ?>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="leaderboard leaderboard-vertical">
-                                <div id='div-gpt-ad-3035191-5'>
+                        <div class="col-lg-10 justify-content-center">
+                            <div class="leaderboard leaderboard-top">
+                                <div id='div-gpt-ad-3035191-2'>
                                     <script>
                                         googletag.cmd.push(function() {
-                                            googletag.display('div-gpt-ad-3035191-5')
+                                            googletag.display('div-gpt-ad-3035191-2')
                                         });
                                     </script>
                                 </div>
                             </div>
-                            <?php
-                                $args = [
-                                    'post_type' => 'post',
-                                    'post__not_in' => [get_the_ID()],
-                                    'posts_per_page' => 5,
-                                    'post_status' => 'publish',
-                                    'ignore_sticky_posts'=> 1,
-                                ];
-
-                                $tags = wp_get_post_tags(get_the_ID());
-                                $tag_ids = [];
-
-                                foreach ($tags as $tag) {
-                                    $tag_ids[] = $tag->term_id;
-                                }
-
-                                if ($tag_ids) {
-                                    $args['tag__in'] = $tag_ids;
-                                }
-
-                                $relatedPost = new WP_Query($args);
-                            ?>
-                            <div class="sticky-top py-0 py-md-3">
-                                <div class="mb-4 border-bottom">
-                                    <h2 class="oranienbaum">You May Like</h2>
+            
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="post__content lora mb-5  border-bottom">
+                                        <?php the_content(); ?>
+                                    </div>
                                 </div>
-                                <div class="row">
-                                    <?php while ( $relatedPost->have_posts() ) : $relatedPost->the_post(); ?>
-                                        <div class="col-12 pb-3 pb-md-4">
-                                            <?php get_template_part('templates/components/article-box') ?>
+                                <div class="col-md-4">
+                                    <div class="leaderboard leaderboard-vertical">
+                                        <div id='div-gpt-ad-3035191-5'>
+                                            <script>
+                                                googletag.cmd.push(function() {
+                                                    googletag.display('div-gpt-ad-3035191-5')
+                                                });
+                                            </script>
                                         </div>
-                                    <?php endwhile; ?>
-                                    <?php wp_reset_postdata(); ?>
+                                    </div>
+                                    <?php
+                                        $args = [
+                                            'post_type' => 'post',
+                                            'post__not_in' => [get_the_ID()],
+                                            'posts_per_page' => 5,
+                                            'post_status' => 'publish',
+                                            'ignore_sticky_posts'=> 1,
+                                        ];
+        
+                                        $tags = wp_get_post_tags(get_the_ID());
+                                        $tag_ids = [];
+        
+                                        foreach ($tags as $tag) {
+                                            $tag_ids[] = $tag->term_id;
+                                        }
+        
+                                        if ($tag_ids) {
+                                            $args['tag__in'] = $tag_ids;
+                                        }
+        
+                                        $relatedPost = new WP_Query($args);
+                                    ?>
+                                    <div class="sticky-top py-0 py-md-3">
+                                        <div class="mb-4 border-bottom">
+                                            <h2 class="oranienbaum">You May Like</h2>
+                                        </div>
+                                        <div class="row">
+                                            <?php while ( $relatedPost->have_posts() ) : $relatedPost->the_post(); ?>
+                                                <div class="col-12 pb-3 pb-md-4">
+                                                    <?php get_template_part('templates/components/article-box') ?>
+                                                </div>
+                                            <?php endwhile; ?>
+                                            <?php wp_reset_postdata(); ?>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
