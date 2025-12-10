@@ -65,18 +65,20 @@
                 </div>
 
                 <div class="container">
+                    <div class="leaderboard leaderboard-top">
+                        <div id='div-gpt-ad-3035191-2'>
+                            <script>
+                                googletag.cmd.push(function() {
+                                    googletag.display('div-gpt-ad-3035191-2')
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
-                            <div class="leaderboard leaderboard-top">
-                                <div id='div-gpt-ad-3035191-2'>
-                                    <script>
-                                        googletag.cmd.push(function() {
-                                            googletag.display('div-gpt-ad-3035191-2')
-                                        });
-                                    </script>
-                                </div>
-                            </div>
-            
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="post__content lora mb-5  border-bottom">
