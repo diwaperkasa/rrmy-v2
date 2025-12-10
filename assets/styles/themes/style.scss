@@ -32,7 +32,7 @@
     .wp-video {
         margin-bottom: 2rem;
     }
-    
+
     p > a > img {
         margin-bottom: 2rem;
     }
@@ -47,11 +47,18 @@
         color: var(--bs-secondary) !important;
     }
 
+    h1,
     h2,
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    h1 span,
+    h2 span,
+    h3 span,
+    h4 span,
+    h5 span,
+    h6 span {
         font-size: calc(1.325rem + 0.9vw);
     }
 
