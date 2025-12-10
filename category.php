@@ -66,7 +66,7 @@ $topArticles = array_splice($articles, 0, 3);
                     <div class="row">
                         <?php foreach ($topArticles as $post): ?>
                             <div class="col-6 col-md-12 pb-3 pb-md-4">
-                                <?php get_template_part('templates/components/article-box', '1x1') ?>
+                                <?php get_template_part('templates/components/article-box', 'category-child') ?>
                             </div>
                         <?php endforeach ?>
                         <?php wp_reset_postdata(); ?>
