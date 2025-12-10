@@ -65,8 +65,8 @@
                 </div>
 
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-10 justify-content-center">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
                             <div class="leaderboard leaderboard-top">
                                 <div id='div-gpt-ad-3035191-2'>
                                     <script>
