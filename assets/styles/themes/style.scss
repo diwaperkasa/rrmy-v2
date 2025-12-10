@@ -35,20 +35,12 @@
 
     a {
         color: var(--bs-body-color);
+        text-underline-offset: 4px;
+        text-decoration-color: rgb(var(--bs-warning-rgb)) !important;
     }
 
     a:hover {
         color: var(--bs-secondary) !important;
-    }
-
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin-bottom: 2rem;
     }
 
     h2,
@@ -537,7 +529,7 @@ body {
 }
 
 .gallery {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .navigation.pagination {
