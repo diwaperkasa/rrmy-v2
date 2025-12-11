@@ -436,7 +436,7 @@
                                                     <h3 class="text-uppercase mb-4 sweet-sans-pro ls-1">Get The Magazine</h3>
                                                     <p class="mulish-light ls-1">Subscribe now for a full year (12 issues) at only RM150 for the print version or opt for the digital edition for US$39.90 with two issues free.</p>
                                                     <div class="d-flex">
-                                                        <button class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 roboto-light ls-1">SUBSCRIBE</button>
+                                                        <a href="/print-subscription" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 roboto-light ls-1">SUBSCRIBE</a>
                                                     </div>
                                                 </div>
                                             </div>
