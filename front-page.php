@@ -94,7 +94,7 @@
                 $query = new WP_Query([
                     'posts_per_page' => $length,
                     'post_status' => 'publish',
-                    'post_type' => 'post',
+                    'post_type' => ['post', 'wine', 'passport', 'package'],
                     'orderby' => 'date',
                     'order' => 'DESC'
                 ]);

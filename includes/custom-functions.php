@@ -158,7 +158,7 @@ function get_dfp_targets()
 
     if (is_home() || is_front_page()) {
         $targets[] = 'home';
-    } elseif (is_singular(array('post'))) {
+    } elseif (is_singular(['post', 'wine', 'passport', 'package'])) {
         $categories = wp_get_object_terms($post->ID, 'category');
 
         if (!empty($categories)) {
@@ -277,7 +277,7 @@ function more_category_article()
         'paged' => $page,
         'posts_per_page' => $length,
         'post_status' => 'publish',
-        'post_type' => 'post',
+        'post_type' => ['post', 'wine', 'passport', 'package'],
         'orderby' => 'date',
         'order' => 'DESC',
         'tax_query' => [
@@ -324,7 +324,7 @@ function more_article()
         'paged' => $page,
         'posts_per_page' => $length,
         'post_status' => 'publish',
-        'post_type' => 'post',
+        'post_type' => ['post', 'wine', 'passport', 'package'],
         'orderby' => 'date',
         'order' => 'DESC',
     ]);
