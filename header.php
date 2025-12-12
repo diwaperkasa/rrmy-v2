@@ -330,7 +330,7 @@
                                     <path d="M2 7.5h18m-18 6h18M2 1.5h18" stroke-width="2.09" fill="none" stroke-linecap="square"></path>
                                 </svg>
                             </span>
-                            <span type="button" class="text-dark me-3 search-btn">
+                            <span type="button" class="top-header-menu text-dark me-3 search-btn">
                                 <svg style="stroke: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;" fill="#fff" width="18" height="18" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
                                     <title>Search</title>
                                     <g transform="translate(.7)" stroke-width="1.58" fill="none" fill-rule="evenodd">
@@ -339,7 +339,7 @@
                                     </g>
                                 </svg>
                             </span>
-                            <a class="me-2" href="<?= get_theme_mod("rr1_url", "javascript:void(0);") ?>" target="_blank">
+                            <a class="top-header-menu me-2" href="<?= get_theme_mod("rr1_url", "javascript:void(0);") ?>" target="_blank">
                                 <svg width="30" height="30" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 720 252" style="enable-background:new 0 0 720 252;" xml:space="preserve">
                                     <title>RR One</title>
                                     <g>
@@ -352,7 +352,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a target="_blank" class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish" href="<?= get_theme_mod("the_vault_url", "javascript:void(0);") ?>">The Vault</a>
+                            <a target="_blank" class="top-header-menu text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish" href="<?= get_theme_mod("the_vault_url", "javascript:void(0);") ?>">The Vault</a>
                         </div>
                     </div>
                     <div class="col-4">
@@ -364,7 +364,7 @@
                     </div>
                     <div class="col-4">
                         <div class="d-flex justify-content-end align-items-center">
-                            <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish me-2" href="<?= get_theme_mod("ultimate_drives_url", "javascript:void(0);") ?>">Ultimate Drives</a>
+                            <a class="top-header-menu text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small mulish me-2" href="<?= get_theme_mod("ultimate_drives_url", "javascript:void(0);") ?>">Ultimate Drives</a>
                             <a class="text-uppercase text-black text-secondary-hover transition-color-hover text-decoration-none fs-small subsribe-hover mulish" href="javascript:void(0);">SUBSCRIBE</a>
                         </div>
                     </div>

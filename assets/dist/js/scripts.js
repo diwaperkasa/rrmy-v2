@@ -30,6 +30,7 @@ import Flickity from 'flickity';
     const subsribeHover = document.querySelectorAll('.subsribe-hover');
     const subsribePopup = document.querySelector('.subsribe-popup');
     const subsribePopupContainer = document.querySelector('.subsribe-popup-container');
+    const topMenuHeader = document.querySelectorAll('.top-header-menu');
     
     subsribeHover.forEach(element => {
         element.addEventListener('mouseenter', () => {
@@ -43,7 +44,15 @@ import Flickity from 'flickity';
         if (!subsribePopup.classList.contains('d-none')) {
             subsribePopup.classList.add('d-none');
         }
-    })
+    });
+
+    topMenuHeader.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            if (!subsribePopup.classList.contains('d-none')) {
+                subsribePopup.classList.add('d-none');
+            }
+        });
+    });
     
     const searchBtn = document.querySelectorAll('.search-btn');
     const searchPopup = document.querySelector('.search-popup');
