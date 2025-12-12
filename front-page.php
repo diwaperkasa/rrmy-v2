@@ -90,8 +90,9 @@
                     <h2 class="oranienbaum border-bottom pb-2">Latest Stories</h2>
                 </header>
                 <?php
+                $length = get_field('how_many_articles_to_show');;
                 $query = new WP_Query([
-                    'posts_per_page' => get_field('how_many_articles_to_show'),
+                    'posts_per_page' => $length,
                     'post_status' => 'publish',
                     'post_type' => 'post',
                     'orderby' => 'date',
@@ -142,7 +143,7 @@
                 </div>
                 <div class="pt-4 pb-5">
                     <div class="horizontal-line text-center text-uppercase">
-                        <button style="--bs-btn-disabled-opacity: 1" class="btn px-4 border-0 rounded-0 bg-white more-article-btn">
+                        <button data-length="<?= $length ?>" style="--bs-btn-disabled-opacity: 1" class="btn px-4 border-0 rounded-0 bg-white more-article-btn">
                             <span class="oranienbaum h3 loading-text text-secondary-hover transition-color-hover">Read More Stories</span>
                         </button>
                     </div>

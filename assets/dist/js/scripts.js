@@ -171,7 +171,7 @@ import Flickity from 'flickity';
 
     if (moreArticle) {
         let page = 2;
-        const length = 10;
+        const length = moreArticle.dataset.length;
 
         moreArticle.addEventListener("click", async function() {
             const content = moreArticle.innerHTML;
