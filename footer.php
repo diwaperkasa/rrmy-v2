@@ -29,7 +29,7 @@
                         <?php $menus = get_wp_menu_tree('footer'); ?>
                         <div class="row">
                             <?php foreach ($menus as $menu): ?>
-                                <div class="col-md-4 col-sm-6">
+                                <div class="col-6 col-md-4 col-sm-6">
                                     <h2 class="fw-normal h4 oranienbaum"><?= $menu['title'] ?></h2>
                                     <ul class="list-unstyled">
                                         <?php foreach ($menu['children'] as $children): ?>

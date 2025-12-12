@@ -114,13 +114,6 @@ $topArticles = array_splice($articles, 0, 3);
             </div>
         </div>
     </div>
-    <div class="border-bottom">
-        <div class="container">
-            <section id="newsletter">
-                <?php get_template_part('templates/components/newsletter') ?>
-            </section>
-        </div>
-    </div>
     <div class="leaderboard-border-bottom">
         <div class="container">
             <div class="leaderboard leaderboard-mid">
@@ -138,6 +131,13 @@ $topArticles = array_splice($articles, 0, 3);
         <div class="container">
             <section id="most-popular" class="pb-4">
                 <?php get_template_part('templates/components/most-popular') ?>
+            </section>
+        </div>
+    </div>
+    <div class="border-bottom">
+        <div class="container">
+            <section id="newsletter">
+                <?php get_template_part('templates/components/newsletter') ?>
             </section>
         </div>
     </div>
