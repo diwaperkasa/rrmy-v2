@@ -444,8 +444,8 @@
                                     </div>
                                     <div class="col-md-6 py-4">
                                         <div class="py-3 px-5 border-start">
-                                            <h3 class="mb-4 text-center oranienbaum ls-1">Newsletter</h3>
-                                            <p class="text-center mb-4 mulish-light ls-1">Sign up for our weekly newsletter for the latest from the universe of luxury.</p>
+                                            <h3 class="mb-4 oranienbaum ls-1">Newsletter</h3>
+                                            <p class="mb-4 mulish-light ls-1">Sign up for our weekly newsletter for the latest from the universe of luxury.</p>
                                             <form target="_blank" action="https://robbreport.us12.list-manage.com/subscribe/post?u=28729885bbfbb9568a4580c7b&id=6523a24d0a" method="POST">
                                                 <div class="input-group mb-4">
                                                     <input name="EMAIL" type="email" class="fs-small form-control rounded-0 border-black roboto-light ls-1 px-3 py-2" placeholder="Email address" aria-label="Email address" required />
