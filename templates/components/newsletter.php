@@ -3,7 +3,7 @@
         <div class="col-md-5">
             <div class="d-flex h-100 align-items-center pe-md-4 border-end pb-4 pb-md-0">
                 <p class="mb-0 oranienbaum h4">
-                    Get Robb Report Malaysia’s take on what matters most in the world of the luxury, delivered to your inbox.
+                    Get our take on what matters most in the world of the luxury, delivered to your inbox.
                 </p>
             </div>
         </div>
