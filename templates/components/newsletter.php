@@ -18,8 +18,8 @@
                         <button type="submit" class="fs-small input-group-text rounded-0 mulish border border-black text-white bg-black px-3 py-2">SIGN UP</button>
                     </div>
                 </form>
-                <p class="m-0 fs-small mulish text-uppercase">
-                    LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. IN SED RUTRUM MASSA. DONEC ULTRICIES EFFICITUR NIBH ID CONSEQUAT. NULLA SAPIEN LEO, EUISMOD A LACINIA NEC, BIBENDUM NON NISL. CURABITUR PHARETRA VULPUTATE VENENATIS. NULLA MAGNA FELIS,
+                <p class="mb-0 mulish-light ls-1 fs-small">
+                    By providing your information, you agree to our Terms of Use and our Privacy Policy. We use vendors that may also process your information to help provide our services. This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
                 </p>
             </div>
         </div>
