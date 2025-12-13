@@ -59,8 +59,10 @@ $topArticles = array_splice($articles, 0, 3);
             <div class="row">
                 <?php $post = array_shift($topArticles) ?>
                 <div class="col-md-8 pb-3 pb-md-4">
-                    <?php get_template_part('templates/components/article-box', 'square') ?>
-                    <?php wp_reset_postdata(); ?>
+                    <?php if ($post): ?>
+                        <?php get_template_part('templates/components/article-box', 'square') ?>
+                        <?php wp_reset_postdata(); ?>
+                    <?php endif; ?>
                 </div>
                 <div class="col-md-4">
                     <div class="row">
