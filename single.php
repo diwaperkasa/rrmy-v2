@@ -28,13 +28,13 @@
                                 <div class="article-writter text-center fs-small mb-3">
                                     <span>
                                         <?php if ($writers): ?>
-                                            <span class="mulish-light text-uppercase">By</span>
+                                            <span class="mulish text-uppercase">By</span>
                                             <?php foreach ($writers as $writer): ?>
-                                                <a class="text-decoration-none text-dark mulish-light text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
+                                                <a class="text-decoration-none text-dark mulish text-secondary-hover transition-color-hover" href="<?= get_term_link($writer->term_id) ?>"><span class="text-uppercase"><?= $writer->name ?></span></a>
                                             <?php endforeach; ?>
                                             <span class="">|</span>
                                         <?php endif; ?>
-                                        <span class="mulish-light text-uppercase"><?= date('F d, Y', strtotime($post->post_date)) ?></span>
+                                        <span class="mulish text-uppercase"><?= date('F d, Y', strtotime($post->post_date)) ?></span>
                                     </span>
                                 </div>
                             </div>
