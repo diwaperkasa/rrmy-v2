@@ -119,7 +119,7 @@
                                     ?>
                                     <div class="sticky-top py-0 py-md-3">
                                         <div class="mb-4 border-bottom">
-                                            <h2 class="oranienbaum">You May Like</h2>
+                                            <h2 class="oranienbaum">You May Also Like</h2>
                                         </div>
                                         <div class="row">
                                             <?php while ( $relatedPost->have_posts() ) : $relatedPost->the_post(); ?>
