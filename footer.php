@@ -21,8 +21,7 @@
                             </a>
                         </div>
                         <div class="my-4">
-                            <p class="lora fs-small">Robb Report is leading voice in the global luxury market. Its discerning audience appreciates and desires quality, exclusivity, heritage, taste, and fine design. It is synonomous aith affluence, luxury, and the best of the best.</p>
-                            <p class="text-secondary mulish fs-small">When the most successful people on the planet seek the finest products, experiences and adventures available to them, they turn to Robb Report. The title, which began as a newsletter for vintage Rolls-Royce enthusiasts nearly half a century ago, has grown to be the leading voice in global luxury, with over 20 international editions and growing. Now, as the tastemaker’s tastemaker, it covers cars, yachts, jets, bikes, fashion, watches, art, design, real estate, wine, spirits, fine dining, philanthropy, travel, cigars, and tech, and rules on the brands and artisans that are truly in a league of their own.</p>
+                            <p class="mulish fs-small">When the most successful people on the planet seek the finest products, experiences and adventures available to them, they turn to Robb Report. The title, which began as a newsletter for vintage Rolls-Royce enthusiasts nearly half a century ago, has grown to be the leading voice in global luxury, with over 20 international editions and growing. Now, as the tastemaker’s tastemaker, it covers cars, yachts, jets, bikes, fashion, watches, art, design, real estate, wine, spirits, fine dining, philanthropy, travel, cigars, and tech, and rules on the brands and artisans that are truly in a league of their own.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
