@@ -50,32 +50,32 @@ function mytheme_customize_register($wp_customize)
         $wp_customize,
         'theme_logo',
         [
-            'label' => __('RobbReport Image','rr_logo'),
+            'label' => __('RobbReport Image', 'rr_logo'),
             'section' => 'theme_options',
             'settings' => 'theme_logo'
         ]
     ));
 
     $wp_customize->add_control('rr1_url', [
-        'label' => __('RR1 Url','rr1_url'),
+        'label' => __('RR1 Url', 'rr1_url'),
         'section' => 'theme_options',
         'type' => 'url',
     ]);
 
     $wp_customize->add_control('the_vault_url', [
-        'label' => __('The Vault Url','the_vault_url'),
+        'label' => __('The Vault Url', 'the_vault_url'),
         'section' => 'theme_options',
         'type' => 'url',
     ]);
 
     $wp_customize->add_control('ultimate_drives_url', [
-        'label' => __('Ultimate Drives Url','ultimate_drives_url'),
+        'label' => __('Ultimate Drives Url', 'ultimate_drives_url'),
         'section' => 'theme_options',
         'type' => 'url',
     ]);
 
     $wp_customize->add_control('subscribe_url', [
-        'label' => __('Subscribe Url','subscribe_url'),
+        'label' => __('Subscribe Url', 'subscribe_url'),
         'section' => 'theme_options',
         'type' => 'url',
     ]);
@@ -128,7 +128,8 @@ function theme_setup()
 
 add_action('after_setup_theme', 'theme_setup');
 
-function my_acf_json_save_point( $path ) {
+function my_acf_json_save_point($path)
+{
     $path = get_stylesheet_directory() . '/acf-json';
 
     return $path;
@@ -268,7 +269,7 @@ function get_wp_menu_tree($menu_location = 'primary')
 function more_category_article()
 {
     $result = [];
-    
+
     $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $length = filter_input(INPUT_GET, 'length', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $term_id = filter_input(INPUT_GET, 'term_id', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -316,7 +317,7 @@ add_action('wp_ajax_nopriv_more_category_article', 'more_category_article');
 function more_article()
 {
     $result = [];
-    
+
     $page = filter_input(INPUT_GET, 'page', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $length = filter_input(INPUT_GET, 'length', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
@@ -353,11 +354,11 @@ function more_article()
 add_action('wp_ajax_more_article', 'more_article');
 add_action('wp_ajax_nopriv_more_article', 'more_article');
 
-add_shortcode('gap', function($atts) {
+add_shortcode('gap', function ($atts) {
     return null;
 });
 
-add_shortcode('title', function($atts) {
+add_shortcode('title', function ($atts) {
 
     $atts = shortcode_atts([
         'text'  => '',
@@ -368,3 +369,18 @@ add_shortcode('title', function($atts) {
 
     return "<h2><b>{$text}</b></h2>";
 });
+
+function package_price()
+{
+    global $post;
+
+    $currency = get_field('currency', $post->ID);
+    $package_price = get_field('package_price', $post->ID);
+    $unit = get_field('unit', $post->ID);
+
+    if (!preg_match('#[^0-9]#', $package_price)) {
+        return $currency . " " . number_format($package_price, 2, '.', ',') . (!empty($unit) ? " " . $unit : "");
+    } else {
+        return $package_price;
+    }
+}
