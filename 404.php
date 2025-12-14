@@ -21,7 +21,7 @@
                                 <div class="col-md-8">
                                     <form method="get" class="searchform" action="/" role="search">
                                         <div class="mb-3">
-                                            <input type="text" class="form-control mulish rounded-0 border-dark" name="s" placeholder="Search..." required>
+                                            <input type="search" class="form-control mulish rounded-0 border-dark" name="s" placeholder="Search..." required>
                                         </div>
                                     </form>
                                 </div>
