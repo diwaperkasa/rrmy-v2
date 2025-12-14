@@ -97,7 +97,7 @@
                                     </div>
                                     <?php
                                         $args = [
-                                            'post_type' => 'post',
+                                            'post_type' => ['post', 'wine', 'passport', 'package'],
                                             'post__not_in' => [get_the_ID()],
                                             'posts_per_page' => 5,
                                             'post_status' => 'publish',
