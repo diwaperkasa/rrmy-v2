@@ -105,12 +105,13 @@ function ux_col($atts, $content = null) {
 
   // Fix old cols
   if(strpos($span, '/')) $span = flatsome_fix_span($span);
+  if(strpos($span__md, '/')) $span__md = flatsome_fix_span($span__md);
+  if(strpos($span__sm, '/')) $span__sm = flatsome_fix_span($span__sm);
 
   // add custom class
   if($class) $classes[] = $class;
 
   if($visibility) $classes[] = $visibility;
-
 
   if($span__md) $classes[] = 'col-md-'.$span__md;
   if($span__sm) $classes[] = 'col-sm-'.$span__sm;
