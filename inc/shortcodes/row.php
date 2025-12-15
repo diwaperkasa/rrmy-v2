@@ -112,9 +112,9 @@ function ux_col($atts, $content = null) {
   if($visibility) $classes[] = $visibility;
 
 
-  if($span__md) $classes[] = 'medium-'.$span__md;
-  if($span__sm) $classes[] = 'small-'.$span__sm;
-  if($span) $classes[] = 'large-'.$span;
+  if($span__md) $classes[] = 'col-md-'.$span__md;
+  if($span__sm) $classes[] = 'col-sm-'.$span__sm;
+  if($span) $classes[] = 'col-lg-'.$span;
 
   // Force first position
   if($force_first) $classes[] = $force_first.'-col-first';

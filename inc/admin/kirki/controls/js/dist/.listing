@@ -1,0 +1,6 @@
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 .
+drwxr-xr-x   3 ftp      ftp          4096 Aug  1  2019 ..
+-rw-r--r--   1 ftp      ftp         79488 Aug  6  2019 script.js
+-rw-r--r--   1 ftp      ftp         80596 Aug  6  2019 script-legacy.js
+-rw-r--r--   1 ftp      ftp         40381 Aug  6  2019 script-legacy.min.js
+-rw-r--r--   1 ftp      ftp         39928 Aug  6  2019 script.min.js

@@ -1,0 +1,5 @@
+drwxr-xr-x   2 ftp      ftp          4096 Feb 20  2020 .
+drwxr-xr-x  14 ftp      ftp          4096 Feb 20  2020 ..
+-rw-r--r--   1 ftp      ftp          3054 Aug  6  2019 widget-blocks.php
+-rw-r--r--   1 ftp      ftp          6077 Aug  6  2019 widget-recent-posts.php
+-rw-r--r--   1 ftp      ftp          3254 Aug  6  2019 widget-upsell.php

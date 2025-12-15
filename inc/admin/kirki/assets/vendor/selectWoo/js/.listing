@@ -1,0 +1,11 @@
+drwxr-xr-x   3 ftp      ftp          4096 Aug  1  2019 .
+drwxr-xr-x   4 ftp      ftp          4096 Aug  1  2019 ..
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 i18n
+-rw-r--r--   1 ftp      ftp        166593 Aug  6  2019 select2.full.js
+-rw-r--r--   1 ftp      ftp         76736 Aug  6  2019 select2.full.min.js
+-rw-r--r--   1 ftp      ftp        146695 Aug  6  2019 select2.js
+-rw-r--r--   1 ftp      ftp         68420 Aug  6  2019 select2.min.js
+-rw-r--r--   1 ftp      ftp        166593 Aug  6  2019 selectWoo.full.js
+-rw-r--r--   1 ftp      ftp         76736 Aug  6  2019 selectWoo.full.min.js
+-rw-r--r--   1 ftp      ftp        146695 Aug  6  2019 selectWoo.js
+-rw-r--r--   1 ftp      ftp         68420 Aug  6  2019 selectWoo.min.js

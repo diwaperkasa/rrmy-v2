@@ -1,0 +1,7 @@
+drwxr-xr-x   4 ftp      ftp          4096 Aug  1  2019 .
+drwxr-xr-x   5 ftp      ftp          4096 Aug  1  2019 ..
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 css
+drwxr-xr-x   3 ftp      ftp          4096 Aug  1  2019 js
+-rw-r--r--   1 ftp      ftp          1011 Aug  6  2019 kirki.css
+-rw-r--r--   1 ftp      ftp           519 Aug  6  2019 kirki.css.map
+-rw-r--r--   1 ftp      ftp           977 Aug  6  2019 kirki.scss

@@ -1,0 +1,14 @@
+drwxr-xr-x  13 ftp      ftp          4096 Aug  1  2019 .
+drwxr-xr-x   8 ftp      ftp          4096 Aug  1  2019 ..
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 blog
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 footer
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 global
+drwxr-xr-x   3 ftp      ftp          4096 Aug  1  2019 header
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 helpers
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 layout
+-rw-r--r--   1 ftp      ftp           470 Aug  6  2019 options-depricated.php
+drwxr-xr-x   3 ftp      ftp          4096 Aug  1  2019 pages
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 portfolio
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 shop
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 social
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 styles

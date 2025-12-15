@@ -1,0 +1,9 @@
+drwxr-xr-x   3 ftp      ftp          4096 Aug  1  2019 .
+drwxr-xr-x   5 ftp      ftp          4096 Aug  1  2019 ..
+-rw-r--r--   1 ftp      ftp          2551 Aug  6  2019 color-picker.min.js
+-rw-r--r--   1 ftp      ftp           819 Aug  6  2019 cookie.js
+-rw-r--r--   1 ftp      ftp         21293 Aug  6  2019 iris.min.js
+-rw-r--r--   1 ftp      ftp          6930 Aug  6  2019 jquery.maskedinput-1.2.2.js
+-rw-r--r--   1 ftp      ftp          9324 Aug  6  2019 jquery.tipsy.js
+drwxr-xr-x   2 ftp      ftp          4096 Aug  1  2019 min
+-rw-r--r--   1 ftp      ftp         18191 Aug  6  2019 smof.js

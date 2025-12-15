@@ -1,7 +1,6 @@
 <?php
 
-require_once __DIR__ . "/../inc/extensions/extensions.php";
-require_once __DIR__ . "/../inc/shortcodes/function.php";
+require_once get_template_directory() . "/inc/init.php";
 
 /**
  * This is file for all of your custom functions for the project
@@ -370,14 +369,4 @@ function package_price()
     } else {
         return $package_price;
     }
-}
-
-function get_shortcode_inline_css($args)
-{
-    $style = '';
-    foreach ($args as $key => $value) {
-        $unit = array_key_exists('unit', $value) ? $value['unit'] : null;
-        if ($value['value']) $style .=  $value['attribute'] . ':' . $value['value'] . $unit . ';';
-    }
-    if ($style) return 'style="' . $style . '"';
 }
