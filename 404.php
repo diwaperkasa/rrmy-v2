@@ -16,17 +16,18 @@
                                 <h1 class="oranienbaum">Oops! That page can’t be found.</h1>
                             </header>
                             <div class="page-content">
-							<p class="mulish">It looks like nothing was found at this location. Maybe try one of the links below or a search?</p>
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <form method="get" class="searchform" action="/" role="search">
-                                        <div class="mb-3">
-                                            <input type="search" class="form-control mulish rounded-0 border-dark" name="s" placeholder="Search..." required>
-                                        </div>
-                                    </form>
+                                <p class="mulish">It looks like nothing was found at this location. Maybe try one of the links below or a search?</p>
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <form method="get" class="searchform" action="/" role="search">
+                                            <div class="mb-3">
+                                                <input type="search" class="form-control mulish rounded-0 border-dark" name="s" placeholder="Search..." required />
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-						</div>
+                        </div>
                     </div>
                 </div>
             </div>
