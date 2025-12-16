@@ -3,11 +3,6 @@
 <?php
 $category = get_queried_object();
 
-$children = get_categories([
-    'parent' => $category->term_id,
-    'hide_empty' => false
-]);
-
 $query = new WP_Query([
     'posts_per_page' => 10,
     'post_status' => 'publish',
@@ -36,23 +31,31 @@ $topArticles = array_splice($articles, 0, 3);
                     <div class="text-center">
                         <h1 class="oranienbaum pb-2"><?= $category->name ?></h1>
                     </div>
-                    <?php if ($children): ?>
-                        <div class="border-bottom">
-                            <div class="row justify-content-center">
-                                <div class="col-md-8">
-                                    <div class="d-flex justify-content-between lora">
-                                        <div class="pb-2 col text-center">
-                                            <span class="text-warning">All</span>
-                                        </div>
-                                        <?php foreach ($children as $childCategory): ?>
-                                            <div class="border-start pb-2 col text-center">
-                                                <a class="text-secondary-hover text-decoration-none text-dark" href="<?= get_term_link($childCategory->term_id) ?>"><?= $childCategory->name ?></a>
+                    <?php if (!$category->parent): ?>
+                        <?php
+                        $children = get_categories([
+                            'parent' => $category->term_id,
+                            'hide_empty' => false
+                        ]);
+                        ?>
+                        <?php if ($children): ?>
+                            <div class="border-bottom">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <div class="d-flex justify-content-between lora">
+                                            <div class="pb-2 col text-center">
+                                                <span class="text-warning">All</span>
                                             </div>
-                                        <?php endforeach ?>
+                                            <?php foreach ($children as $childCategory): ?>
+                                                <div class="border-start pb-2 col text-center">
+                                                    <a class="text-secondary-hover text-decoration-none text-dark" href="<?= get_term_link($childCategory->term_id) ?>"><?= $childCategory->name ?></a>
+                                                </div>
+                                            <?php endforeach ?>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        <?php endif; ?>
                     <?php endif; ?>
                 </header>
             </section>
