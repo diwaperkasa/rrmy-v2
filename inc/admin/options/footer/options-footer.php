@@ -350,4 +350,4 @@ function flatsome_refresh_footer_partials( WP_Customize_Manager $wp_customize ) 
 	) );
 
 }
-add_action( 'customize_register', 'flatsome_refresh_footer_partials' );
+// add_action( 'customize_register', 'flatsome_refresh_footer_partials' );

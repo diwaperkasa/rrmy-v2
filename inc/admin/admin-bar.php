@@ -522,4 +522,4 @@ if(is_woocommerce_activated()) {
 }
 
 }
-add_action( 'admin_bar_menu', 'flatsome_admin_bar_helper' , 35);
+// add_action( 'admin_bar_menu', 'flatsome_admin_bar_helper' , 35);
