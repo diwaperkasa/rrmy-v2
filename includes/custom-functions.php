@@ -370,3 +370,8 @@ function package_price()
         return $package_price;
     }
 }
+
+add_filter('shortcode_atts_gallery', function ($out, $pairs, $atts) {
+    $out['size'] = 'full';
+    return $out;
+}, 10, 3);
