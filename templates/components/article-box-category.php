@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <div class="article-footer d-flex flex-column justify-content-between">
+            <div class="article-footer d-flex flex-column justify-content-between mb-3 mb-sm-0">
                 <div class="article-desc">
                     <?php $categories = get_the_category(get_the_ID()) ?>
                     <?php if ($categories): ?>
