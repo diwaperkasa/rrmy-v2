@@ -262,7 +262,7 @@
                                 </div>
                                 <ul class="list-unstyled">
                                     <?php foreach ($menu['children'] as $childMenu): ?>
-                                        <li class="mb-2"><a href="<?= $childMenu['url'] ?>" class="text-white text-decoration-none text-danger-hover transition-color-hover fs-6 mulish ls-3"><?= $childMenu['title'] ?></a></li>
+                                        <li class="mb-2"><a target="<?= $childMenu["target"] ?>" href="<?= $childMenu['url'] ?>" class="text-white text-decoration-none text-danger-hover transition-color-hover fs-6 mulish ls-3"><?= $childMenu['title'] ?></a></li>
                                     <?php endforeach; ?>
                                 </ul>
                             </div>

@@ -239,6 +239,7 @@ function get_wp_menu_tree($menu_location = 'primary')
                 'title'    => $item->title,
                 'url'      => $item->url,
                 'object'   => $item->object,
+                'target'   => $item->target,
                 'children' => []
             ];
         } else {
@@ -247,6 +248,7 @@ function get_wp_menu_tree($menu_location = 'primary')
                 'title'    => $item->title,
                 'url'      => $item->url,
                 'object'   => $item->object,
+                'target'   => $item->target,
                 'parent'   => $parent_id,
                 'children' => []
             ];
