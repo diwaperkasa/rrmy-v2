@@ -96,11 +96,19 @@
     }
 
     .next {
-        right: 25% !important;
+        right: 10% !important;
+
+        @media (min-width: 768px) {
+            right: 25% !important;
+        }
     }
 
     .previous {
-        left: 25% !important;
+        left: 10% !important;
+
+        @media (min-width: 768px) {
+            left: 25% !important;
+        }
     }
 
     p:has(iframe) {
