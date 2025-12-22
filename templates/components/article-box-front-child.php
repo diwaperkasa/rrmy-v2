@@ -4,7 +4,9 @@
             <div class="article-header">
                 <div class="img-hover-zoom ratio-1x1 ratio-md-16x9">
                     <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
-                        <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
+                        <?= get_the_post_thumbnail(get_the_ID(), 'full', [
+                            "class" => "ratio-1x1 ratio-md-16x9"
+                        ]) ?>
                     </a>
                 </div>
             </div>
