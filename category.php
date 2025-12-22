@@ -42,12 +42,12 @@ $topArticles = array_splice($articles, 0, 3);
                             <div class="border-bottom">
                                 <div class="row justify-content-center">
                                     <div class="col-md-8">
-                                        <div class="d-flex justify-content-between lora">
-                                            <div class="pb-2 col text-center">
-                                                <span class="text-warning">All</span>
+                                        <div class="d-flex justify-content-between align-items-center lora">
+                                            <div class="pb-2 col px-2 text-center">
+                                                <span class="text-warning mx-2">All</span>
                                             </div>
                                             <?php foreach ($children as $childCategory): ?>
-                                                <div class="border-start pb-2 col text-center">
+                                                <div class="border-start pb-2 col px-2 text-center">
                                                     <a class="text-secondary-hover text-decoration-none text-dark" href="<?= get_term_link($childCategory->term_id) ?>"><?= $childCategory->name ?></a>
                                                 </div>
                                             <?php endforeach ?>

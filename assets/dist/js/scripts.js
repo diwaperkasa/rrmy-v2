@@ -91,7 +91,7 @@ import Flickity from 'flickity';
         const flkty = new Flickity(carouselGallery, {
             freeScroll: false,
             wrapAround: true,
-            pageDots: false,
+            pageDots: true,
             autoPlay: false,
             cellAlign: 'center'
         });

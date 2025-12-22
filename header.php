@@ -370,7 +370,9 @@
                     </div>
                 </div>
             </header>
-            <div id="containerNav">
+        </div>
+        <div id="containerNav">
+            <div class="container">
                 <nav class="navbar navbar-expand-lg p-0" id="mainNavbar">
                     <span type="button" class="d-block d-lg-none text-danger pe-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">
                         <svg fill="#fff" stroke="#d02027" width="24" height="24" viewBox="0 0 22 15" xmlns="http://www.w3.org/2000/svg">
@@ -410,15 +412,21 @@
                         </svg>
                     </span>
                 </nav>
-                <div class="d-block d-lg-none slider-menu-mobile">
-                    <div class="d-flex overflow-auto gap-3 pb-2">
-                        <?php foreach ($primaryMenus as $menu): ?>
-                            <div class="flex-shrink-0">
-                                <a class="text-uppercase text-dark text-decoration-none mulish" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
-                            </div>
-                        <?php endforeach; ?>
+            </div>
+            <div class="border-top mt-3 d-block d-lg-none">
+                <div class="container">
+                    <div class="slider-menu-mobile">
+                        <div class="d-flex overflow-auto gap-3 py-2">
+                            <?php foreach ($primaryMenus as $menu): ?>
+                                <div class="flex-shrink-0">
+                                    <a class="text-uppercase text-dark text-decoration-none mulish" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="container">
                 <div class="position-relative subsribe-popup d-none">
                     <div class="position-absolute w-100">
                         <div class="container bg-white border-top">
