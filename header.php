@@ -413,7 +413,7 @@
                     </span>
                 </nav>
             </div>
-            <div class="border-top mt-3 d-block d-lg-none">
+            <div class="border-top mt-2 d-block d-lg-none">
                 <div class="container">
                     <div class="slider-menu-mobile">
                         <div class="d-flex overflow-auto gap-3 py-2">
