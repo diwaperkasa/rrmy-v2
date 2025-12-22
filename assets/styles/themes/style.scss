@@ -238,7 +238,6 @@ a.hover-border::before {
 
 .gallery-item {
     width: 100% !important;
-    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
 .package {
@@ -641,6 +640,7 @@ body {
 
 .gallery {
     margin-bottom: 4rem;
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
 .navigation.pagination {
