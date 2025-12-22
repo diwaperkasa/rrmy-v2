@@ -21,7 +21,7 @@
                                 <div class="position-absolute carousel-desc">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div style="--bs-bg-opacity: 0.75" class="m-4 p-4 position-relative article-banner-title bg-white">
+                                            <div class="m-4 p-4 position-relative article-banner-title bg-white">
                                                 <?php $categories = get_the_category(get_the_ID()) ?>
                                                 <?php if ($categories): ?>
                                                     <a class="text-decoration-none category-article" href="<?= get_term_link($categories[0]->term_id) ?>">

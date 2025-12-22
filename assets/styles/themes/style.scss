@@ -570,6 +570,10 @@ a.hover-border::before {
 }
 
 .carousel-gallery {
+    .article-banner-title {
+        --bs-bg-opacity: 1;
+    }
+
     .flickity-button {
         background: transparent;
         z-index: 999;
@@ -606,6 +610,10 @@ a.hover-border::before {
     }
 
     @media (min-width: 768px) {
+        .article-banner-title {
+            --bs-bg-opacity: 0.75;
+        }
+
         .flickity-button {
             top: 50%;
         }
