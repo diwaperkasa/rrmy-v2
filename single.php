@@ -59,7 +59,7 @@
                 </div>
     
                 <div class="container p-0">
-                    <div class="post__thumbnail mb-5">
+                    <div class="post__thumbnail mb-3">
                         <?= get_the_post_thumbnail(get_the_ID(), 'full') ?>
                     </div>
                 </div>
