@@ -272,7 +272,7 @@
     <div class="border-bottom bg-light d-block d-md-none">
         <div class="container">
             <section id="magazine-subscribe" class="py-4">
-                <div class="text-center">
+                <div class="text-center mb-3">
                     <img class="img-fluid" src="<?= get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp"); ?>" alt="<?= get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp"); ?>">
                 </div>
                 <h2 class="mb-4 oranienbaum ls-1 text-center">Get The Magazine</h2>
