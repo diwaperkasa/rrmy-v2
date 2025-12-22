@@ -299,6 +299,11 @@ a.hover-border::before {
     }
 }
 
+.placeholder-secondary::placeholder {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important
+}
+
 .ls-0 {
     letter-spacing: 0;
 }
