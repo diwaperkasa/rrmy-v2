@@ -441,6 +441,43 @@ a.hover-border::before {
     display: none;
 }
 
+.section-title-container {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    display: flex;
+    flex-flow: nowrap;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.section-text-bold-center {
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+
+    b {
+        flex: 1;
+        background-color: rgb(var(--bs-dark-rgb));
+        height: 2px;
+        opacity: 0.1;
+    }
+
+    .section-title-main {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+.text-bold-center {
+    text-align: center;
+    font-weight: bold;
+}
+
 .pb-10 {
     padding-bottom: 6rem;
 }
