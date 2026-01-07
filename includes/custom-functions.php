@@ -378,11 +378,16 @@ add_filter('shortcode_atts_gallery', function ($out, $pairs, $atts) {
     return $out;
 }, 10, 3);
 
+add_filter('ep_is_integrated', '__return_true');
+
 add_action( 'pre_get_posts', function( $query ) {
-    if ( $query->is_search() && $query->is_main_query() && ! is_admin() ) {
+    if ($query->is_search() && $query->is_main_query()) {
         $query->set('post_status', ['publish']);
-        $query->set('fields', 'ids');
         $query->set('ignore_sticky_posts', true);
-        $query->set('meta_query', []);
+        
+        if ( apply_filters('ep_is_integrated', false) ) {
+            $query->set('fields', '');
+            $query->set('ep_integrate', true);
+        }
     }
 });

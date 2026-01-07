@@ -9,6 +9,7 @@ $query = new WP_Query([
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC',
+    'no_found_rows'  => true,
     'tax_query' => [
         [
             'taxonomy' => 'category',

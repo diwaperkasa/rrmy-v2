@@ -93,7 +93,8 @@
                     'post_status' => 'publish',
                     'post_type' => ['post', 'wine', 'passport', 'package'],
                     'orderby' => 'date',
-                    'order' => 'DESC'
+                    'order' => 'DESC',
+                    'no_found_rows'  => true,
                 ]);
     
                 $latestArticles = $query->posts;
@@ -175,6 +176,7 @@
             'post_type' => 'post',
             'orderby' => 'date',
             'order' => 'DESC',
+            'no_found_rows'  => true,
             'tax_query' => [
                 [
                     'taxonomy' => 'category',

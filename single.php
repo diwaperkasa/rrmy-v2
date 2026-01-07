@@ -102,6 +102,7 @@
                                             'posts_per_page' => 5,
                                             'post_status' => 'publish',
                                             'ignore_sticky_posts'=> 1,
+                                            'no_found_rows'  => true,
                                         ];
         
                                         $tags = wp_get_post_tags(get_the_ID());
