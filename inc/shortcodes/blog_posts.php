@@ -1,6 +1,6 @@
 <?php
 // [blog_posts]
-function shortcode_latest_from_blog($atts, $content = null, $tag) {
+function shortcode_latest_from_blog($atts, $content = null, $tag = null) {
 
 	extract(shortcode_atts(array(
 		"_id" => 'row-'.rand(),

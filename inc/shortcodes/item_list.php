@@ -1,7 +1,7 @@
 <?php
 
 // [ux_item_list]
-function ux_item_list($atts, $content=null, $code) {
+function ux_item_list($atts, $content=null, $code = null) {
   extract(shortcode_atts(array(
     'title' => ''
   ), $atts));
@@ -10,7 +10,7 @@ function ux_item_list($atts, $content=null, $code) {
 add_shortcode('ux_item_list', 'ux_item_list');
 
 // [ux_menu_item]
-function ux_item($atts, $content=null, $code) {
+function ux_item($atts, $content=null, $code = null) {
   extract(shortcode_atts(array(
     'title' => 'Menu Item',
   ), $atts));

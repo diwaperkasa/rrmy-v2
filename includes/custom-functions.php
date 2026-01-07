@@ -121,7 +121,7 @@ function theme_setup()
         'widgets',
     ));
     /*  Enable support for Post Formats */
-    add_theme_support('post-formats', array('video'));
+    // add_theme_support('post-formats', array('video'));
     /* Register Menus */
     register_nav_menus([
         'mobile_menu' => __('Mobile', 'rrmy'),
@@ -377,3 +377,12 @@ add_filter('shortcode_atts_gallery', function ($out, $pairs, $atts) {
     $out['size'] = 'full';
     return $out;
 }, 10, 3);
+
+add_action( 'pre_get_posts', function( $query ) {
+    if ( $query->is_search() && $query->is_main_query() && ! is_admin() ) {
+        $query->set('post_status', ['publish']);
+        $query->set('fields', 'ids');
+        $query->set('ignore_sticky_posts', true);
+        $query->set('meta_query', []);
+    }
+});
