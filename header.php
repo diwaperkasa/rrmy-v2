@@ -365,7 +365,7 @@
                     <div class="col-4">
                         <div class="text-center">
                             <a class="text-decoration-none" href="/">
-                                <img class="my-0 my-lg-4" height="75px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
+                                <img class="my-0 my-lg-4" height="75px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?>" alt="robbreport-malaysia-logo">
                             </a>
                         </div>
                     </div>
