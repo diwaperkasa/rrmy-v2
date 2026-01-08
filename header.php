@@ -389,7 +389,7 @@
                     </span>
                     <div class="d-block d-lg-none">
                         <a class="nav-link text-uppercase text-black text-decoration-none fw-normal my-2" aria-current="page" href="/">
-                            <img height="40px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?> ?>" alt="robbreport-malaysia-logo">
+                            <img height="40px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?>" alt="robbreport-malaysia-logo">
                         </a>
                     </div>
                     <div class="collapse navbar-collapse primary-menu">
