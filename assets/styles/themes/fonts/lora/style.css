@@ -1,22 +1,29 @@
 @font-face {
     font-family: "lora";
     src: url("../rrmy-v2/assets/styles/themes/fonts/lora/Lora-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "lora-italic";
+    font-family: "lora";
     src: url("../rrmy-v2/assets/styles/themes/fonts/lora/Lora-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "lora-bold";
+    font-family: "lora";
     src: url("../rrmy-v2/assets/styles/themes/fonts/lora/Lora-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
 }
 
 .lora {
     font-family: lora, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 
 .lora-italic {
