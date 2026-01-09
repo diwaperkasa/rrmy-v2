@@ -1,21 +1,27 @@
 @font-face {
     font-family: "mulish";
     src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "mulish-light";
-    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Light.ttf") format("truetype");
+    font-family: "mulish";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "mulish";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
 }
 
 .mulish {
     font-family: mulish, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.mulish-light {
-    font-family: mulish-light, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }

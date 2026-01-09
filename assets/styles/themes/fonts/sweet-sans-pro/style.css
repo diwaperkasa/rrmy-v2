@@ -1,21 +1,27 @@
 @font-face {
     font-family: "sweet-sans-pro";
     src: url("../rrmy-v2/assets/styles/themes/fonts/sweet-sans-pro/SourceSans3-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "sweet-sans-pro-bold";
+    font-family: "sweet-sans-pro";
     src: url("../rrmy-v2/assets/styles/themes/fonts/sweet-sans-pro/SourceSans3-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "sweet-sans-pro";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/sweet-sans-pro/SourceSans3-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
 }
 
 .sweet-sans-pro {
     font-family: sweet-sans-pro, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.sweet-sans-pro-bold {
-    font-family: sweet-sans-pro-bold, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }

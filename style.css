@@ -5,179 +5,160 @@ https://flickity.metafizzy.co
 @font-face {
     font-family: "sweet-sans-pro";
     src: url("../rrmy-v2/assets/styles/themes/fonts/sweet-sans-pro/SourceSans3-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "sweet-sans-pro-bold";
+    font-family: "sweet-sans-pro";
     src: url("../rrmy-v2/assets/styles/themes/fonts/sweet-sans-pro/SourceSans3-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "sweet-sans-pro";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/sweet-sans-pro/SourceSans3-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
 }
 
 .sweet-sans-pro {
     font-family: sweet-sans-pro, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.sweet-sans-pro-bold {
-    font-family: sweet-sans-pro-bold, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: "titling-gothic-fb-cond";
     src: url("../rrmy-v2/assets/styles/themes/fonts/titling-gothic-fb-cond/TitlingGothicFBCond-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "titling-gothic-fb-cond-bold";
+    font-family: "titling-gothic-fb-cond";
     src: url("../rrmy-v2/assets/styles/themes/fonts/titling-gothic-fb-cond/TitlingGothicFBCond-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
 }
 
 .titling-gothic-fb-cond {
     font-family: titling-gothic-fb-cond, sans-serif;
-    transform: translateY(2px);
-    font-weight: normal;
-    font-style: normal;
-}
-
-.titling-gothic-fb-cond-bold {
-    font-family: titling-gothic-fb-cond-bold, sans-serif;
-    transform: translateY(2px);
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: "roboto";
     src: url("../rrmy-v2/assets/styles/themes/fonts/roboto/fonnts.com-Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "roboto-light";
+    font-family: "roboto";
     src: url("../rrmy-v2/assets/styles/themes/fonts/roboto/fonnts.com-Roboto-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "roboto-bold";
+    font-family: "roboto";
     src: url("../rrmy-v2/assets/styles/themes/fonts/roboto/fonnts.com-Roboto-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/roboto/fonnts.com-Roboto-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap
 }
 
 .roboto {
     font-family: roboto, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.roboto-light {
-    font-family: roboto-light, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.roboto-bold {
-    font-family: roboto-bold, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: "arnhem";
     src: url("../rrmy-v2/assets/styles/themes/fonts/arnhem/Arnhem.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "arnhem-bold";
+    font-family: "arnhem";
     src: url("../rrmy-v2/assets/styles/themes/fonts/arnhem/Arnhem-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
 }
 
 .arnhem {
     font-family: arnhem, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.arnhem-bold {
-    font-family: arnhem-bold, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: "barlow";
     src: url("../rrmy-v2/assets/styles/themes/fonts/barlow/Barlow-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "barlow-light";
+    font-family: "barlow";
     src: url("../rrmy-v2/assets/styles/themes/fonts/barlow/Barlow-Light.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "barlow-bold";
+    font-family: "barlow";
     src: url("../rrmy-v2/assets/styles/themes/fonts/barlow/Barlow-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
 }
 
 .barlow {
     font-family: barlow, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.barlow-light {
-    font-family: barlow-light, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.barlow-bold {
-    font-family: barlow-bold, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 /* #### Generated By: http://font.download #### */
 
 @font-face {
-    font-family: 'Georgia Regular';
+    font-family: 'Georgia';
     src: url("../rrmy-v2/assets/styles/themes/fonts/georgia/georgia.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 
 @font-face {
-    font-family: 'Georgia Italic';
+    font-family: 'Georgia';
     src: url("../rrmy-v2/assets/styles/themes/fonts/georgia/georgiai.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
 }
 
 
 @font-face {
-    font-family: 'Georgia Bold';
+    font-family: 'Georgia';
     src: url("../rrmy-v2/assets/styles/themes/fonts/georgia/georgiab.woff") format("woff");
-}
-
-
-@font-face {
-    font-family: 'Georgia Bold Italic';
-    src: url("../rrmy-v2/assets/styles/themes/fonts/georgia/georgiaz.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
 }
 
 .georgia {
-    font-family: 'Georgia Regular', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
-.georgia-italic {
-    font-family: 'Georgia Italic', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
-.georgia-bold {
-    font-family: 'Georgia Bold', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
-.georgia-bold-italic {
-    font-family: 'Georgia Bold Italic', sans-serif;
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Georgia', sans-serif;
 }
 @font-face {
     font-family: "lora";
@@ -221,33 +202,40 @@ https://flickity.metafizzy.co
 @font-face {
     font-family: "oranienbaum";
     src: url("../rrmy-v2/assets/styles/themes/fonts/oranienbaum/Oranienbaum-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 .oranienbaum {
     font-family: oranienbaum, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: "mulish";
     src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
 }
 
 @font-face {
-    font-family: "mulish-light";
-    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Light.ttf") format("truetype");
+    font-family: "mulish";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap
+}
+
+@font-face {
+    font-family: "mulish";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap
 }
 
 .mulish {
     font-family: mulish, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.mulish-light {
-    font-family: mulish-light, sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 /*!
 Theme Name: Barebones
