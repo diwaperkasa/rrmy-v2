@@ -164,9 +164,7 @@
             </section>
         </div>
     </div>
-    <?php
-    $selectedCategories = get_field('selected_categories');
-    ?>
+    <?php $selectedCategories = get_field('selected_categories'); ?>
     <?php foreach ($selectedCategories as $categoryIndex => $category): ?>
         <?php
         $query = new WP_Query([

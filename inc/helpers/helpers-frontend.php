@@ -28,7 +28,7 @@ function flatsome_html_atts( array $atts ) {
   $string = '';
   foreach ( $atts as $key => $value ) {
     if ( is_array( $value ) ) $value = implode( ' ', $value );
-    $string .= "${key}=\"${value}\" ";
+    $string .= "{$key}=\"{$value}\" ";
   }
   return $string;
 }

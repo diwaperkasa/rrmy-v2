@@ -126,6 +126,14 @@ function theme_setup()
     register_nav_menus([
         'mobile_menu' => __('Mobile', 'rrmy'),
     ]);
+
+    if (class_exists('MultiPostThumbnails')) {
+        new MultiPostThumbnails(array(
+            'label' => 'Feature Image (Square)',
+            'id'    => 'square-image', // A unique ID for the thumbnail
+            'post_type' => 'post' // The post type to associate the image with
+        ));
+    }
 }
 
 add_action('after_setup_theme', 'theme_setup');
@@ -391,3 +399,27 @@ add_action( 'pre_get_posts', function( $query ) {
         }
     }
 });
+
+add_filter('ep_is_integrated', function ($integrated) {
+    if (is_admin()) {
+        return false;
+    }
+
+    return $integrated;
+}, 10, 3);
+
+function getPostThumbnail($postId, $slug)
+{
+    if (!class_exists('MultiPostThumbnails')) {
+        return;
+    }
+
+    $imgUrl = MultiPostThumbnails::get_post_thumbnail_url(
+        'post',
+        $slug,
+        $postId,
+        'full'
+    );
+
+    return $imgUrl;
+}

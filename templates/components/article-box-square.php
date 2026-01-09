@@ -1,3 +1,17 @@
+<?php
+add_filter('wp_get_attachment_image_attributes', function ( $attr, $attachment ) {
+    $squareImage = getPostThumbnail(get_the_ID(), 'square-image');
+
+    if ($squareImage) {
+        $attr['src'] = esc_url( $squareImage );
+        $attr['srcset'] = false;
+        $attr['sizes']  = false;
+    }
+
+    return $attr;
+},10, 2);
+?>
+
 <article <?php post_class('h-100', get_the_ID()) ?>>
     <div class="img-hover-zoom ratio-1x1">
         <a class="text-decoration-none" href="<?= get_the_permalink() ?>">

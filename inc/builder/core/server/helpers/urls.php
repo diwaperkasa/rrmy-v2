@@ -29,8 +29,8 @@ function ux_builder_asset( $path ) {
  * @return string
  */
 function ux_builder_edit_url( $post_id, $edit_post_id = null, $mode = 'frontend' ) {
-  $edit_post_id = $edit_post_id ? "&edit_post_id=${edit_post_id}" : '';
-  return admin_url( "edit.php?page=uxbuilder&post_id=${post_id}" . $edit_post_id );
+  $edit_post_id = $edit_post_id ? "&edit_post_id={$edit_post_id}" : '';
+  return admin_url( "edit.php?page=uxbuilder&post_id={$post_id}" . $edit_post_id );
 }
 
 /**
