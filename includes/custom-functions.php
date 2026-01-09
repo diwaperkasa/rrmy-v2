@@ -423,3 +423,15 @@ function getPostThumbnail($postId, $slug)
 
     return $imgUrl;
 }
+
+add_filter('wp_get_attachment_image_attributes', function ( $attr, $attachment ) {
+    $squareImage = getPostThumbnail(get_the_ID(), 'square-image');
+
+    if ($squareImage) {
+        $attr['src'] = esc_url( $squareImage );
+        $attr['srcset'] = false;
+        $attr['sizes']  = false;
+    }
+
+    return $attr;
+},10, 2);
