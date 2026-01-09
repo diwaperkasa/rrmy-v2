@@ -80,7 +80,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
                         <div class="text-center">
-                            <p class="text-white fs-small fst-italic">Published by Indochine Media Ventures under license from Robb Report Media, LLC, a subsidiary of Penske Media Corporation.</p>
+                            <p class="text-white fs-small fst-italic mulish">Published by Indochine Media Ventures under license from Robb Report Media, LLC, a subsidiary of Penske Media Corporation.</p>
                         </div>
                     </div>
                 </div>
