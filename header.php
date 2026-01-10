@@ -215,6 +215,11 @@
     <?php wp_head(); ?>
 </head>
 
+<?php
+$logo = get_theme_mod('theme_logo' , get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp");
+$subscribeLogo = get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp");
+?>
+
 <body <?php body_class(); ?>>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
@@ -230,7 +235,7 @@
                             <div class="col-md-4">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <a class="text-decoration-none me-4" href="/">
-                                        <img class="invert-color" height="50px" src="<?= get_theme_mod('theme_logo' , get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp"); ?>" alt="robbreport-malaysia-logo">
+                                        <img class="invert-color" height="50px" src="<?= $logo ?>" alt="robbreport-malaysia-logo">
                                     </a>
                                     <div class="bg-danger rounded-circle p-1 d-block d-md-none">
                                         <button style="--bs-btn-close-opacity: 1;" type="button" class="m-1 btn-close text-reset invert-color" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -365,7 +370,7 @@
                     <div class="col-4">
                         <div class="text-center">
                             <a class="text-decoration-none" href="/">
-                                <img class="my-0 my-lg-4" height="75px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?>" alt="robbreport-malaysia-logo">
+                                <img class="my-0 my-lg-4" height="75px" src="<?= $logo ?>" alt="robbreport-malaysia-logo">
                             </a>
                         </div>
                     </div>
@@ -389,7 +394,7 @@
                     </span>
                     <div class="d-block d-lg-none">
                         <a class="nav-link text-uppercase text-black text-decoration-none fw-normal my-2" aria-current="page" href="/">
-                            <img height="40px" src="<?= get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp" ?>" alt="robbreport-malaysia-logo">
+                            <img height="40px" src="<?= $logo ?>" alt="robbreport-malaysia-logo">
                         </a>
                     </div>
                     <div class="collapse navbar-collapse primary-menu">
@@ -443,7 +448,7 @@
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <div class="d-flex justify-content-center">
-                                                    <img class="img-fluid" src="<?= get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp"); ?>" alt="<?= get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp"); ?>">
+                                                    <img class="img-fluid" src="<?= $subscribeLogo ?>" alt="<?= $subscribeLogo ?>">
                                                 </div>
                                             </div>
                                             <div class="col-md-7 d-none d-md-block">
