@@ -293,6 +293,7 @@ function more_category_article()
         'post_type' => ['post', 'wine', 'passport', 'package'],
         'orderby' => 'date',
         'order' => 'DESC',
+        'no_found_rows'  => true,
         'tax_query' => [
             [
                 'taxonomy' => 'category',
@@ -340,6 +341,7 @@ function more_article()
         'post_type' => ['post', 'wine', 'passport', 'package'],
         'orderby' => 'date',
         'order' => 'DESC',
+        'no_found_rows'  => true,
     ]);
 
     foreach ($query->posts as $row) {
