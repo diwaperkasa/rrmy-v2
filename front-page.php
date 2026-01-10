@@ -276,10 +276,10 @@
                     <img class="img-fluid mb-3" src="<?= get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp"); ?>" alt="<?= get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-content/uploads/2024/10/RR2022_09_shadow.webp"); ?>">
                 </div>
                 <h2 class="mb-4 oranienbaum ls-1 text-center">Get The Magazine</h2>
-                <p class="mulish-light ls-1">Subscribe now for a one-year subscription at only RM150 for the print version or opt for the digital edition for US$39.90 with two issues free.</p>
+                <p class="mulish fw-light ls-1">Subscribe now for a one-year subscription at only RM150 for the print version or opt for the digital edition for US$39.90 with two issues free.</p>
                 <div class="text-center">
-                    <a href="/print-subscription" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish-light ls-1">PRINT</a>
-                    <a target="_blank" href="https://www.magzter.com/MY/Indochine-Media/Robb-Report-Malaysia/Lifestyle/?utm_source=cj-cps&cjevent=612b9ff3d3dd11f0829401a20a18b8f6" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish-light ls-1">DIGITAL</a>
+                    <a href="/print-subscription" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish fw-light ls-1">PRINT</a>
+                    <a target="_blank" href="https://www.magzter.com/MY/Indochine-Media/Robb-Report-Malaysia/Lifestyle/?utm_source=cj-cps&cjevent=612b9ff3d3dd11f0829401a20a18b8f6" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish fw-light ls-1">DIGITAL</a>
                 </div>
             </section>
         </div>

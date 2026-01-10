@@ -456,8 +456,8 @@ $subscribeLogo = get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-con
                                                     <h3 class="mb-4 oranienbaum ls-1">Get The Magazine</h3>
                                                     <p class="mulish-light ls-1">Subscribe now for a one-year subscription at only RM150 for the print version or opt for the digital edition for US$39.90 with two issues free.</p>
                                                     <div>
-                                                        <a href="/print-subscription" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish-light ls-1">PRINT</a>
-                                                        <a target="_blank" href="https://www.magzter.com/MY/Indochine-Media/Robb-Report-Malaysia/Lifestyle/?utm_source=cj-cps&cjevent=612b9ff3d3dd11f0829401a20a18b8f6" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish-light ls-1">DIGITAL</a>
+                                                        <a href="/print-subscription" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish fw-light ls-1">PRINT</a>
+                                                        <a target="_blank" href="https://www.magzter.com/MY/Indochine-Media/Robb-Report-Malaysia/Lifestyle/?utm_source=cj-cps&cjevent=612b9ff3d3dd11f0829401a20a18b8f6" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish fw-light ls-1">DIGITAL</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -466,14 +466,14 @@ $subscribeLogo = get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-con
                                     <div class="col-md-6 py-4">
                                         <div class="py-3 px-5 border-start">
                                             <h3 class="mb-4 oranienbaum ls-1">Newsletter</h3>
-                                            <p class="mb-4 mulish-light ls-1">Sign up for our weekly newsletter for the latest from the universe of luxury.</p>
+                                            <p class="mb-4 mulish fw-light ls-1">Sign up for our weekly newsletter for the latest from the universe of luxury.</p>
                                             <form target="_blank" action="https://robbreport.us12.list-manage.com/subscribe/post?u=28729885bbfbb9568a4580c7b&id=6523a24d0a" method="POST">
                                                 <div class="input-group mb-4">
-                                                    <input name="EMAIL" type="email" class="fs-small form-control rounded-0 border-black mulish-light ls-1 px-3 py-2" placeholder="EMAIL ADDRESS" aria-label="Email address" required />
-                                                    <button type="submit" class="fs-small input-group-text bg-black text-white rounded-0 border-black mulish-light ls-1 px-3 py-2"><span>SIGN UP</span></button>
+                                                    <input name="EMAIL" type="email" class="fs-small form-control rounded-0 border-black mulish fw-light ls-1 px-3 py-2" placeholder="EMAIL ADDRESS" aria-label="Email address" required />
+                                                    <button type="submit" class="fs-small input-group-text bg-black text-white rounded-0 border-black mulish fw-light ls-1 px-3 py-2"><span>SIGN UP</span></button>
                                                 </div>
                                             </form>
-                                            <p class="mb-0 mulish-light ls-1 fs-small">
+                                            <p class="mb-0 mulish fw-light ls-1 fs-small">
                                                 By providing your information, you agree to our Terms of Use and our Privacy Policy. We use vendors that may also process your information to help provide our services. This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
                                             </p>
                                         </div>

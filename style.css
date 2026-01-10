@@ -234,6 +234,14 @@ https://flickity.metafizzy.co
     font-display: swap
 }
 
+@font-face {
+    font-family: "mulish";
+    src: url("../rrmy-v2/assets/styles/themes/fonts/mulish/Mulish-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
 .mulish {
     font-family: mulish, sans-serif;
 }
