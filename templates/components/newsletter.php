@@ -18,7 +18,7 @@
                         <button type="submit" class="fs-small input-group-text rounded-0 mulish border border-black text-white bg-black px-3 py-2">SIGN UP</button>
                     </div>
                 </form>
-                <p class="mb-0 mulish-light ls-1 fs-small">
+                <p class="mb-0 mulish fw-light ls-1 fs-small">
                     By providing your information, you agree to our Terms of Use and our Privacy Policy. We use vendors that may also process your information to help provide our services. This site is protected by reCAPTCHA Enterprise and the Google Privacy Policy and Terms of Service apply.
                 </p>
             </div>
