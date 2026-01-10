@@ -187,18 +187,6 @@ https://flickity.metafizzy.co
 .lora {
     font-family: lora, sans-serif;
 }
-
-.lora-italic {
-    font-family: lora-italic, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
-
-.lora-bold {
-    font-family: lora-bold, sans-serif;
-    font-weight: normal;
-    font-style: normal;
-}
 @font-face {
     font-family: "oranienbaum";
     src: url("../rrmy-v2/assets/styles/themes/fonts/oranienbaum/Oranienbaum-Regular.ttf") format("truetype");
