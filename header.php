@@ -404,7 +404,7 @@ $subscribeLogo = get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-con
                                 <?php foreach ($primaryMenus as $menu): ?>
                                     <li class="nav-item dropdown flex-shrink-0 px-3">
                                         <a class="nav-link text-uppercase text-black text-decoration-none fw-normal mulish ls-1 text-secondary-hover transition-color-hover" aria-current="page" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
-                                        <ul class="dropdown-menu bg-white shadow border-0 rounded-0 py-0" style="--bs-light-rgb: 235,236,237;">
+                                        <ul class="dropdown-menu bg-white shadow border-0 rounded-0 py-0 mulish" style="--bs-light-rgb: 235,236,237;">
                                             <?php foreach ($menu['children'] as $childMenu): ?>
                                                 <li><a class="dropdown-item py-2" href="<?= $childMenu['url'] ?>"><?= $childMenu['title'] ?></a></li>
                                             <?php endforeach; ?>
