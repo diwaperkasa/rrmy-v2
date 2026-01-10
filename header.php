@@ -456,8 +456,8 @@ $subscribeLogo = get_theme_mod('subscribe_logo' , "https://robbreport.com/wp-con
                                                     <h3 class="mb-4 oranienbaum ls-1">Get The Magazine</h3>
                                                     <p class="mulish fw-light ls-1">Subscribe now for a one-year subscription at only RM150 for the print version or opt for the digital edition for US$39.90 with two issues free.</p>
                                                     <div>
-                                                        <a href="/print-subscription" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish fw-light ls-1">PRINT</a>
-                                                        <a target="_blank" href="https://www.magzter.com/MY/Indochine-Media/Robb-Report-Malaysia/Lifestyle/?utm_source=cj-cps&cjevent=612b9ff3d3dd11f0829401a20a18b8f6" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 mulish fw-light ls-1">DIGITAL</a>
+                                                        <a href="/print-subscription" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 ls-1"><span class="mulish fw-light">PRINT</span></a>
+                                                        <a target="_blank" href="https://www.magzter.com/MY/Indochine-Media/Robb-Report-Malaysia/Lifestyle/?utm_source=cj-cps&cjevent=612b9ff3d3dd11f0829401a20a18b8f6" class="text-uppercase text-white btn btn-danger rounded-0 px-4 py-2 ls-1"><span class="mulish fw-light">DIGITAL</span></a>
                                                     </div>
                                                 </div>
                                             </div>
