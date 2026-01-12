@@ -7,6 +7,10 @@ require get_template_directory() . '/inc/helpers/helpers-shortcode.php';
 require get_template_directory() . '/inc/helpers/helpers-grid.php';
 require get_template_directory() . '/inc/helpers/helpers-icons.php';
 
+if (is_admin()) {
+  require get_template_directory() . '/inc/structure/structure-admin.php';
+}
+
 /**
  * Flatsome Shortcodes.
  */
