@@ -470,3 +470,21 @@ add_filter('wp_get_attachment_image_attributes', function ( $attr, $attachment )
 
     return $attr;
 },10, 2);
+
+function filter_short_title( $title, $post_id ) {
+    if (is_admin()) {
+        return $title;
+    }
+
+    if (is_single()) {
+        return $title;
+    }
+
+    if ($shortTitle = get_field('short_title', $post_id)) {
+        return $shortTitle;
+    }
+
+    return $title;
+}
+
+add_filter( 'the_title', 'filter_short_title', 10, 2 );
