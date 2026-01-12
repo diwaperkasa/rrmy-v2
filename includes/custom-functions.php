@@ -129,7 +129,7 @@ function theme_setup()
 
     if (class_exists('MultiPostThumbnails')) {
         new MultiPostThumbnails(array(
-            'label' => 'Featured Image (Square)',
+            'label' => 'Featured image (Square)',
             'id'    => 'square-image', // A unique ID for the thumbnail
             'post_type' => 'post' // The post type to associate the image with
         ));
