@@ -29,6 +29,16 @@
     cursor: pointer;
 }
 
+pre {
+    padding: 1rem;
+    background: rgb(240, 241, 242);
+    border: 1px solid rgb(220, 221, 222) !important;
+}
+
+blockquote {
+    text-align: center;
+}
+
 .post__content {
     .wp-video {
         margin-bottom: 2rem;
@@ -55,7 +65,7 @@
     h5 {
         font-family: oranienbaum;
     }
-    
+
     h6 {
         font-family: mulish;
     }
