@@ -452,7 +452,7 @@ function flatsome_formats_before_init( $settings ) {
         array(
           'title' => 'Uppercase',
           'selector' => 'h1,h2,h3,h4,h5,h6,p,a',
-          'classes' => 'uppercase',
+          'classes' => 'text-uppercase',
            'exact' => true,
         ),
        array(
@@ -464,13 +464,13 @@ function flatsome_formats_before_init( $settings ) {
          array(
           'title' => 'Thin Font',
           'selector' => 'h1,h2,h3,h4,h5,h6,p,a',
-          'classes' => 'thin-font',
+          'classes' => 'fw-light',
         ),
 
         array(
-          'title' => 'Alternative Font',
+          'title' => 'Sweet Sans Font',
           'selector' => 'h1,h2,h3,h4,h5,h6,p,a',
-          'classes' => 'alt-font',
+          'classes' => 'sweet-sans-pro',
         ),
     );
 
