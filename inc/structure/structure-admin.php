@@ -472,6 +472,24 @@ function flatsome_formats_before_init( $settings ) {
           'selector' => 'h1,h2,h3,h4,h5,h6,p,a',
           'classes' => 'sweet-sans-pro',
         ),
+
+        array(
+          'title' => 'Mulish Sans Font',
+          'selector' => 'h1,h2,h3,h4,h5,h6,p,a',
+          'classes' => 'mulish',
+        ),
+
+        array(
+          'title' => 'Oranienbaum Font',
+          'selector' => 'h1,h2,h3,h4,h5,h6,p,a',
+          'classes' => 'oranienbaum',
+        ),
+
+        array(
+          'title' => 'Roboto Font',
+          'selector' => 'h1,h2,h3,h4,h5,h6,p,a',
+          'classes' => 'roboto',
+        ),
     );
 
     $style_formats = apply_filters( 'flatsome_text_formats', $style_formats );
