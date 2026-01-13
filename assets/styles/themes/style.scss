@@ -560,6 +560,78 @@ a.hover-border::before {
     }
 }
 
+.h1-sm {
+    @media (min-width: 576px) {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+
+.h1-md {
+    @media (min-width: 768px) {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+
+.h1-lg {
+    @media (min-width: 992px) {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+
+.h1-xl {
+    @media (min-width: 1200px) {
+        font-size: calc(1.375rem + 1.5vw);
+    }
+}
+
+.h2-sm {
+    @media (min-width: 576px) {
+        font-size: calc(1.325rem + 0.9vw);
+    }
+}
+
+.h2-md {
+    @media (min-width: 768px) {
+        font-size: calc(1.325rem + 0.9vw);
+    }
+}
+
+.h2-lg {
+    @media (min-width: 992px) {
+        font-size: calc(1.325rem + 0.9vw);
+    }
+}
+
+.h2-xl {
+    @media (min-width: 1200px) {
+        font-size: calc(1.325rem + 0.9vw);
+    }
+}
+
+.h3-sm {
+    @media (min-width: 576px) {
+        font-size: calc(1.3rem + 0.6vw);
+    }
+}
+
+.h3-md {
+    @media (min-width: 768px) {
+        font-size: calc(1.3rem + 0.6vw);
+    }
+}
+
+.h3-lg {
+    @media (min-width: 992px) {
+        font-size: calc(1.3rem + 0.6vw);
+    }
+}
+
+.h3-xl {
+    @media (min-width: 1200px) {
+        font-size: calc(1.3rem + 0.6vw);
+    }
+}
+
 .h4-sm {
     @media (min-width: 576px) {
         font-size: calc(1.275rem + 0.3vw);
@@ -569,6 +641,42 @@ a.hover-border::before {
 .h4-md {
     @media (min-width: 768px) {
         font-size: calc(1.275rem + 0.3vw);
+    }
+}
+
+.h4-lg {
+    @media (min-width: 992px) {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+}
+
+.h4-xl {
+    @media (min-width: 1200px) {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+}
+
+.h5-sm {
+    @media (min-width: 576px) {
+        font-size: 1.25rem;
+    }
+}
+
+.h5-md {
+    @media (min-width: 768px) {
+        font-size: 1.25rem;
+    }
+}
+
+.h5-lg {
+    @media (min-width: 992px) {
+        font-size: 1.25rem;
+    }
+}
+
+.h5-xl {
+    @media (min-width: 1200px) {
+        font-size: 1.25rem;
     }
 }
 
