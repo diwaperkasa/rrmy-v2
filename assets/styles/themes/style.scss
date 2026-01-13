@@ -560,6 +560,12 @@ a.hover-border::before {
     }
 }
 
+.h4-sm {
+    @media (min-width: 576px) {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+}
+
 .h4-md {
     @media (min-width: 768px) {
         font-size: calc(1.275rem + 0.3vw);

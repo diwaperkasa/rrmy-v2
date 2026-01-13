@@ -24,7 +24,7 @@
                             </div>
                         <?php endif; ?>
                         <a class="text-decoration-none" href="<?= get_the_permalink(); ?>">
-                            <h3 class="article-title text-dark oranienbaum text-secondary-hover transition-color-hover mb-1 h6 h4-md"><?php the_title(); ?></h3>
+                            <h3 class="article-title text-dark oranienbaum text-secondary-hover transition-color-hover mb-1 h6 h4-sm"><?php the_title(); ?></h3>
                         </a>
                     </div>
                     <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
