@@ -19,9 +19,9 @@
                                 <div class="text-center mb-3">
                                     <h1 class="post__title oranienbaum"><?php the_title(); ?></h1>
                                 </div>
-                                <?php if ($shortTitle = get_field('short_title', get_the_ID())): ?>
+                                <?php if ($secondaryTitle = get_post_meta( get_the_ID(), '_secondary_title', true )): ?>
                                     <div class="text-center mb-3">
-                                        <p class="fw-light text-dark lora"><?= $shortTitle; ?></p>
+                                        <p class="fw-light text-dark lora"><?= $secondaryTitle; ?></p>
                                     </div>
                                 <?php endif; ?>
                                 <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
