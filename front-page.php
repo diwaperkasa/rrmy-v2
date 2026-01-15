@@ -9,7 +9,7 @@
                     <div class="carousel-gallery ratio-16x9">
                         <?php foreach ($carousels as $postId): $post = get_post($postId); ?>
                             <div id="carousel-slide-<?= $postId ?>" class="carousel-cell w-100" data-id="<?= $postId ?>">
-                                <figure class="pb-15 pb-md-0 mb-0">
+                                <figure class="pb-0 mb-0">
                                     <article <?php post_class("", get_the_ID()); ?>>
                                         <div class="p-0">
                                             <a class="text-decoration-none" href="<?= get_the_permalink() ?>">
