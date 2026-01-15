@@ -16,7 +16,7 @@ $randomPost = new WP_Query($args);
         <div class="container">
             <?php if (have_posts()): ?>
                 <div class="text-center py-4">
-                    <h1 class="oranienbaum">Search Result For: <span><?= get_search_query() ?></span></h1>
+                    <h1 class="oranienbaum">Search Results For: <span><?= get_search_query() ?></span></h1>
                 </div>
                 <div class="row">
                     <div class="col-lg-9">
