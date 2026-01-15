@@ -23,10 +23,6 @@
 .carousel-desc {
     bottom: -6rem;
     width: 100%;
-
-    @media (min-width: 768px) {
-        bottom: 0rem;
-    }
 }
 
 .cursor-pointer {
