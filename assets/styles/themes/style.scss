@@ -39,7 +39,7 @@ blockquote {
     text-align: center;
 }
 
-.article-writter a:not(:last-of-type)::after {
+.article-writter > a:not(:last-of-type)::after {
     content: ",";
 }
 
