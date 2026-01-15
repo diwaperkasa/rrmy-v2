@@ -7,8 +7,7 @@
                 <div class="container">
                     <header class="post__header py-4" role="heading">
                         <div class="text-center mb-3">
-                            <?php $categories = get_the_category(get_the_ID()) ?>
-                            <?php if ($categories): ?>
+                            <?php if ($categories = get_the_category(get_the_ID())): ?>
                                 <a class="text-decoration-none category-article" href="<?= get_term_link($categories[0]->term_id) ?>">
                                     <span class="h6 fs-6 text-center text-warning text-uppercase mulish ls-1"><?= $categories[0]->name ?></span>
                                 </a>

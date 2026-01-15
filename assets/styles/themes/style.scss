@@ -40,6 +40,38 @@ blockquote {
 }
 
 .post__content {
+    .banner > * {
+        color: #fff;
+    }
+
+    .banner {
+        background-color: #0a0a0a;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+
+        .banner h1 {
+            font-weight: 700;
+        }
+
+        .banner-layers {
+            display: flex;
+            justify-content: center;
+        }
+
+        figcaption {
+            color: #c0c0c0 !important;
+        }
+
+        .dark, .dark p, .dark td {
+            color: #f1f1f1;
+        }
+
+        .banner-layers {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
     .wp-video {
         margin-bottom: 2rem;
     }

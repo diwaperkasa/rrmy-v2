@@ -21,7 +21,7 @@
                                 <div class="position-absolute carousel-desc">
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <div class="m-4 p-4 position-relative article-banner-title bg-white">
+                                            <div class="m-4 p-3 p-md-4 position-relative article-banner-title bg-white">
                                                 <?php $categories = get_the_category(get_the_ID()) ?>
                                                 <?php if ($categories): ?>
                                                     <a class="text-decoration-none category-article" href="<?= get_term_link($categories[0]->term_id) ?>">
@@ -29,7 +29,7 @@
                                                     </a>
                                                 <?php endif; ?>
                                                 <a class="text-decoration-none" href="<?= get_the_permalink(); ?>">
-                                                    <h1 class="article-title text-dark h3 oranienbaum text-secondary-hover transition-color-hover mb-0"><?php the_title(); ?></h1>
+                                                    <h1 class="article-title text-dark h5 h3-md oranienbaum text-secondary-hover transition-color-hover mb-0"><?php the_title(); ?></h1>
                                                 </a>
                                                 <?php $writers = wp_get_post_terms(get_the_ID(), 'writer', ['field' => 'all']); ?>
                                                 <p class="mb-0">
