@@ -401,7 +401,7 @@ add_action( 'pre_get_posts', function( $query ) {
         }
     }
 
-    if ((is_tag() || is_tax()) && $query->is_main_query()) {
+    if ((is_tag() || is_tax() || is_archive()) && $query->is_main_query()) {
         $query->set('post_status', ['publish']);
         
         if (apply_filters('ep_is_integrated', false)) {
