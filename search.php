@@ -6,6 +6,7 @@ $args = [
     'posts_per_page' => 5,
     'post_status' => 'publish',
     'orderby' => 'rand',
+    'no_found_rows'  => true,
 ];
 
 $randomPost = new WP_Query($args);
