@@ -401,8 +401,12 @@ add_action( 'pre_get_posts', function( $query ) {
         }
     }
 
-    if (apply_filters('ep_is_integrated', false) && $query->is_main_query() && (is_tag() || is_tax())) {
-        $query->set('ep_integrate', true);
+    if ((is_tag() || is_tax()) && $query->is_main_query()) {
+        $query->set('post_status', ['publish']);
+        
+        if (apply_filters('ep_is_integrated', false)) {
+            $query->set('ep_integrate', true);
+        }
     }
 });
 
