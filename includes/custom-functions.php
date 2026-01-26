@@ -478,6 +478,14 @@ add_filter('wp_get_attachment_image_attributes', function ( $attr, $attachment )
         ";
     }
 
+    if (isset($attr['src'])) {
+        $attr['data-src'] = $attr['src'];
+    }
+
+    if (isset($attr['srcset'])) {
+        $attr['data-srcset'] = $attr['srcset'];
+    }
+
     return $attr;
 },10, 2);
 
