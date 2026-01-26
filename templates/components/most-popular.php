@@ -2,7 +2,7 @@
 $popularPostIds = wpp_get_ids([
     'post_type' => 'post',
     'limit' => 6,
-    'range' => 'last7days'
+    'range' => 'weekly'
 ]);
 ?>
 <div class="most-popular-container">
