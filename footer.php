@@ -1,5 +1,5 @@
 <?php
-$logo = get_theme_mod('theme_logo' , get_stylesheet_directory_uri() . "/assets/images/RobbReport_Malaysia-black-01-V2.webp");
+$logo = wp_get_attachment_url( get_theme_mod('theme_logo') );
 ?>
 
         <div class="leaderboard-border-bottom">

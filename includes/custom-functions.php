@@ -19,8 +19,9 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('theme_logo', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw'
+        'default' => 0,
+        'sanitize_callback' => 'absint',
+        'type' => 'theme_mod',
     ));
 
     $wp_customize->add_setting('rr1_url', array(
@@ -44,17 +45,18 @@ function mytheme_customize_register($wp_customize)
     ));
 
     $wp_customize->add_setting('subscribe_logo', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw'
+        'default' => 0,
+        'sanitize_callback' => 'absint',
+        'type' => 'theme_mod',
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize->add_control(new WP_Customize_Media_Control(
         $wp_customize,
         'theme_logo',
         [
             'label' => __('RobbReport Image', 'rr_logo'),
             'section' => 'theme_options',
-            'settings' => 'theme_logo'
+            'mime_type' => 'image',
         ]
     ));
 
@@ -82,13 +84,13 @@ function mytheme_customize_register($wp_customize)
         'type' => 'url',
     ]);
 
-    $wp_customize->add_control(new WP_Customize_Image_Control(
+    $wp_customize->add_control(new WP_Customize_Media_Control(
         $wp_customize,
         'subscribe_logo',
         [
             'label' => __('Subscribe Image', 'subscribe_logo'),
             'section' => 'theme_options',
-            'settings' => 'subscribe_logo'
+            'mime_type' => 'image',
         ]
     ));
 }
