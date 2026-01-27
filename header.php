@@ -235,7 +235,7 @@ $subscribeLogo = wp_get_attachment_url( get_theme_mod('subscribe_logo') );
                             <div class="col-md-4">
                                 <div class="d-flex justify-content-between align-items-start">
                                     <a class="text-decoration-none me-4" href="/">
-                                        <img class="invert-color" height="50px" src="<?= $logoId ?>" alt="robbreport-malaysia-logo">
+                                        <img class="invert-color" height="50px" src="<?= $logo ?>" alt="robbreport-malaysia-logo">
                                     </a>
                                     <div class="bg-danger rounded-circle p-1 d-block d-md-none">
                                         <button style="--bs-btn-close-opacity: 1;" type="button" class="m-1 btn-close text-reset invert-color" data-bs-dismiss="offcanvas" aria-label="Close"></button>
