@@ -454,7 +454,9 @@ add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id
     if (str_contains($class, 'ratio-1x1')) {
         if (!str_contains($class, '16x9') && !str_contains($class, '2x1')) {
             $source[] = "<source srcset=\"{$squareImage}\"/>";
-        } elseif (str_contains($class, 'ratio-sm')) {
+        }
+        
+        if (str_contains($class, 'ratio-sm')) {
             $source[] = "<source media=\"(max-width: 575px)\" srcset=\"{$squareImage}\"/>";
         } elseif (str_contains($class, 'ratio-md')) {
             $source[] = "<source media=\"(max-width: 767px)\" srcset=\"{$squareImage}\"/>";
