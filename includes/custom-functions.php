@@ -457,6 +457,20 @@ add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id
         $source[] = "<source media=\"(min-width: 1024px)\" srcset=\"{$squareImage}\"/>";
     }
 
+    $originalImage = get_img_src($html);
+
+    if ($originalImage) {
+        if (str_contains($class, 'ratio-16x9')) {
+            $source[] = "<source srcset=\"{$originalImage}\"/>";
+        } elseif (str_contains($class, 'ratio-sm-16x9')) {
+            $source[] = "<source media=\"(min-width: 576px)\" srcset=\"{$originalImage}\"/>";
+        } elseif (str_contains($class, 'ratio-md-16x9')) {
+           $source[] = "<source media=\"(min-width: 768px)\" srcset=\"{$originalImage}\"/>";
+        } elseif (str_contains($class, 'ratio-lg-16x9')) {
+            $source[] = "<source media=\"(min-width: 1024px)\" srcset=\"{$originalImage}\"/>";
+        }
+    }
+
     $sourceTag = join('', $source);
 
     return "
@@ -466,6 +480,21 @@ add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id
         </picture>
     ";
 },10, 15);
+
+function get_img_src( $html ) {
+    libxml_use_internal_errors( true );
+
+    $dom = new DOMDocument();
+    $dom->loadHTML( $html, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
+
+    $imgs = $dom->getElementsByTagName( 'img' );
+
+    if ( $imgs->length === 0 ) {
+        return null;
+    }
+
+    return $imgs->item(0)->getAttribute( 'src' );
+}
 
 function filter_short_title( $title, $post_id ) {
     if (is_admin()) {
