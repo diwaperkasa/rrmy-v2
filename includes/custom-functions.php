@@ -436,59 +436,36 @@ function getPostThumbnail($postId, $slug)
     return $imgUrl;
 }
 
-add_filter('wp_get_attachment_image_attributes', function ( $attr, $attachment ) {
+add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id, $size, $attr  ) {
+    $imgTag = $html;
     $class = $attr['class'];
+    $source = [];
 
-    if (!str_contains($class, '1x1')) return $attr;
+    if (!str_contains($class, '1x1')) return $html;
 
     $squareImage = getPostThumbnail(get_the_ID(), 'square-image');
 
-    if (!$squareImage) return $attr;
-
-    $src = $attr['src'];
+    if (!$squareImage) return $html;
 
     if (str_contains($class, 'ratio-1x1')) {
-        $attr['src'] = esc_url( $squareImage );
-        unset($attr['srcset']);
-        unset($attr['sizes']);
-
-        if (str_contains($class, '2x1')) {
-            $attr['srcset'] = "{$src} 768w";
-            $attr['sizes']  = "
-                (min-width: 768px) 100vw,
-                768px
-            ";
-        }
+        $source[] = "<source srcset=\"{$squareImage}\"/>";
     } elseif (str_contains($class, 'ratio-sm-1x1')) {
-        $attr['srcset'] = "{$squareImage} 768w";
-        $attr['sizes']  = "
-            (min-width: 768px) 100vw,
-            768px
-        ";
+        $source[] = "<source media=\"(min-width: 576px)\" srcset=\"{$squareImage}\"/>";
     } elseif (str_contains($class, 'ratio-md-1x1')) {
-        $attr['srcset'] = "{$squareImage} 992w";
-        $attr['sizes']  = "
-            (min-width: 992px) 100vw,
-            992px
-        ";
+       $source[] = "<source media=\"(min-width: 768px)\" srcset=\"{$squareImage}\"/>";
     } elseif (str_contains($class, 'ratio-lg-1x1')) {
-        $attr['srcset'] = "{$squareImage} 1200w";
-        $attr['sizes']  = "
-            (min-width: 1200px) 100vw,
-            1200px
-        ";
+        $source[] = "<source media=\"(min-width: 1024px)\" srcset=\"{$squareImage}\"/>";
     }
 
-    if (isset($attr['src'])) {
-        $attr['data-src'] = $attr['src'];
-    }
+    $sourceTag = join('', $source);
 
-    if (isset($attr['srcset'])) {
-        $attr['data-srcset'] = $attr['srcset'];
-    }
-
-    return $attr;
-},10, 2);
+    return "
+        <picture>
+            {$sourceTag}
+            {$imgTag}
+        </picture>
+    ";
+},10, 15);
 
 function filter_short_title( $title, $post_id ) {
     if (is_admin()) {
