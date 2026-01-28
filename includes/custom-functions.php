@@ -448,27 +448,15 @@ add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id
     if (!$squareImage) return $html;
 
     if (str_contains($class, 'ratio-1x1')) {
-        $source[] = "<source srcset=\"{$squareImage}\"/>";
+        if (!str_contains($class, '16x9') || !str_contains($class, '1x2')) {
+            $source[] = "<source srcset=\"{$squareImage}\"/>";
+        }
     } elseif (str_contains($class, 'ratio-sm-1x1')) {
         $source[] = "<source media=\"(min-width: 576px)\" srcset=\"{$squareImage}\"/>";
     } elseif (str_contains($class, 'ratio-md-1x1')) {
        $source[] = "<source media=\"(min-width: 768px)\" srcset=\"{$squareImage}\"/>";
     } elseif (str_contains($class, 'ratio-lg-1x1')) {
         $source[] = "<source media=\"(min-width: 1024px)\" srcset=\"{$squareImage}\"/>";
-    }
-
-    $originalImage = get_img_src($html);
-
-    if ($originalImage) {
-        if (str_contains($class, 'ratio-16x9')) {
-            $source[] = "<source srcset=\"{$originalImage}\"/>";
-        } elseif (str_contains($class, 'ratio-sm-16x9')) {
-            $source[] = "<source media=\"(min-width: 576px)\" srcset=\"{$originalImage}\"/>";
-        } elseif (str_contains($class, 'ratio-md-16x9')) {
-           $source[] = "<source media=\"(min-width: 768px)\" srcset=\"{$originalImage}\"/>";
-        } elseif (str_contains($class, 'ratio-lg-16x9')) {
-            $source[] = "<source media=\"(min-width: 1024px)\" srcset=\"{$originalImage}\"/>";
-        }
     }
 
     $sourceTag = join('', $source);
