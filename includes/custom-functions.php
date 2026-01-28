@@ -483,21 +483,6 @@ add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id
     ";
 },10, 15);
 
-function get_img_src( $html ) {
-    libxml_use_internal_errors( true );
-
-    $dom = new DOMDocument();
-    $dom->loadHTML( $html, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD );
-
-    $imgs = $dom->getElementsByTagName( 'img' );
-
-    if ( $imgs->length === 0 ) {
-        return null;
-    }
-
-    return $imgs->item(0)->getAttribute( 'src' );
-}
-
 function filter_short_title( $title, $post_id ) {
     if (is_admin()) {
         return $title;
