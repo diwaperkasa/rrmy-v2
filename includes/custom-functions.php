@@ -459,6 +459,10 @@ add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id
         $source[] = "<source media=\"(min-width: 1024px)\" srcset=\"{$squareImage}\"/>";
     }
 
+    if (empty($source)) {
+        return $html;
+    }
+
     $sourceTag = join('', $source);
 
     return "
