@@ -437,6 +437,10 @@ function getPostThumbnail($postId, $slug)
 }
 
 add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id, $size, $attr  ) {
+    if (!isset($attr['class'])) {
+        return $html;
+    }
+    
     $imgTag = $html;
     $class = $attr['class'];
     $source = [];
