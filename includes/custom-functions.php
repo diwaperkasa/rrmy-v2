@@ -445,8 +445,9 @@ add_filter('wp_get_attachment_image_attributes', function ( $attr, $attachment )
 
     if (!$squareImage) return $attr;
 
+    $src = $attr['src'];
+
     if (str_contains($class, 'ratio-1x1')) {
-        $src = $attr['src'];
         $attr['src'] = esc_url( $squareImage );
         unset($attr['srcset']);
         unset($attr['sizes']);
@@ -454,27 +455,27 @@ add_filter('wp_get_attachment_image_attributes', function ( $attr, $attachment )
         if (str_contains($class, '2x1')) {
             $attr['srcset'] = "{$src} 768w";
             $attr['sizes']  = "
-                (min-width: 768px) 768px,
-                100vw
+                (min-width: 768px) 100vw,
+                768px
             ";
         }
     } elseif (str_contains($class, 'ratio-sm-1x1')) {
         $attr['srcset'] = "{$squareImage} 768w";
         $attr['sizes']  = "
-            (min-width: 768px) 768px,
-            100vw
+            (min-width: 768px) 100vw,
+            768px
         ";
     } elseif (str_contains($class, 'ratio-md-1x1')) {
         $attr['srcset'] = "{$squareImage} 992w";
         $attr['sizes']  = "
-            (min-width: 992px) 992px,
-            100vw
+            (min-width: 992px) 100vw,
+            992px
         ";
     } elseif (str_contains($class, 'ratio-lg-1x1')) {
         $attr['srcset'] = "{$squareImage} 1200w";
         $attr['sizes']  = "
-            (min-width: 1200px) 1200px,
-            100vw
+            (min-width: 1200px) 100vw,
+            1200px
         ";
     }
 
