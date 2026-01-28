@@ -441,15 +441,16 @@ add_filter('post_thumbnail_html', function ( $html, $post_id, $post_thumbnail_id
         return $html;
     }
     
-    $imgTag = $html;
     $class = $attr['class'];
-    $source = [];
 
     if (!str_contains($class, '1x1')) return $html;
 
     $squareImage = getPostThumbnail(get_the_ID(), 'square-image');
 
     if (!$squareImage) return $html;
+
+    $imgTag = $html;
+    $source = [];
 
     if (str_contains($class, 'ratio-1x1')) {
         if (!str_contains($class, '16x9') && !str_contains($class, '2x1')) {
