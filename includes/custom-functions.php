@@ -503,3 +503,9 @@ function filter_short_title( $title, $post_id ) {
 }
 
 add_filter( 'the_title', 'filter_short_title', 10, 2 );
+
+if ( defined( 'AUTOMATIC_UPDATER_DISABLED' ) && AUTOMATIC_UPDATER_DISABLED ) {
+    remove_action( 'admin_init', '_maybe_update_plugins' );
+    remove_action( 'admin_init', '_maybe_update_themes' );
+    remove_action( 'admin_init', '_maybe_update_core' );
+}
