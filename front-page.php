@@ -273,7 +273,7 @@
         <div class="container">
             <section id="magazine-subscribe" class="py-5">
                 <div class="text-center px-5">
-                    <img class="img-fluid mb-3" src="<?= wp_get_attachment_url( get_theme_mod('subscribe_logo') ); ?>" alt="<?= wp_get_attachment_url( get_theme_mod('subscribe_logo') ); ?>">
+                    <img class="img-fluid mb-3" src="<?= wp_get_attachment_url( get_theme_mod('subscribe_logo') ); ?>" alt="subscribe-logo">
                 </div>
                 <h2 class="mb-4 oranienbaum ls-1 text-center">Get The Magazine</h2>
                 <p class="mulish fw-light ls-1">Subscribe now for a one-year subscription at only RM150 for the print version or opt for the digital edition for US$39.90 with two issues free.</p>
