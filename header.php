@@ -244,7 +244,7 @@ $subscribeLogo = wp_get_attachment_url( get_theme_mod('subscribe_logo') );
                             </div>
                             <div class="col-md-5">
                                 <div class="my-3 my-md-0">
-                                    <form action="/">
+                                    <form action="<?= home_url() ?>" method="get">
                                         <div class="input-group">
                                             <button type="submit" class="bg-transparent input-group-text border-0 rounded-0 border-bottom">
                                                 <svg fill="#FFF" class="text-white" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
@@ -490,7 +490,7 @@ $subscribeLogo = wp_get_attachment_url( get_theme_mod('subscribe_logo') );
                                 <div class="py-5">
                                     <div class="row justify-content-center">
                                         <div class="col-md-10">
-                                            <form action="/">
+                                            <form action="<?= home_url() ?>" method="get">
                                                 <div class="input-group">
                                                     <button type="submit" class="bg-transparent input-group-text border-0 rounded-0 border-bottom border-black">
                                                         <svg fill="#000" class="text-white" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
