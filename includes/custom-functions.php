@@ -420,6 +420,8 @@ add_filter('ep_is_integrated', function ($integrated) {
     return $integrated;
 }, 10, 3);
 
+add_filter( 'ep_post_match_fuzziness', '__return_zero' );
+
 function getPostThumbnail($postId, $slug)
 {
     if (!class_exists('MultiPostThumbnails')) {
