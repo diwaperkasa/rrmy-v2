@@ -319,7 +319,7 @@ $subscribeLogo = wp_get_attachment_url( get_theme_mod('subscribe_logo') );
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container-fluid">
         <div class="leaderboard header-top">
             <div id='div-gpt-ad-3035191-1'>
                 <script>
