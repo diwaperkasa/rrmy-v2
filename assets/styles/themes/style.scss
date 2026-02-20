@@ -118,6 +118,10 @@ blockquote {
         font-family: mulish;
     }
 
+    img {
+        margin-bottom: .5rem;
+    }
+
     img iframe,
     iframe,
     * img,
@@ -203,7 +207,6 @@ blockquote {
 }
 
 figcaption, .wp-caption-text {
-    margin-top: .5rem;
     font-size: .8rem !important;
     --bs-text-opacity: 1;
     color: rgba(var(--bs-dark-rgb), var(--bs-text-opacity)) !important;
