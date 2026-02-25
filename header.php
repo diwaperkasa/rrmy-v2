@@ -428,7 +428,7 @@ $subscribeLogo = wp_get_attachment_url( get_theme_mod('subscribe_logo') );
             <div class="border-top mt-2 d-block d-lg-none">
                 <div class="container">
                     <div class="slider-menu-mobile">
-                        <div class="d-flex overflow-auto gap-3 py-2">
+                        <div class="d-flex overflow-auto gap-3 py-2 justify-content-md-center">
                             <?php foreach ($primaryMenus as $menu): ?>
                                 <div class="flex-shrink-0">
                                     <a class="text-uppercase text-dark text-decoration-none mulish" href="<?= $menu['url'] ?>"><?= $menu['title'] ?></a>
