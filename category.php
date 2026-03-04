@@ -4,6 +4,7 @@
 $category = get_queried_object();
 
 $query = new WP_Query([
+    'paged' => max(1, get_query_var('paged')),
     'posts_per_page' => 10,
     'post_status' => 'publish',
     'post_type' => 'post',
