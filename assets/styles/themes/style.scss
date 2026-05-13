@@ -137,8 +137,6 @@ blockquote {
     }
 
     .flickity-page-dots {
-        bottom: -2.5rem;
-
         .flickity-page-dot.is-selected {
             background: #BA8E3F;
             box-shadow: 0 0 10px 2px #BA8E3F;
@@ -161,6 +159,22 @@ blockquote {
             height: 50%;
             color: #BA8E3F;
         }
+    }
+
+    .flickity-page-dots {
+        align-content: center;
+        display: flex;
+        height: 2rem;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        width: 80%;
+        bottom: -3.25rem;
+    }
+
+    .flickity-page-dot {
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
     }
 
     .next {
