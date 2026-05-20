@@ -6,7 +6,7 @@ import Flickity from 'flickity';
     let lastScroll = 0;
     const navbar = document.getElementById("main-nav");
     const headerTop = document.querySelector(".header-top");
-    
+
     window.addEventListener("scroll", () => {
         const current = window.scrollY;
         const offsetHeight = navbar.offsetHeight + headerTop.offsetHeight;
@@ -22,16 +22,16 @@ import Flickity from 'flickity';
         } else {
             navbar.classList.remove("sticky-hide"); // show on up
         }
-    
+
         lastScroll = current;
     });
-    
-    
+
+
     const subsribeHover = document.querySelectorAll('.subsribe-hover');
     const subsribePopup = document.querySelector('.subsribe-popup');
     const subsribePopupContainer = document.querySelector('.subsribe-popup-container');
     const topMenuHeader = document.querySelectorAll('.top-header-menu');
-    
+
     subsribeHover.forEach(element => {
         element.addEventListener('mouseenter', () => {
             if (subsribePopup.classList.contains('d-none')) {
@@ -39,7 +39,7 @@ import Flickity from 'flickity';
             }
         })
     });
-    
+
     subsribePopupContainer.addEventListener('mouseleave', () => {
         if (!subsribePopup.classList.contains('d-none')) {
             subsribePopup.classList.add('d-none');
@@ -53,11 +53,11 @@ import Flickity from 'flickity';
             }
         });
     });
-    
+
     const searchBtn = document.querySelectorAll('.search-btn');
     const searchPopup = document.querySelector('.search-popup');
     const searchPopupContainer = document.querySelector('.search-popup-container');
-    
+
     searchBtn.forEach(element => {
         element.addEventListener('click', () => {
             if (searchPopup.classList.contains('d-none')) {
@@ -67,26 +67,84 @@ import Flickity from 'flickity';
             }
         })
     });
-    
+
     searchPopupContainer.addEventListener('mouseleave', () => {
         if (!searchPopup.classList.contains('d-none')) {
             searchPopup.classList.add('d-none');
         }
     })
-    
+
     const imageGalleries = document.querySelectorAll('.gallery');
-    
-    imageGalleries.forEach((gallery) => {
-        const flkty = new Flickity(gallery, {
+
+    imageGalleries.forEach(async (gallery) => {
+        const getMaxDotsRowWidth = (dotsContainer) => {
+            const dots = [...dotsContainer.querySelectorAll('.flickity-page-dot')];
+            const rows = {};
+
+            dots.forEach((dot) => {
+                const rect = dot.getBoundingClientRect();
+
+                const top = Math.round(rect.top);
+
+                if (!rows[top]) {
+                    rows[top] = [];
+                }
+
+                rows[top].push(rect);
+            });
+
+            let maxWidth = 0;
+
+            Object.values(rows).forEach((row) => {
+                const first = row[0];
+                const last = row[row.length - 1];
+                const width = last.right - first.left;
+
+                maxWidth = Math.max(maxWidth, width);
+            });
+
+            return maxWidth;
+        }
+        
+        const updateArrowPosition = () => {
+            const dots = gallery.querySelector('.flickity-page-dots');
+            const prevButtons = gallery.querySelector('.previous');
+            const nextButtons = gallery.querySelector('.next');
+            const fullWidth = dots.offsetWidth;
+            const realWidth = getMaxDotsRowWidth(dots);
+            const ratio = realWidth / fullWidth;
+
+            if (ratio >= .8) {
+                return
+            }
+
+            gallery.querySelector('.previous').style.setProperty(
+                'left',
+                `calc(${((1 - ratio) / 2 * 100)}% - ${prevButtons.offsetWidth}px)`,
+                'important'
+            );
+            gallery.querySelector('.next').style.setProperty(
+                'right',
+                `calc(${((1 - ratio) / 2 * 100)}% - ${nextButtons.offsetWidth}px)`,
+                'important'
+            );
+        }
+
+        const flkty = await new Flickity(gallery, {
             freeScroll: false,
             wrapAround: true,
             autoPlay: true,
-            cellAlign: 'center'
+            cellAlign: 'center',
+            on: {
+                ready: updateArrowPosition,
+                resize: updateArrowPosition,
+                change: updateArrowPosition,
+            }
         });
     })
-    
+
     const carouselGallery = document.querySelector('.carousel-gallery');
-    
+
     if (carouselGallery) {
         const flkty = new Flickity(carouselGallery, {
             freeScroll: false,
@@ -106,9 +164,9 @@ import Flickity from 'flickity';
             prevNextButtons: false,
             cellAlign: 'center'
         });
-    
+
         const carouselNav = document.querySelectorAll('.carousel-nav');
-    
+
         carouselNav.forEach((element) => {
             element.addEventListener('click', () => {
                 const id = element.dataset.id;
@@ -116,34 +174,34 @@ import Flickity from 'flickity';
                 flktyNavGallery.selectCell('#carousel-nav-' + id);
             })
         })
-    
+
         flkty.on('change', function () {
             const currentSlide = flkty.selectedElement;
             const id = currentSlide.dataset.id;
-    
+
             flktyNavGallery.selectCell('#carousel-nav-' + id);
         });
 
         flktyNavGallery.on('change', function () {
             const element = flktyNavGallery.selectedElement;
             const id = element.dataset.id;
-            
+
             flkty.selectCell('#carousel-slide-' + id);
         });
     }
-    
+
     const moreCategoryArticle = document.querySelector('.more-category-article');
-    
+
     if (moreCategoryArticle) {
         let page = 2;
         const length = 10;
         const term_id = moreCategoryArticle.dataset.term_id;
 
-        moreCategoryArticle.addEventListener("click", async function() {
+        moreCategoryArticle.addEventListener("click", async function () {
             const content = moreCategoryArticle.innerHTML;
             moreCategoryArticle.disabled = true;
             moreCategoryArticle.innerHTML = '<div class="loader"></div>';
-    
+
             try {
                 const res = await fetch(`/wp-admin/admin-ajax.php?${new URLSearchParams({
                     action: 'more_category_article',
@@ -158,7 +216,7 @@ import Flickity from 'flickity';
                     if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
                     }
-        
+
                     return await response.json()
                 });
 
@@ -169,7 +227,7 @@ import Flickity from 'flickity';
                 });
 
                 page++;
-            } catch (error) {} finally {
+            } catch (error) { } finally {
                 moreCategoryArticle.innerHTML = content
                 moreCategoryArticle.disabled = false;
             }
@@ -182,11 +240,11 @@ import Flickity from 'flickity';
         let page = 2;
         const length = moreArticle.dataset.length;
 
-        moreArticle.addEventListener("click", async function() {
+        moreArticle.addEventListener("click", async function () {
             const content = moreArticle.innerHTML;
             moreArticle.disabled = true;
             moreArticle.innerHTML = '<div class="loader"></div>';
-    
+
             try {
                 const res = await fetch(`/wp-admin/admin-ajax.php?${new URLSearchParams({
                     action: 'more_article',
@@ -200,7 +258,7 @@ import Flickity from 'flickity';
                     if (!response.ok) {
                         throw new Error(`HTTP error! Status: ${response.status}`);
                     }
-        
+
                     return await response.json()
                 });
 
@@ -211,7 +269,7 @@ import Flickity from 'flickity';
                 });
 
                 page++;
-            } catch (error) {} finally {
+            } catch (error) { } finally {
                 moreArticle.innerHTML = content
                 moreArticle.disabled = false;
             }
