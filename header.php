@@ -121,6 +121,48 @@
         });
     </script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWC6L1FB6R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-WWC6L1FB6R');
+    </script>
+
+    <script>
+        <?php if (is_singular()): ?>
+            dataLayer = [{
+                'author_name': `<?= implode(', ', wp_list_pluck(
+                    wp_get_post_terms(get_the_ID(), 'writer'),
+                    'name'
+                    ));
+                ?>`,
+                'publish_date': `<?= get_the_date('Y-m-d'); ?>`,
+                'terms': `<?= implode(', ', wp_list_pluck(
+            wp_get_post_terms(get_the_ID(), 'category'),
+                'slug'
+                    ));
+                ?>`,
+            }];
+        <?php elseif (is_category()): ?>
+            dataLayer = [{
+                'terms': `<?= implode(', ', wp_list_pluck(
+            wp_get_post_terms(get_the_ID(), 'category'),
+                'slug'
+                    ));
+                ?>`,
+            }];
+        <?php elseif (is_tag() || is_tax()): ?>
+            dataLayer = [{
+                'terms': `<?= get_queried_object()->slug ?>`,
+            }];
+        <?php endif; ?>
+    </script>
+
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -139,18 +181,6 @@
         })(window, document, 'script', 'dataLayer', 'GTM-T5GV2H9');
     </script>
     <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WWC6L1FB6R"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-WWC6L1FB6R');
-    </script>
 
     <!-- Event snippet for Page view conversion page -->
     <script>
