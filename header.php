@@ -126,16 +126,8 @@
     <script>
         window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-WWC6L1FB6R');
-    </script>
-
-    <script>
         <?php if (is_singular()): ?>
-            dataLayer = [{
+            dataLayer.push({
                 'author_name': `<?= implode(', ', wp_list_pluck(
                     wp_get_post_terms(get_the_ID(), 'writer'),
                     'name'
@@ -147,20 +139,22 @@
                 'slug'
                     ));
                 ?>`,
-            }];
+            });
         <?php elseif (is_category()): ?>
-            dataLayer = [{
-                'terms': `<?= implode(', ', wp_list_pluck(
-            wp_get_post_terms(get_the_ID(), 'category'),
-                'slug'
-                    ));
-                ?>`,
-            }];
-        <?php elseif (is_tag() || is_tax()): ?>
-            dataLayer = [{
+            dataLayer.push({
                 'terms': `<?= get_queried_object()->slug ?>`,
-            }];
+            });
+        <?php elseif (is_tag() || is_tax()): ?>
+            dataLayer.push({
+                'terms': `<?= get_queried_object()->slug ?>`,
+            });
         <?php endif; ?>
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-WWC6L1FB6R');
     </script>
 
     <!-- Google Tag Manager -->
